@@ -6,7 +6,8 @@ import { LiteSVM, FailedTransactionMetadata } from 'litesvm';
 import { address, getTransactionDecoder, signature, lamports } from '@solana/kit';
 import { Connection, PublicKey, Keypair, Transaction, ComputeBudgetProgram, SystemProgram } from '@solana/web3.js';
 import { SolanaChain } from '../src/solana/chain.ts';
-import { buildInstruction } from '../src/solana/instructions.ts';
+import { buildTransactionInstructions } from '../src/solana/instructions.ts';
+import { activationPlatformFee, PLATFORM_FEE_RECIPIENT } from '../src/core/platform-fee.ts';
 import { Engine, RECENT_CONSUMED_SHELLS, type Attempt, type Kind, type Request } from '../src/core/engine.ts';
 import { b64, base58, from64, hex, unhex } from '../src/core/bytes.ts';
 import { authorizationContext, operationDigest, type AuthorizationProfile } from '../src/core/protocol.ts';
@@ -31,7 +32,7 @@ class SvmChain extends SolanaChain {
     this.svm.expireBlockhash();
     const tx = new Transaction({ feePayer: this.payerKey.publicKey, recentBlockhash: this.svm.latestBlockhash() });
     if (r.kind === 'withdraw') tx.add(ComputeBudgetProgram.setComputeUnitLimit({ units: 800_000 }));
-    tx.add(buildInstruction(new PublicKey(this.program), r, this.payerKey.publicKey));
+    tx.add(...buildTransactionInstructions(new PublicKey(this.program), r, this.payerKey.publicKey, this.profile));
     if (r.kind === 'create' || r.kind === 'commit') tx.partialSign(Keypair.fromSeed(unhex(r.coordinatorSeed)));
     tx.partialSign(this.payerKey); assert.ok(tx.serialize().length <= 1232, 'real signed packet fits Solana'); return tx;
   }
@@ -68,6 +69,9 @@ for (const profile of ['devnet-v1', 'mainnet-v2'] as const) test(`SBF ${profile}
   const local = (await e.read()).shells[0]; await prefund(local.address);
   assert.equal(await chain.vault(local.address), null, 'An empty prefunded System account is not protected or initialized');
   const initialization = await e.createOnChain(); assert.equal(initialization?.state, 'confirmed', chain.lastFailure ?? 'SVM initialization must confirm before funding');
+  const collectedFee = svm.getBalance(address(PLATFORM_FEE_RECIPIENT)) ?? 0n;
+  assert.equal(collectedFee, activationPlatformFee(profile), 'Initial activation pays the exact platform fee only on Mainnet');
+  assert.equal(await e.createOnChain(), null, 'Already activated vaults do not create another fee transaction');
   await e.deposit(1_000_000_000n);
   const first = (await e.read()).shells[0]; assert.equal((await chain.vault(first.address))!.balance - await chain.rent(), 1_000_000_000n);
   backup = await prepared(e); await e.commitWithdrawal(); chain.rejectWallet = true; await assert.rejects(e.executeWithdrawal(), /wallet rejection/); chain.rejectWallet = false;
@@ -109,6 +113,7 @@ for (const profile of ['devnet-v1', 'mainnet-v2'] as const) test(`SBF ${profile}
   assert.equal(await chain.walletBalance(), payerBefore + 750_000_000n - await chain.rent() - await chain.fee('withdraw'));
   assert.equal(svm.getBalance(address(RECIPIENT)), 250_000_000n); const final = await recovered.read();
   assert.equal((await chain.vault(final.shells.at(-1)!.address))!.balance, await chain.rent());
+  assert.equal(svm.getBalance(address(PLATFORM_FEE_RECIPIENT)) ?? 0n, collectedFee, 'Partial/full withdrawals, rotations and failed recreation never collect another platform fee');
   if (profile === 'mainnet-v2') {
     // Exercise retirement with actual new keys and compiled-program rotations,
     // then restore the last pre-confirmation package in a clean store.
@@ -137,7 +142,7 @@ for (const profile of ['devnet-v1', 'mainnet-v2'] as const) test(`SBF ${profile}
     assert.equal((await chain.vault(first.address))!.status, 'consumed', 'Permanent on-chain receipt still rejects replay');
   }
   // A direct transfer before activation must survive initialization. A wallet
-  // with only the actual two-signature fee must not need to fund rent twice.
+  // with only the platform + actual two-signature fee must not fund rent twice.
   const feePayer = Keypair.generate(), directChain = new SvmChain(svm, program, feePayer, profile);
   const direct = new Engine(new MemoryStore(), directChain, PASSWORD);
   await direct.create(); const directBackup = await direct.exportBackup(); await direct.verifyBackup(directBackup, PASSWORD);
@@ -147,9 +152,20 @@ for (const profile of ['devnet-v1', 'mainnet-v2'] as const) test(`SBF ${profile}
   assert.equal(await directChain.uninitializedBalance(directAddress), 90_998_331n);
   assert.equal(await directChain.initializationRent(directAddress), 0n);
   await assert.rejects(direct.createOnChain(), /Insufficient/);
-  svm.setAccount({ address: address(feePayer.publicKey.toBase58()), lamports: lamports(10_000n), programAddress: address(SystemProgram.programId.toBase58()), executable: false, data: new Uint8Array(0), space: 0n });
+  if (profile === 'mainnet-v2') {
+    svm.setAccount({ address: address(feePayer.publicKey.toBase58()), lamports: lamports(10_000n), programAddress: address(SystemProgram.programId.toBase58()), executable: false, data: new Uint8Array(0), space: 0n });
+    const identity = await direct.read();
+    const failedRequest: Request = { kind: 'create', vault: identity.shells[0], coordinator: identity.coordinator, coordinatorSeed: identity.coordinatorSeed };
+    const failed = await directChain.transaction(failedRequest);
+    await assert.rejects(directChain.broadcast({ ...failed, kind: 'create', address: directAddress, state: 'submitting' }), /SVM rejected/);
+    assert.equal(await directChain.vault(directAddress), null, 'A failing payment rolls back vault initialization');
+    assert.equal(await directChain.uninitializedBalance(directAddress), 90_998_331n, 'Existing incoming SOL is untouched by a failing payment');
+    assert.equal(svm.getBalance(address(PLATFORM_FEE_RECIPIENT)), collectedFee, 'Failed activation collects no platform fee');
+  }
+  svm.setAccount({ address: address(feePayer.publicKey.toBase58()), lamports: lamports(10_000n + activationPlatformFee(profile)), programAddress: address(SystemProgram.programId.toBase58()), executable: false, data: new Uint8Array(0), space: 0n });
   assert.equal((await direct.createOnChain())!.state, 'confirmed', directChain.lastFailure ?? 'Prefunded activation must execute');
   assert.equal(await directChain.walletBalance(), 0n);
+  assert.equal(svm.getBalance(address(PLATFORM_FEE_RECIPIENT)) ?? 0n, collectedFee + activationPlatformFee(profile), 'A separate new vault pays exactly one additional fee');
   const activated = (await directChain.vault(directAddress))!;
   assert.equal(activated.balance, 90_998_331n);
   const directSpendable = 90_998_331n - activated.rent;

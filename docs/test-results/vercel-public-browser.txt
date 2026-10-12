@@ -5,26 +5,26 @@
 
 Running 18 tests using 1 worker
 
-(node:12484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:18460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:12484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:18460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ✓   1 tests/browser/mainnet.spec.ts:61:1 › Mainnet connects Phantom without a network indicator and keeps undeployed funding separately blocked (1.5s)
-  ✓   2 tests/browser/mainnet.spec.ts:87:1 › Mainnet rejects a Devnet RPC hash without disconnecting the wallet (1.0s)
-  ✓   3 tests/browser/mainnet.spec.ts:104:1 › Mainnet real browser encryption, clean recovery and network switching retain isolated identities (4.3s)
-  ✓   4 tests/browser/mainnet.spec.ts:190:1 › real pinned Mainnet RPC verifies genesis and the configured release without requesting a transaction (6.6s)
-  ✓   5 tests/browser/mainnet.spec.ts:231:1 › production Mainnet stays verified when direct browser access to PublicNode is blocked (1.8s)
-  ✓   6 tests/browser/mainnet.spec.ts:278:1 › RPC-verified Mainnet setup enables activation only for an authorized public release (19.3s)
-  ✓   7 tests/browser/network.spec.ts:118:1 › Phantom connects without network metadata; full Devnet genesis is verified and missing deployment stays separate (1.2s)
+  ✓   1 tests/browser/mainnet.spec.ts:62:1 › Mainnet connects Phantom without a network indicator and keeps undeployed funding separately blocked (1.5s)
+  ✓   2 tests/browser/mainnet.spec.ts:88:1 › Mainnet rejects a Devnet RPC hash without disconnecting the wallet (1.0s)
+  ✓   3 tests/browser/mainnet.spec.ts:105:1 › Mainnet real browser encryption, clean recovery and network switching retain isolated identities (4.3s)
+  ✓   4 tests/browser/mainnet.spec.ts:191:1 › real pinned Mainnet RPC verifies genesis and the configured release without requesting a transaction (6.3s)
+  ✓   5 tests/browser/mainnet.spec.ts:232:1 › production Mainnet stays verified when direct browser access to PublicNode is blocked (1.0s)
+  ✓   6 tests/browser/mainnet.spec.ts:279:1 › RPC-verified Mainnet setup enables activation only for an authorized public release (30.1s)
+  ✓   7 tests/browser/network.spec.ts:118:1 › Phantom connects without network metadata; full Devnet genesis is verified and missing deployment stays separate (2.3s)
   ✓   8 tests/browser/network.spec.ts:173:5 › RPC unexpected-cluster retains successful wallet connection and blocks funding (1.8s)
-  ✓   9 tests/browser/network.spec.ts:173:5 › RPC timeout retains successful wallet connection and blocks funding (1.8s)
-  ✓  10 tests/browser/network.spec.ts:192:1 › real official Devnet RPC verifies its full hash in the hosted browser, with no program account (3.0s)
-  ✓  11 tests/browser/protocol.spec.ts:4:1 › contract-address section visibly awaits the real CA and cannot copy a placeholder (754ms)
-  ✓  12 tests/browser/protocol.spec.ts:21:1 › verified and owner-supplied CAs display in full and copy exactly to the clipboard (1.4s)
+  ✓   9 tests/browser/network.spec.ts:173:5 › RPC timeout retains successful wallet connection and blocks funding (1.7s)
+  ✓  10 tests/browser/network.spec.ts:192:1 › real official Devnet RPC verifies its full hash in the hosted browser, with no program account (2.9s)
+  ✓  11 tests/browser/protocol.spec.ts:4:1 › contract-address section visibly awaits the real CA and cannot copy a placeholder (644ms)
+  ✓  12 tests/browser/protocol.spec.ts:21:1 › verified and owner-supplied CAs display in full and copy exactly to the clipboard (1.6s)
   ✓  13 tests/browser/protocol.spec.ts:51:1 › protocol dashboard shows no invented financial metrics while deployment is missing; mobile page fits (842ms)
-  ✓  14 tests/browser/recovery.spec.ts:4:1 › real browser: create, encrypted export/verification, reload/unlock and clean-profile recovery (9.5s)
-  ✓  15 tests/browser/recovery.spec.ts:83:1 › responsive navigation explains setup, returns to the vault and preserves appearance without a Devnet option (1.3s)
-  ✓  16 tests/browser/recovery.spec.ts:151:1 › browser storage that ignores strict durability cannot create a signing identity (1.3s)
+  ✓  14 tests/browser/recovery.spec.ts:4:1 › real browser: create, encrypted export/verification, reload/unlock and clean-profile recovery (12.3s)
+  ✓  15 tests/browser/recovery.spec.ts:83:1 › responsive navigation explains setup, returns to the vault and preserves appearance without a Devnet option (1.6s)
+  ✓  16 tests/browser/recovery.spec.ts:151:1 › browser storage that ignores strict durability cannot create a signing identity (1.2s)
 [SHELL devnet diagnostics] {
   rpcEndpoint: [32m'https://api.devnet.solana.com'[39m,
   rpcTransportEndpoint: [32m'https://api.devnet.solana.com'[39m,
@@ -40,7 +40,7 @@ Running 18 tests using 1 worker
   deploymentStatus: [32m'unchecked'[39m,
   deploymentCause: [1mnull[22m
 }
-  ✓  17 tests/browser/vault.spec.ts:18:52 › browser + compiled SBF devnet-v1: backup, deposit, partial/full rotation and clean-browser recovery (16.6s)
+  ✓  17 tests/browser/vault.spec.ts:19:52 › browser + compiled SBF devnet-v1: backup, deposit, partial/full rotation and clean-browser recovery (17.4s)
 [SHELL devnet diagnostics] {
   rpcEndpoint: [32m'https://api.devnet.solana.com'[39m,
   rpcTransportEndpoint: [32m'https://api.devnet.solana.com'[39m,
@@ -926,6 +926,6 @@ Running 18 tests using 1 worker
   deploymentStatus: [32m'unverified'[39m,
   deploymentCause: [32m'Mainnet lifecycle verification failed: RPC network mismatch: expected mainnet-beta genesis 5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d; received EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG. Wallet network selection was not inspected.. Funding is disabled.'[39m
 }
-  ✓  18 tests/browser/vault.spec.ts:18:52 › browser + compiled SBF mainnet-v2: backup, deposit, partial/full rotation and clean-browser recovery (22.1s)
+  ✓  18 tests/browser/vault.spec.ts:19:52 › browser + compiled SBF mainnet-v2: backup, deposit, partial/full rotation and clean-browser recovery (22.4s)
 
-  18 passed (1.6m)
+  18 passed (1.9m)

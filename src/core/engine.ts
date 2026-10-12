@@ -2,6 +2,7 @@ import { base58, concat, from58, from64url, hex, random, unhex } from './bytes.t
 import { decrypt, encrypt, fingerprint, type Envelope } from './recovery.ts';
 import { DEVNET_AUTHORIZATION_DOMAIN, MAINNET_GENESIS, authorizationContext, operationDigest, sameOperation, type AuthorizationProfile, type Operation, type VaultState } from './protocol.ts';
 import { checkFunds } from './amount.ts';
+import { activationPlatformFee } from './platform-fee.ts';
 import { generateKey, rootOf, signDigest } from './winternitz.ts';
 import type { PaidChoice } from '../protocol/client.ts';
 import type { Session, Store } from './store.ts';
@@ -197,8 +198,8 @@ export class Engine {
       backupReady(i); await this.chain.validate(); const s = active(i);
       const exists = await this.chain.vault(s.address);
       if (exists) { assertState(s, i, exists); return null; }
-      const cost = await this.chain.initializationRent(s.address) + await this.chain.fee('create');
-      if (await this.chain.walletBalance() < cost) throw Error('Insufficient SOL for activation rent top-up and transaction fees');
+      const cost = await this.chain.initializationRent(s.address) + await this.chain.fee('create') + activationPlatformFee(this.profile);
+      if (await this.chain.walletBalance() < cost) throw Error('Insufficient SOL for the activation platform fee, rent top-up and transaction fees');
       return this.send(i, session, { kind: 'create', vault: s, coordinator: i.coordinator, coordinatorSeed: i.coordinatorSeed });
     });
   }

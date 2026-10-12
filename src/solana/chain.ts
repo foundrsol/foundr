@@ -3,7 +3,8 @@ import { Buffer } from 'buffer';
 import { base58, b64, equal, from64, hex, sha256, unhex, utf8 } from '../core/bytes.ts';
 import { ACCOUNT_SIZE, assertNetwork, authorizationContext, encodeOperation, type AuthorizationProfile, type Cluster, type Operation, type VaultState } from '../core/protocol.ts';
 import type { Attempt, Chain, Kind, Request, Stage } from '../core/engine.ts';
-import { buildInstruction } from './instructions.ts';
+import { buildTransactionInstructions, activationFeeInstruction } from './instructions.ts';
+import { activationPlatformFee, PLATFORM_FEE_RECIPIENT } from '../core/platform-fee.ts';
 import { initialDiagnostics, publicDiagnostics, rpcForProfile, rpcTransportForProfile, MAINNET_DEPLOY_RPC, type DevnetDiagnostics } from './network.ts';
 import { mainnetReleaseAuthorized, type ExperimentalLaunch } from './release.ts';
 export type MainnetSmoke = { payer: string; recipient: string; vaults: [string, string, string]; depositLamports: string; partialLamports: string; signatures: [string, string, string, string, string, string] };
@@ -150,9 +151,15 @@ export class SolanaChain implements Chain {
       const message = tx.transaction.message, keys = message.getAccountKeys();
       if (!keys.get(0)?.equals(payer)) throw Error('Unexpected lifecycle fee payer');
       const instructions = message.compiledInstructions;
+      const tag = tags[n];
       const calls = instructions.filter(ix => keys.get(ix.programIdIndex)?.toBase58() === this.program);
-      if (calls.length !== 1 || instructions.some(ix => !keys.get(ix.programIdIndex)?.equals(new PublicKey(this.program)) && !keys.get(ix.programIdIndex)?.equals(ComputeBudgetProgram.programId))) throw Error('Unexpected lifecycle instructions');
-      const ix = calls[0], bytes = Buffer.from(ix.data), tag = tags[n];
+      const payments = instructions.filter(ix => keys.get(ix.programIdIndex)?.equals(SystemProgram.programId));
+      if (payments.length > 1 || payments.some(ix => {
+        const bytes = Buffer.from(ix.data);
+        return tag !== 0 || bytes.length !== 12 || bytes.readUInt32LE(0) !== 2 || bytes.readBigUInt64LE(4) !== activationPlatformFee(this.profile) || ix.accountKeyIndexes.length !== 2 || !keys.get(ix.accountKeyIndexes[0])?.equals(payer) || keys.get(ix.accountKeyIndexes[1])?.toBase58() !== PLATFORM_FEE_RECIPIENT;
+      })) throw Error('Unexpected lifecycle activation payment');
+      if (calls.length !== 1 || instructions.some(ix => !keys.get(ix.programIdIndex)?.equals(new PublicKey(this.program)) && !keys.get(ix.programIdIndex)?.equals(ComputeBudgetProgram.programId) && !keys.get(ix.programIdIndex)?.equals(SystemProgram.programId))) throw Error('Unexpected lifecycle instructions');
+      const ix = calls[0], bytes = Buffer.from(ix.data);
       if (bytes[0] !== tag || keys.get(ix.accountKeyIndexes[tag === 0 ? 2 : 1])?.toBase58() !== proof.vaults[indices[n]]) throw Error('Lifecycle operation or vault mismatch');
       if (tag === 1 && (bytes.length !== 9 || bytes.readBigUInt64LE(1) !== deposit)) throw Error('Lifecycle deposit mismatch');
       if (tag === 1) {
@@ -223,6 +230,7 @@ export class SolanaChain implements Chain {
     if (kind === 'create' || kind === 'commit' || kind === 'authorization') keys.push({ pubkey: new PublicKey(new Uint8Array(32).fill(7)), isSigner: true, isWritable: false });
     if (kind === 'withdraw') tx.add(ComputeBudgetProgram.setComputeUnitLimit({ units: 800_000 }));
     tx.add(new TransactionInstruction({ programId: new PublicKey(this.program), keys, data: Buffer.alloc(0) }));
+    if (kind === 'create') { const payment = activationFeeInstruction(payer, this.profile); if (payment) tx.add(payment); }
     const quote = await this.connection.getFeeForMessage(tx.compileMessage(), 'finalized');
     if (quote.value === null) throw Error('RPC could not quote transaction fees'); return safe(quote.value);
   }
@@ -231,10 +239,10 @@ export class SolanaChain implements Chain {
     if (typeof this.wallet?.signTransaction !== 'function') throw Error('This wallet does not support signing without submission. SHELL requires signTransaction so that only the verified RPC for this identity submits transactions.');
     const tx = new Transaction({ feePayer: payer, ...block });
     if (request.kind === 'withdraw') tx.add(ComputeBudgetProgram.setComputeUnitLimit({ units: 800_000 }));
-    tx.add(buildInstruction(new PublicKey(this.program), request, payer));
+    tx.add(...buildTransactionInstructions(new PublicKey(this.program), request, payer, this.profile));
     const quote = await this.connection.getFeeForMessage(tx.compileMessage(), 'finalized'); if (quote.value === null) throw Error('Fee quote unavailable');
-    const costs = safe(quote.value) + (request.kind === 'create' ? await this.initializationRent(request.vault.address) : request.kind === 'withdraw' ? await this.rent() : request.amount ?? 0n);
-    if (await this.walletBalance() < costs) throw Error('Connected wallet cannot cover the exact transaction fee and account rent');
+    const costs = safe(quote.value) + (request.kind === 'create' ? await this.initializationRent(request.vault.address) + activationPlatformFee(this.profile) : request.kind === 'withdraw' ? await this.rent() : request.amount ?? 0n);
+    if (await this.walletBalance() < costs) throw Error(request.kind === 'create' && activationPlatformFee(this.profile) > 0n ? 'Connected wallet cannot cover the activation platform fee, exact transaction fee and account rent' : 'Connected wallet cannot cover the exact transaction fee and account rent');
     if (request.kind === 'create' || request.kind === 'commit') tx.partialSign(Keypair.fromSeed(unhex(request.coordinatorSeed, 32)));
     const intended = tx.serializeMessage();
     const signed = await this.wallet!.signTransaction(tx);
@@ -249,7 +257,7 @@ export class SolanaChain implements Chain {
   async outcome(a: Attempt): Promise<{ state: Stage; error?: string }> {
     try {
       const status = (await this.connection.getSignatureStatuses([a.signature], { searchTransactionHistory: true })).value[0];
-      if (status?.confirmationStatus === 'finalized') return status.err ? { state: 'failed', error: 'On-chain transaction failed. The one-time operation remains bound; its amount and destinations cannot change.' } : { state: 'confirmed' };
+      if (status?.confirmationStatus === 'finalized') return status.err ? { state: 'failed', error: a.kind === 'create' ? 'Vault activation failed. No platform fee was collected. Solana may still charge its transaction fee.' : 'On-chain transaction failed. The one-time operation remains bound; its amount and destinations cannot change.' } : { state: 'confirmed' };
       if (status) return { state: 'confirming' };
       // Finalized height must pass the blockhash validity window before a new
       // outer transaction is allowed. The signature itself never changes.

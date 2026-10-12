@@ -1,16 +1,16 @@
 {
-  "checkedAt": "2026-10-12T16:37:04.477Z",
-  "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "checkedAt": "2026-10-12T18:11:44.229Z",
+  "releaseSourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
   "deployment": {
     "provider": "vercel",
     "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
     "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
     "projectName": "sonic-perseus-9a1cxls",
-    "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+    "deploymentId": "dpl_GZvTPfaqVpGX9aPy6855fyKU57eJ",
     "target": "production",
     "readyState": "READY",
     "url": "https://sonic-perseus-9a1cxls.vercel.app",
-    "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+    "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-j0ew4tmz1-foundr2.vercel.app",
     "aliases": [
       "www.shellsafe.xyz",
       "sonic-perseus-9a1cxls.vercel.app",
@@ -18,10 +18,10 @@
       "temporary-sonic-perseus-9a1cxls.vercel.app",
       "sonic-perseus-9a1cxls-foundr2.vercel.app"
     ],
-    "createdAt": "2026-10-12T16:36:33.177000+00:00",
-    "createdAtAsiaShanghai": "2026-10-13T00:36:33.177000+08:00",
-    "verifiedAt": "2026-10-12T16:37:04.477Z",
-    "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "createdAt": "2026-10-12T18:10:43.442000+00:00",
+    "createdAtAsiaShanghai": "2026-10-13T02:10:43.442000+08:00",
+    "verifiedAt": "2026-10-12T18:11:44.229Z",
+    "releaseSourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
     "websiteOnly": true,
     "mainnetFundingEnabled": true,
     "devnetFundingEnabled": false,
@@ -46,19 +46,19 @@
     "mode": "owner-authorized-experimental",
     "authorizationProfile": "mainnet-v2",
     "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
-    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
     "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
-    "authorizedAt": "2026-10-12T16:32:33.377Z",
+    "authorizedAt": "2026-10-12T18:08:37.885Z",
     "disclosure": "Experimental vault authorization. Independent security review pending."
   },
   "independentReviewVerified": false,
   "mainnetFundingEnabled": true,
   "devnetFundingEnabled": false,
   "liveActivation": {
-    "checkedAt": "2026-10-12T16:38:15.432Z",
+    "checkedAt": "2026-10-12T18:16:47.120Z",
     "website": "https://sonic-perseus-9a1cxls.vercel.app",
     "releaseStatus": "experimental-ready",
-    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
     "independentReviewStatus": "pending",
     "walletInterfaceConnected": true,
     "encryptedIdentityCreated": true,
@@ -70,7 +70,7 @@
   },
   "interfaceChecks": {
     "baseURL": "https://sonic-perseus-9a1cxls.vercel.app",
-    "checkedAt": "2026-10-12T16:42:17.271Z",
+    "checkedAt": "2026-10-12T18:18:52.374Z",
     "passed": true,
     "publicDevnetOptionAbsent": true,
     "guideHasThreeSteps": true,
@@ -176,7 +176,7 @@
     "transactionsSubmitted": 0
   },
   "tests": {
-    "unit": 61,
+    "unit": 66,
     "compiledSbfMatrices": 3,
     "localBrowser": 15,
     "localBrowserSkipped": 3,
@@ -190,19 +190,5 @@
   "newSolanaTransactionsSubmitted": 0,
   "mainnetProgramChanged": false,
   "mainnetProgramImmutable": true,
-  "originalOwnerLifecycleSourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
-  "tokenAddressUpdate": {
-    "checkedAt": "2026-10-12T16:40:31.263Z",
-    "website": "https://sonic-perseus-9a1cxls.vercel.app",
-    "address": "66fEEkGSYVeBb2eTwsfmipZBvT3WY1ab9bRJTooSpump",
-    "status": "owner-provided",
-    "mintVerification": "not-found",
-    "hostedMetadataMatches": true,
-    "fullAddressVisible": true,
-    "desktopClipboardExact": true,
-    "mobileClipboardExact": true,
-    "mobileNoOverflow": true,
-    "pageErrors": [],
-    "transactionsSubmitted": 0
-  }
+  "originalOwnerLifecycleSourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4"
 }

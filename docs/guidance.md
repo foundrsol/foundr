@@ -4,6 +4,8 @@ Current funding policy: [owner-authorized experimental Mainnet release](experime
 
 Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
 
+Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
+
 # Simple wallet setup
 
 The public header has Wallet and How it Works, plus the existing dark-mode switch. There is no public Devnet option. The direct `/devnet` and `/protocol` routes remain for developer verification with their test-funds banners and isolated encrypted identities; they are not linked from the public wallet or guide.

@@ -1,8 +1,9 @@
 SHELL project source and public program artifacts
 
 Start with README.md for setup, deployment, recovery and limitations.
-The package includes the direct-transfer balance fix, simplified How it Works,
-and removal of the Mainnet banner. Wallet and recovery secrets are excluded.
+The package includes atomic 0.01 SOL fees for each new vault activation,
+the direct-transfer balance fix, simplified How it Works and dark mode.
+Automatic rotations have no platform fee. Wallet and recovery secrets are excluded.
 
 Requirements: Node.js 24 or newer, npm, and access to npm for installation.
 

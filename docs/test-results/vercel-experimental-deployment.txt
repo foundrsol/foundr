@@ -1,11 +1,11 @@
 Deploying sonic-perseus-9a1cxls
-Uploading [--------------------] (0.0B/212.5KB)
-Uploading [=====---------------] (56.8KB/212.5KB)
-Uploading [===========---------] (119.2KB/212.5KB)
-Uploading [===============-----] (168.8KB/212.5KB)
-Uploading [====================] (212.5KB/212.5KB)
-  Inspect         https://vercel.com/foundr2/sonic-perseus-9a1cxls/3kvgdGM3CWvpULvBHgURmJqqT8mJ
-  Production      https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app
+Uploading [--------------------] (0.0B/276.7KB)
+Uploading [=====---------------] (74.7KB/276.7KB)
+Uploading [==========----------] (138.4KB/276.7KB)
+Uploading [===============-----] (218.7KB/276.7KB)
+Uploading [====================] (276.7KB/276.7KB)
+  Inspect         https://vercel.com/foundr2/sonic-perseus-9a1cxls/GZvTPfaqVpGX9aPy6855fyKU57eJ
+  Production      https://sonic-perseus-9a1cxls-j0ew4tmz1-foundr2.vercel.app
 Building…
 Building…
 Running build in Cleveland, USA (East) – cle1
@@ -16,6 +16,6 @@ Downloading 64 deployment files...
 Using prebuilt build artifacts from .vercel/output
 Learn more: https://vercel.link/build-output-api
 Deploying outputs...
-[2K[1A[2K[G  Production      https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app
+[2K[1A[2K[G  Production      https://sonic-perseus-9a1cxls-j0ew4tmz1-foundr2.vercel.app
 Completing…
 ▲ Aliased         https://www.shellsafe.xyz

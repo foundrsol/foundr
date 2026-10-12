@@ -1,3 +1,4 @@
+import { PLATFORM_FEE_RECIPIENT } from '../../src/core/platform-fee.ts';
 import { test, expect, type Page } from '@playwright/test';
 import { Keypair } from '@solana/web3.js';
 import { readFile, writeFile } from 'node:fs/promises';
@@ -115,7 +116,14 @@ test('RPC-verified Mainnet setup enables activation only for an authorized publi
   await page.getByRole('button', { name: 'Verify recovery file', exact: true }).click();
   const activate = page.getByRole('button', { name: 'Activate vault', exact: true });
   await expect(page.getByRole('button', { name: 'Back up vault', exact: true })).toBeEnabled({ timeout: 60000 });
-  if (active) await expect(activate).toBeEnabled({ timeout: 60000 }); else await expect(activate).toBeDisabled({ timeout: 60000 });
+  if (active) {
+    await expect(activate).toBeEnabled({ timeout: 60000 });
+    await activate.click();
+    await expect(page.getByRole('heading', { name: 'Activate your vault', exact: true })).toBeVisible();
+    await expect(page.getByTestId('activation-platform-fee')).toContainText('0.010000000 SOL');
+    await page.getByText('Platform fee recipient', { exact: true }).click();
+    await expect(page.getByTestId('platform-fee-recipient')).toHaveText(PLATFORM_FEE_RECIPIENT);
+  } else await expect(activate).toBeDisabled({ timeout: 60000 });
   await expect(page.getByRole('button', { name: 'Add SOL', exact: true })).toBeDisabled();
   expect(signRequests).toBe(0); expect(sentTransactions).toBe(0);
   await writeFile('.dev/experimental-live-activation.json', JSON.stringify({ checkedAt: new Date().toISOString(), website: process.env.SHELL_BROWSER_URL ?? 'http://127.0.0.1:3000', releaseStatus: manifest.mainnetRelease?.status, sourceSha256: manifest.mainnetRelease?.sourceSha256, independentReviewStatus: manifest.mainnetRelease?.securityReview.status, walletInterfaceConnected: true, encryptedIdentityCreated: true, recoveryExportVerified: true, activationEnabled: active, noDepositBeforeActivation: true, signatureRequests: signRequests, transactionsSubmitted: sentTransactions }, null, 2) + '\n');

@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-12T16:38:15.432Z",
+  "checkedAt": "2026-10-12T18:16:47.120Z",
   "website": "https://sonic-perseus-9a1cxls.vercel.app",
   "releaseStatus": "experimental-ready",
-  "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
   "independentReviewStatus": "pending",
   "walletInterfaceConnected": true,
   "encryptedIdentityCreated": true,

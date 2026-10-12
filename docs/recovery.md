@@ -4,6 +4,8 @@ Current funding policy: [owner-authorized experimental Mainnet release](experime
 
 Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
 
+Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
+
 # Recovery instructions
 
 Your existing wallet seed phrase is never requested. SHELL uses an independent

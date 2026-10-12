@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-12T16:37:56.108Z",
+  "checkedAt": "2026-10-12T18:12:48.849Z",
   "website": "https://sonic-perseus-9a1cxls.vercel.app",
   "rpcProvider": "https://solana-rpc.publicnode.com",
   "rpcTransportEndpoint": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
@@ -8,10 +8,6 @@
   "directRequests": 0,
   "observedRelayMethods": [
     "getGenesisHash",
-    "getAccountInfo",
-    "getAccountInfo",
-    "getAccountInfo",
-    "getAccountInfo",
     "getAccountInfo"
   ],
   "fundingDisabled": true,

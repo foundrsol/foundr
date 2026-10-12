@@ -4,6 +4,8 @@ Current funding policy: [owner-authorized experimental Mainnet release](experime
 
 Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
 
+Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
+
 # Mainnet release preparation
 
 The website has a separate Mainnet SOL-vault implementation at `/`, and keeps

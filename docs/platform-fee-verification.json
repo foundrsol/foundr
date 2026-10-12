@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-12T18:20:16.431401+00:00",
+  "website": "https://sonic-perseus-9a1cxls.vercel.app",
+  "deploymentId": "dpl_GZvTPfaqVpGX9aPy6855fyKU57eJ",
+  "githubRepository": "https://github.com/foundrsol/foundr",
+  "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
+  "platformFee": {
+    "amountLamports": "10000000",
+    "recipient": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+    "trigger": "each separate new Mainnet vault activation through the SHELL app",
+    "atomicWithActivation": true,
+    "paidBy": "connected conventional wallet",
+    "chargedOnAutomaticRotation": false,
+    "chargedOnDepositOrWithdrawal": false,
+    "retroactive": false,
+    "enforcement": "Application transaction construction; immutable program direct calls can bypass it"
+  },
+  "tests": {
+    "unit": 66,
+    "compiledSbfMatrices": 3,
+    "localBrowser": 15,
+    "localBrowserSkipped": 3,
+    "localBrowserSkipReason": "The three HTTPS production RPC/history checks pass in the public suite.",
+    "localBrowserAppearance": "light",
+    "publicBrowser": 18,
+    "publicBrowserAppearance": "dark",
+    "mainnetOwnerLifecycle": true,
+    "allPassed": true
+  },
+  "phoneApprovalChecks": {
+    "390": {
+      "website": "https://sonic-perseus-9a1cxls.vercel.app",
+      "layout": {
+        "viewportWidth": 390,
+        "documentWidth": 390
+      },
+      "platformFeeLamports": "10000000",
+      "recipientVisible": true,
+      "readOnly": true,
+      "transactionsSubmitted": 0
+    },
+    "320": {
+      "website": "https://sonic-perseus-9a1cxls.vercel.app",
+      "layout": {
+        "viewportWidth": 320,
+        "documentWidth": 320
+      },
+      "platformFeeLamports": "10000000",
+      "recipientVisible": true,
+      "readOnly": true,
+      "transactionsSubmitted": 0
+    }
+  },
+  "customDomain": {
+    "url": "https://www.shellsafe.xyz",
+    "status": 200,
+    "redirect": null,
+    "matchesPublishedExport": true,
+    "htmlSha256": "d19a382ac3c896e729ebeb8a9829078c222f98d3a4b3886c323c78dce1a493c1",
+    "transactionsSubmitted": 0
+  },
+  "newMainnetTransactionsSubmitted": 0,
+  "programChanged": false,
+  "programBinarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+  "independentReviewVerified": false
+}

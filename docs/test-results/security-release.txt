@@ -19,16 +19,16 @@
 > shell-devnet@0.1.0 test
 > node --test --test-isolation=none --test-concurrency=1 tests/*.test.ts
 
-✔ Solana integer conversion uses the pinned non-native fork and accepts buffers longer than 32 bytes safely (3.580525ms)
-✔ the actual Solana SDK entrypoints do not load the remaining vulnerable streaming parser (230.225502ms)
-✔ history relay accepts only finalized public owner receipts and rejects transactions or substituted destinations (0.392075ms)
-✔ history server strips browser/credential headers, pins the upstream and fails closed without logging inputs (7.260952ms)
-✔ keeper SQL prevents duplicate nonce claims across processes and preserves ambiguous signed bytes across restart (7.840078ms)
-✔ public accounting deduplicates finalized receipts, detects altered records and rejects bogus burns (2.850458ms)
-✔ keeper renews an expired quote under its durable job ID before signing or broadcasting (61.775626ms)
-✔ owner-funded deployment requires verified network, absent account, exact checks and rent budget (0.709004ms)
-✔ bounded owner smoke permits a pending review but never accepts unverified or changed builds (6.854034ms)
-✔ owner smoke journal survives a fresh store and refuses concurrent writers before replacing encrypted state (188.782877ms)
+✔ Solana integer conversion uses the pinned non-native fork and accepts buffers longer than 32 bytes safely (3.079856ms)
+✔ the actual Solana SDK entrypoints do not load the remaining vulnerable streaming parser (236.701632ms)
+✔ history relay accepts only finalized public owner receipts and rejects transactions or substituted destinations (0.616564ms)
+✔ history server strips browser/credential headers, pins the upstream and fails closed without logging inputs (7.414352ms)
+✔ keeper SQL prevents duplicate nonce claims across processes and preserves ambiguous signed bytes across restart (6.526798ms)
+✔ public accounting deduplicates finalized receipts, detects altered records and rejects bogus burns (2.414999ms)
+✔ keeper renews an expired quote under its durable job ID before signing or broadcasting (60.633784ms)
+✔ owner-funded deployment requires verified network, absent account, exact checks and rent budget (0.515311ms)
+✔ bounded owner smoke permits a pending review but never accepts unverified or changed builds (4.286373ms)
+✔ owner smoke journal survives a fresh store and refuses concurrent writers before replacing encrypted state (180.114593ms)
 [SHELL mainnet diagnostics] {
   rpcEndpoint: 'https://solana-rpc.publicnode.com',
   rpcTransportEndpoint: 'https://solana-rpc.publicnode.com',
@@ -119,12 +119,12 @@
   deploymentStatus: 'missing',
   deploymentCause: 'No SHELL program account exists at DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4 on verified mainnet-beta. Funding and on-chain signing are disabled.'
 }
-✔ Mainnet explicitly fixes its endpoint/full genesis; missing deployment does not misidentify Phantom (3.154189ms)
-✔ Mainnet encrypted identities have explicit schema 2; network recovery and storage cannot mix (1624.010379ms)
-✔ Mainnet signatures bind their own domain and all outputs; fee/test-pool adaptation stays blocked (3205.574168ms)
-✔ Mainnet duplicate clicks/concurrent signing and fresh-browser recovery preserve a single operation (5053.942963ms)
-✔ Mainnet crash after binding/signing or before submission never frees a one-time key (6678.068645ms)
-✔ Mainnet RPC ambiguity and stale restoration stop alternate signing; identical retries reconcile (4227.852399ms)
+✔ Mainnet explicitly fixes its endpoint/full genesis; missing deployment does not misidentify Phantom (3.390677ms)
+✔ Mainnet encrypted identities have explicit schema 2; network recovery and storage cannot mix (1764.55498ms)
+✔ Mainnet signatures bind their own domain and all outputs; fee/test-pool adaptation stays blocked (3475.137631ms)
+✔ Mainnet duplicate clicks/concurrent signing and fresh-browser recovery preserve a single operation (5356.908215ms)
+✔ Mainnet crash after binding/signing or before submission never frees a one-time key (6810.9879ms)
+✔ Mainnet RPC ambiguity and stale restoration stop alternate signing; identical retries reconcile (4079.166257ms)
 [SHELL mainnet diagnostics] {
   rpcEndpoint: 'https://solana-rpc.publicnode.com',
   rpcTransportEndpoint: 'https://solana-rpc.publicnode.com',
@@ -545,8 +545,8 @@
   deploymentStatus: 'unverified',
   deploymentCause: 'Mainnet launch checks are incomplete: an immutable verified deployment, exact-build release authorization and finalized lifecycle verification are required. Funding is disabled.'
 }
-✔ Mainnet funding rejects mutable programs, legacy binaries, missing review and arbitrary smoke evidence (7.411069ms)
-✔ RPC validation accepts the full official Devnet hash and rejects the truncated CAIP identifier (0.218712ms)
+✔ Mainnet funding rejects mutable programs, legacy binaries, missing review and arbitrary smoke evidence (6.850238ms)
+✔ RPC validation accepts the full official Devnet hash and rejects the truncated CAIP identifier (0.252893ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -569,7 +569,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '5ENbNR8aPDoW6ufGyGmswDpZPuTWUhPYT3uBL57JJkVK',
+  walletPublicKey: '88UNn1N1FaTeQ7LdkuJfhLFoF8mKft3S7rqMoLHemR3A',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -577,7 +577,7 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ all frontend RPC endpoints are fixed to the official Devnet URL (0.848366ms)
+✔ all frontend RPC endpoints are fixed to the official Devnet URL (0.789346ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -600,7 +600,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '3izMH42D8s9eZ6uA7EMbRd71STqGwQgtkitB7qfK8cPV',
+  walletPublicKey: '5NyZCPmxyDbHZ8ZLcUevERTcJQ3nKdJnAEpp1sEmh2pF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -615,7 +615,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '3izMH42D8s9eZ6uA7EMbRd71STqGwQgtkitB7qfK8cPV',
+  walletPublicKey: '5NyZCPmxyDbHZ8ZLcUevERTcJQ3nKdJnAEpp1sEmh2pF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -630,7 +630,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '3izMH42D8s9eZ6uA7EMbRd71STqGwQgtkitB7qfK8cPV',
+  walletPublicKey: '5NyZCPmxyDbHZ8ZLcUevERTcJQ3nKdJnAEpp1sEmh2pF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -645,7 +645,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '3izMH42D8s9eZ6uA7EMbRd71STqGwQgtkitB7qfK8cPV',
+  walletPublicKey: '5NyZCPmxyDbHZ8ZLcUevERTcJQ3nKdJnAEpp1sEmh2pF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -660,7 +660,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '3izMH42D8s9eZ6uA7EMbRd71STqGwQgtkitB7qfK8cPV',
+  walletPublicKey: '5NyZCPmxyDbHZ8ZLcUevERTcJQ3nKdJnAEpp1sEmh2pF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -668,7 +668,7 @@
   deploymentStatus: 'missing',
   deploymentCause: 'No SHELL program account exists at H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds on verified devnet. Funding and on-chain signing are disabled.'
 }
-✔ Phantom connection without a network indicator is independent of verified RPC and missing program (2.024998ms)
+✔ Phantom connection without a network indicator is independent of verified RPC and missing program (1.789411ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -691,7 +691,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'ta7ZMxu3FRZuLpP6ottmjakLBtYRrhvE65XgHruLSYT',
+  walletPublicKey: '9BMEskSbR5vDyMGmjsSgr143ZXDbF9XH5PCcVW1ecRbF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -706,7 +706,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'ta7ZMxu3FRZuLpP6ottmjakLBtYRrhvE65XgHruLSYT',
+  walletPublicKey: '9BMEskSbR5vDyMGmjsSgr143ZXDbF9XH5PCcVW1ecRbF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -721,7 +721,7 @@
   rpcGenesis: null,
   rpcStatus: 'unavailable',
   rpcCause: 'Devnet RPC could not be verified: RPC timeout',
-  walletPublicKey: 'ta7ZMxu3FRZuLpP6ottmjakLBtYRrhvE65XgHruLSYT',
+  walletPublicKey: '9BMEskSbR5vDyMGmjsSgr143ZXDbF9XH5PCcVW1ecRbF',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -729,7 +729,7 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ RPC timeout is unavailable, not a network mismatch, and retains wallet connection (0.998122ms)
+✔ RPC timeout is unavailable, not a network mismatch, and retains wallet connection (0.886012ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -752,7 +752,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '5739uvcyhvCVptT7iatBruTx4V214RSEvZk14T5FwcTx',
+  walletPublicKey: 'G2ER7xXknWPtEVrBH2m4WQYGR697N7mwcFwJ7q3kruGo',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -767,7 +767,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '5739uvcyhvCVptT7iatBruTx4V214RSEvZk14T5FwcTx',
+  walletPublicKey: 'G2ER7xXknWPtEVrBH2m4WQYGR697N7mwcFwJ7q3kruGo',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -782,7 +782,7 @@
   rpcGenesis: 'unexpected-genesis',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '5739uvcyhvCVptT7iatBruTx4V214RSEvZk14T5FwcTx',
+  walletPublicKey: 'G2ER7xXknWPtEVrBH2m4WQYGR697N7mwcFwJ7q3kruGo',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -797,7 +797,7 @@
   rpcGenesis: 'unexpected-genesis',
   rpcStatus: 'mismatch',
   rpcCause: 'RPC network mismatch: expected devnet genesis EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG; received unexpected-genesis. Wallet network selection was not inspected.',
-  walletPublicKey: '5739uvcyhvCVptT7iatBruTx4V214RSEvZk14T5FwcTx',
+  walletPublicKey: 'G2ER7xXknWPtEVrBH2m4WQYGR697N7mwcFwJ7q3kruGo',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -805,7 +805,7 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ wrong RPC genesis blocks signing with exact expected and received hashes (1.903795ms)
+✔ wrong RPC genesis blocks signing with exact expected and received hashes (1.391027ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -828,7 +828,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '9KYwfE24AgAvwcPsZDezBbrBtDE6N5HESwtLHcxVC1gg',
+  walletPublicKey: 'H1JgGdwgFuTbcBVP6oH7onhR43bf977upRBxjJ9g7yqP',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -843,7 +843,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '9KYwfE24AgAvwcPsZDezBbrBtDE6N5HESwtLHcxVC1gg',
+  walletPublicKey: 'H1JgGdwgFuTbcBVP6oH7onhR43bf977upRBxjJ9g7yqP',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -858,7 +858,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '9KYwfE24AgAvwcPsZDezBbrBtDE6N5HESwtLHcxVC1gg',
+  walletPublicKey: 'H1JgGdwgFuTbcBVP6oH7onhR43bf977upRBxjJ9g7yqP',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -873,7 +873,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '9KYwfE24AgAvwcPsZDezBbrBtDE6N5HESwtLHcxVC1gg',
+  walletPublicKey: 'H1JgGdwgFuTbcBVP6oH7onhR43bf977upRBxjJ9g7yqP',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -888,7 +888,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '9KYwfE24AgAvwcPsZDezBbrBtDE6N5HESwtLHcxVC1gg',
+  walletPublicKey: 'H1JgGdwgFuTbcBVP6oH7onhR43bf977upRBxjJ9g7yqP',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -903,7 +903,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '9KYwfE24AgAvwcPsZDezBbrBtDE6N5HESwtLHcxVC1gg',
+  walletPublicKey: 'H1JgGdwgFuTbcBVP6oH7onhR43bf977upRBxjJ9g7yqP',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -933,7 +933,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '9Jq6qmLXNyhN7kaHb2XvHCdjupX5dTrLmEgjiU1Dy3aY',
+  walletPublicKey: '6AU9HMQyyAQGHJFq6rqcbzuZzdz8KkpGF14qt8xWsE76',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -948,7 +948,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '9Jq6qmLXNyhN7kaHb2XvHCdjupX5dTrLmEgjiU1Dy3aY',
+  walletPublicKey: '6AU9HMQyyAQGHJFq6rqcbzuZzdz8KkpGF14qt8xWsE76',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -963,7 +963,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '9Jq6qmLXNyhN7kaHb2XvHCdjupX5dTrLmEgjiU1Dy3aY',
+  walletPublicKey: '6AU9HMQyyAQGHJFq6rqcbzuZzdz8KkpGF14qt8xWsE76',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -978,7 +978,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '9Jq6qmLXNyhN7kaHb2XvHCdjupX5dTrLmEgjiU1Dy3aY',
+  walletPublicKey: '6AU9HMQyyAQGHJFq6rqcbzuZzdz8KkpGF14qt8xWsE76',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -993,7 +993,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '9Jq6qmLXNyhN7kaHb2XvHCdjupX5dTrLmEgjiU1Dy3aY',
+  walletPublicKey: '6AU9HMQyyAQGHJFq6rqcbzuZzdz8KkpGF14qt8xWsE76',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1001,7 +1001,7 @@
   deploymentStatus: 'unverified',
   deploymentCause: 'A program account exists, but source-matched deployment and security verification are incomplete. Funding is disabled.'
 }
-✔ a manifest mismatch is separate from RPC mismatch; ordinary accounts and unverified bytecode stay gated (2.286364ms)
+✔ a manifest mismatch is separate from RPC mismatch; ordinary accounts and unverified bytecode stay gated (2.070526ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -1024,7 +1024,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'FJ6miRDH2tRKCC21a5RH2r3wBQYbZtoGpK8EaUuwnvEb',
+  walletPublicKey: '2ojhoPb3D3Pg3QZdj31WFx7bmgnZ82GEW2NWHao3kFzN',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1039,7 +1039,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'FJ6miRDH2tRKCC21a5RH2r3wBQYbZtoGpK8EaUuwnvEb',
+  walletPublicKey: '2ojhoPb3D3Pg3QZdj31WFx7bmgnZ82GEW2NWHao3kFzN',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1054,7 +1054,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'FJ6miRDH2tRKCC21a5RH2r3wBQYbZtoGpK8EaUuwnvEb',
+  walletPublicKey: '2ojhoPb3D3Pg3QZdj31WFx7bmgnZ82GEW2NWHao3kFzN',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1069,7 +1069,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'FJ6miRDH2tRKCC21a5RH2r3wBQYbZtoGpK8EaUuwnvEb',
+  walletPublicKey: '2ojhoPb3D3Pg3QZdj31WFx7bmgnZ82GEW2NWHao3kFzN',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1084,7 +1084,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'FJ6miRDH2tRKCC21a5RH2r3wBQYbZtoGpK8EaUuwnvEb',
+  walletPublicKey: '2ojhoPb3D3Pg3QZdj31WFx7bmgnZ82GEW2NWHao3kFzN',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1099,7 +1099,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'FJ6miRDH2tRKCC21a5RH2r3wBQYbZtoGpK8EaUuwnvEb',
+  walletPublicKey: '2ojhoPb3D3Pg3QZdj31WFx7bmgnZ82GEW2NWHao3kFzN',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1129,7 +1129,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'Gi11NVDFUKioRnyjbqaDVpiXUFEVMjoxyDbhmPv4AVNw',
+  walletPublicKey: 'BH44ZgaR4xS6vrAdCdXbPtXk8jtgCojLQJDbGXX7C71R',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1144,7 +1144,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'Gi11NVDFUKioRnyjbqaDVpiXUFEVMjoxyDbhmPv4AVNw',
+  walletPublicKey: 'BH44ZgaR4xS6vrAdCdXbPtXk8jtgCojLQJDbGXX7C71R',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1159,7 +1159,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'Gi11NVDFUKioRnyjbqaDVpiXUFEVMjoxyDbhmPv4AVNw',
+  walletPublicKey: 'BH44ZgaR4xS6vrAdCdXbPtXk8jtgCojLQJDbGXX7C71R',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1174,7 +1174,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'Gi11NVDFUKioRnyjbqaDVpiXUFEVMjoxyDbhmPv4AVNw',
+  walletPublicKey: 'BH44ZgaR4xS6vrAdCdXbPtXk8jtgCojLQJDbGXX7C71R',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1189,7 +1189,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'Gi11NVDFUKioRnyjbqaDVpiXUFEVMjoxyDbhmPv4AVNw',
+  walletPublicKey: 'BH44ZgaR4xS6vrAdCdXbPtXk8jtgCojLQJDbGXX7C71R',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1204,7 +1204,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'Gi11NVDFUKioRnyjbqaDVpiXUFEVMjoxyDbhmPv4AVNw',
+  walletPublicKey: 'BH44ZgaR4xS6vrAdCdXbPtXk8jtgCojLQJDbGXX7C71R',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1234,7 +1234,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'FThFM1A5x4Q8HHHAg9MerQb7GeKWgHKTEqfyHnqUYGJV',
+  walletPublicKey: 'HVq99WQuwiSX9XUvYBJtRYnba6E7554GG1d5KZBgawqE',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1249,7 +1249,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'FThFM1A5x4Q8HHHAg9MerQb7GeKWgHKTEqfyHnqUYGJV',
+  walletPublicKey: 'HVq99WQuwiSX9XUvYBJtRYnba6E7554GG1d5KZBgawqE',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1264,7 +1264,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'FThFM1A5x4Q8HHHAg9MerQb7GeKWgHKTEqfyHnqUYGJV',
+  walletPublicKey: 'HVq99WQuwiSX9XUvYBJtRYnba6E7554GG1d5KZBgawqE',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1279,7 +1279,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'FThFM1A5x4Q8HHHAg9MerQb7GeKWgHKTEqfyHnqUYGJV',
+  walletPublicKey: 'HVq99WQuwiSX9XUvYBJtRYnba6E7554GG1d5KZBgawqE',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1294,7 +1294,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'FThFM1A5x4Q8HHHAg9MerQb7GeKWgHKTEqfyHnqUYGJV',
+  walletPublicKey: 'HVq99WQuwiSX9XUvYBJtRYnba6E7554GG1d5KZBgawqE',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1309,7 +1309,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'FThFM1A5x4Q8HHHAg9MerQb7GeKWgHKTEqfyHnqUYGJV',
+  walletPublicKey: 'HVq99WQuwiSX9XUvYBJtRYnba6E7554GG1d5KZBgawqE',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1339,7 +1339,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'CABdQSSnC7sogjKekXepXnh8mVpvdnTPm1M7pe19ifR1',
+  walletPublicKey: '7mmLDGQsrmxabFtJwFrkSJ9TzB9brg795KTsDbY7rybD',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1354,7 +1354,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'CABdQSSnC7sogjKekXepXnh8mVpvdnTPm1M7pe19ifR1',
+  walletPublicKey: '7mmLDGQsrmxabFtJwFrkSJ9TzB9brg795KTsDbY7rybD',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1369,7 +1369,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'CABdQSSnC7sogjKekXepXnh8mVpvdnTPm1M7pe19ifR1',
+  walletPublicKey: '7mmLDGQsrmxabFtJwFrkSJ9TzB9brg795KTsDbY7rybD',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1384,7 +1384,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'CABdQSSnC7sogjKekXepXnh8mVpvdnTPm1M7pe19ifR1',
+  walletPublicKey: '7mmLDGQsrmxabFtJwFrkSJ9TzB9brg795KTsDbY7rybD',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1399,7 +1399,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'CABdQSSnC7sogjKekXepXnh8mVpvdnTPm1M7pe19ifR1',
+  walletPublicKey: '7mmLDGQsrmxabFtJwFrkSJ9TzB9brg795KTsDbY7rybD',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1414,7 +1414,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'CABdQSSnC7sogjKekXepXnh8mVpvdnTPm1M7pe19ifR1',
+  walletPublicKey: '7mmLDGQsrmxabFtJwFrkSJ9TzB9brg795KTsDbY7rybD',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1444,7 +1444,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'Ae87H7zJffseifo8oncTfSMeG3DubbQuryiVCZNcU21A',
+  walletPublicKey: '3qoXi2cvDDjnbgZQus4o1ZnevuBEt65gY8kjaDJbxmb2',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1459,7 +1459,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'Ae87H7zJffseifo8oncTfSMeG3DubbQuryiVCZNcU21A',
+  walletPublicKey: '3qoXi2cvDDjnbgZQus4o1ZnevuBEt65gY8kjaDJbxmb2',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1474,7 +1474,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'Ae87H7zJffseifo8oncTfSMeG3DubbQuryiVCZNcU21A',
+  walletPublicKey: '3qoXi2cvDDjnbgZQus4o1ZnevuBEt65gY8kjaDJbxmb2',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1489,7 +1489,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'Ae87H7zJffseifo8oncTfSMeG3DubbQuryiVCZNcU21A',
+  walletPublicKey: '3qoXi2cvDDjnbgZQus4o1ZnevuBEt65gY8kjaDJbxmb2',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1504,7 +1504,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'Ae87H7zJffseifo8oncTfSMeG3DubbQuryiVCZNcU21A',
+  walletPublicKey: '3qoXi2cvDDjnbgZQus4o1ZnevuBEt65gY8kjaDJbxmb2',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1519,7 +1519,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'Ae87H7zJffseifo8oncTfSMeG3DubbQuryiVCZNcU21A',
+  walletPublicKey: '3qoXi2cvDDjnbgZQus4o1ZnevuBEt65gY8kjaDJbxmb2',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1549,7 +1549,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'ysduVt4Kguk5E15UdM6KKAmfuATFx59MB4oeRxYCRc8',
+  walletPublicKey: '28xaA3w48qw5oRKbqfJooWeXf4gZ3nim4xmBdt3DJjqv',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1564,7 +1564,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'ysduVt4Kguk5E15UdM6KKAmfuATFx59MB4oeRxYCRc8',
+  walletPublicKey: '28xaA3w48qw5oRKbqfJooWeXf4gZ3nim4xmBdt3DJjqv',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1579,7 +1579,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'ysduVt4Kguk5E15UdM6KKAmfuATFx59MB4oeRxYCRc8',
+  walletPublicKey: '28xaA3w48qw5oRKbqfJooWeXf4gZ3nim4xmBdt3DJjqv',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1594,7 +1594,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'ysduVt4Kguk5E15UdM6KKAmfuATFx59MB4oeRxYCRc8',
+  walletPublicKey: '28xaA3w48qw5oRKbqfJooWeXf4gZ3nim4xmBdt3DJjqv',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1609,7 +1609,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'ysduVt4Kguk5E15UdM6KKAmfuATFx59MB4oeRxYCRc8',
+  walletPublicKey: '28xaA3w48qw5oRKbqfJooWeXf4gZ3nim4xmBdt3DJjqv',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1624,7 +1624,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'ysduVt4Kguk5E15UdM6KKAmfuATFx59MB4oeRxYCRc8',
+  walletPublicKey: '28xaA3w48qw5oRKbqfJooWeXf4gZ3nim4xmBdt3DJjqv',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1654,7 +1654,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: 'C3BzDPreLpRvQ12sKnpFWGQ7LQejpQAdF185zEfkAYQ3',
+  walletPublicKey: 'Lwz5F5y3Wp8cM9b1bz5xvS1mhEDLMMzgFuAFVKxreHa',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1669,7 +1669,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'C3BzDPreLpRvQ12sKnpFWGQ7LQejpQAdF185zEfkAYQ3',
+  walletPublicKey: 'Lwz5F5y3Wp8cM9b1bz5xvS1mhEDLMMzgFuAFVKxreHa',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1684,7 +1684,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: 'C3BzDPreLpRvQ12sKnpFWGQ7LQejpQAdF185zEfkAYQ3',
+  walletPublicKey: 'Lwz5F5y3Wp8cM9b1bz5xvS1mhEDLMMzgFuAFVKxreHa',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1699,7 +1699,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'C3BzDPreLpRvQ12sKnpFWGQ7LQejpQAdF185zEfkAYQ3',
+  walletPublicKey: 'Lwz5F5y3Wp8cM9b1bz5xvS1mhEDLMMzgFuAFVKxreHa',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1714,7 +1714,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'C3BzDPreLpRvQ12sKnpFWGQ7LQejpQAdF185zEfkAYQ3',
+  walletPublicKey: 'Lwz5F5y3Wp8cM9b1bz5xvS1mhEDLMMzgFuAFVKxreHa',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1729,7 +1729,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: 'C3BzDPreLpRvQ12sKnpFWGQ7LQejpQAdF185zEfkAYQ3',
+  walletPublicKey: 'Lwz5F5y3Wp8cM9b1bz5xvS1mhEDLMMzgFuAFVKxreHa',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1759,7 +1759,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '4y6tzQLeudcWKFwFVMzyd6vKxaPmasGY2wd3riUg96Ay',
+  walletPublicKey: '6hsAdEL2jigSaXvcMFkvJ3ZXaRARkCVKxqMxnC3JxRs',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1774,7 +1774,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '4y6tzQLeudcWKFwFVMzyd6vKxaPmasGY2wd3riUg96Ay',
+  walletPublicKey: '6hsAdEL2jigSaXvcMFkvJ3ZXaRARkCVKxqMxnC3JxRs',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1789,7 +1789,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '4y6tzQLeudcWKFwFVMzyd6vKxaPmasGY2wd3riUg96Ay',
+  walletPublicKey: '6hsAdEL2jigSaXvcMFkvJ3ZXaRARkCVKxqMxnC3JxRs',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1804,7 +1804,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '4y6tzQLeudcWKFwFVMzyd6vKxaPmasGY2wd3riUg96Ay',
+  walletPublicKey: '6hsAdEL2jigSaXvcMFkvJ3ZXaRARkCVKxqMxnC3JxRs',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1819,7 +1819,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '4y6tzQLeudcWKFwFVMzyd6vKxaPmasGY2wd3riUg96Ay',
+  walletPublicKey: '6hsAdEL2jigSaXvcMFkvJ3ZXaRARkCVKxqMxnC3JxRs',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1834,7 +1834,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '4y6tzQLeudcWKFwFVMzyd6vKxaPmasGY2wd3riUg96Ay',
+  walletPublicKey: '6hsAdEL2jigSaXvcMFkvJ3ZXaRARkCVKxqMxnC3JxRs',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1842,7 +1842,7 @@
   deploymentStatus: 'invalid',
   deploymentCause: 'Invalid deployment data'
 }
-✔ funding requires verified program owner, bytecode, ProgramData, deployment slot and upgrade authority (9.883926ms)
+✔ funding requires verified program owner, bytecode, ProgramData, deployment slot and upgrade authority (16.461638ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -1865,7 +1865,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1880,7 +1880,7 @@
   rpcGenesis: null,
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1895,7 +1895,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'checking',
   rpcCause: null,
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1910,7 +1910,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1925,7 +1925,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1940,7 +1940,7 @@
   rpcGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1955,7 +1955,7 @@
   rpcGenesis: 'wrong-network',
   rpcStatus: 'verified',
   rpcCause: null,
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1970,7 +1970,7 @@
   rpcGenesis: 'wrong-network',
   rpcStatus: 'mismatch',
   rpcCause: 'RPC network mismatch: expected devnet genesis EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG; received wrong-network. Wallet network selection was not inspected.',
-  walletPublicKey: '6JTrcQedSuM3xN3RqWAmHi6UXQeX3DA7UmR8kZ7gRogQ',
+  walletPublicKey: '9guhRAVXux6kp6HLQbzSiNURxxizNwTudnwxM762ZE3T',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -1978,7 +1978,7 @@
   deploymentStatus: 'verified',
   deploymentCause: null
 }
-✔ wallet signs a Devnet-built message, substitution is rejected, and only the verified RPC submits (23.064367ms)
+✔ wallet signs a Devnet-built message, substitution is rejected, and only the verified RPC submits (35.715515ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -2001,7 +2001,7 @@
   rpcGenesis: null,
   rpcStatus: 'unchecked',
   rpcCause: null,
-  walletPublicKey: '9duB39Hj957FCevp3QkyJaXe1fiTrXqxsNSFWYn7yEgC',
+  walletPublicKey: 'ABH2WwkmigsbnsUPzdgLcPcMw8snBrFUwbF45TcmFFPu',
   walletProvider: 'Phantom',
   walletNetwork: 'not exposed; not verified',
   programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
@@ -2009,9 +2009,11 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ diagnostic logging whitelist excludes passwords, recovery data and signing keys (0.63328ms)
-✔ RPC correction preserves the existing v1 authorization preimage exactly (0.510499ms)
-✔ offline recovery retains the original encrypted identity and blocks signing until reconciliation (2082.906843ms)
+✔ diagnostic logging whitelist excludes passwords, recovery data and signing keys (0.655873ms)
+✔ RPC correction preserves the existing v1 authorization preimage exactly (0.463282ms)
+✔ offline recovery retains the original encrypted identity and blocks signing until reconciliation (1941.729845ms)
+✔ the activation fee is exactly 0.01 SOL in integer lamports and only applies to Mainnet (0.533769ms)
+✔ only a new Mainnet vault activation includes one exact transfer from the wallet to the selected recipient (2.886983ms)
 [SHELL mainnet diagnostics] {
   rpcEndpoint: 'https://solana-rpc.publicnode.com',
   rpcTransportEndpoint: 'https://solana-rpc.publicnode.com',
@@ -2027,7 +2029,9 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ incoming System SOL stays uninitialized; activation quotes only the exact missing rent and rejects unsafe amounts (1.728389ms)
+✔ the wallet cannot substitute, reduce or omit the approved fee; the exact fee is included in the signed message and balance check (28.751855ms)
+✔ every separate new vault pays once; duplicate calls, reloads, withdrawals and automatic rotations do not pay again (5747.725575ms)
+✔ ambiguous submission and a crash before broadcast retry the identical activation without collecting twice (4743.567987ms)
 [SHELL mainnet diagnostics] {
   rpcEndpoint: 'https://solana-rpc.publicnode.com',
   rpcTransportEndpoint: 'https://solana-rpc.publicnode.com',
@@ -2043,19 +2047,35 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ a prefunded activation needs the exact wallet fee, not a second rent payment; insufficient fees never request a signature (35.26322ms)
-✔ fee previews use exact lamports, configured rates, ceiling and an absolute cap (0.516943ms)
-✔ revenue allocation conserves every unit and carries integer dust across payments (0.224991ms)
-✔ keeper pool quotes enforce real liquidity, impact, size and minimum output (0.568101ms)
-✔ SPL precision never rounds, truncates, or accepts floating-point exponent notation (0.40233ms)
-✔ devnet-v1: a legacy 100-shell signed package recovers, retains identical bytes, and completes withdrawal (4764.514238ms)
-✔ mainnet-v2: a legacy 100-shell signed package recovers, retains identical bytes, and completes withdrawal (4754.52415ms)
-✔ completed transaction history is bounded without deleting unresolved signed bytes (2271.799883ms)
-✔ a full unresolved journal stops before requesting another wallet signature and preserves its transactions (1755.516081ms)
-✔ oversized encrypted state is rejected before replacing a recoverable local identity (1387.675096ms)
-✔ experimental authorization must bind the exact source, binary, deployment and factual disclosure (0.408941ms)
-✔ experimental policy does not fabricate a review or bypass build and lifecycle prerequisites (0.205613ms)
-✔ reviewed releases still require their own exact-build review; an experimental flag cannot replace it (0.163609ms)
+✔ incoming System SOL stays uninitialized; activation quotes only the exact missing rent and rejects unsafe amounts (2.444353ms)
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  rpcTransportEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: null,
+  rpcStatus: 'unchecked',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+✔ a prefunded activation needs the platform fee and exact network fee, not a second rent payment; insufficient fees never request a signature (43.858058ms)
+✔ fee previews use exact lamports, configured rates, ceiling and an absolute cap (0.667841ms)
+✔ revenue allocation conserves every unit and carries integer dust across payments (0.185921ms)
+✔ keeper pool quotes enforce real liquidity, impact, size and minimum output (0.324551ms)
+✔ SPL precision never rounds, truncates, or accepts floating-point exponent notation (0.404032ms)
+✔ devnet-v1: a legacy 100-shell signed package recovers, retains identical bytes, and completes withdrawal (4740.099439ms)
+✔ mainnet-v2: a legacy 100-shell signed package recovers, retains identical bytes, and completes withdrawal (4787.597478ms)
+✔ completed transaction history is bounded without deleting unresolved signed bytes (2245.239071ms)
+✔ a full unresolved journal stops before requesting another wallet signature and preserves its transactions (1824.106327ms)
+✔ oversized encrypted state is rejected before replacing a recoverable local identity (1444.409791ms)
+✔ experimental authorization must bind the exact source, binary, deployment and factual disclosure (0.462481ms)
+✔ experimental policy does not fabricate a review or bypass build and lifecycle prerequisites (0.236568ms)
+✔ reviewed releases still require their own exact-build review; an experimental flag cannot replace it (0.144148ms)
 [SHELL mainnet diagnostics] {
   rpcEndpoint: 'https://solana-rpc.publicnode.com',
   rpcTransportEndpoint: 'https://shell.example/api/mainnet-rpc',
@@ -2176,33 +2196,33 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ HTTPS Mainnet requests use the same-origin relay with no cookies, redirect or cache; Devnet stays official (6.336501ms)
-✔ RPC transport cannot substitute another destination or alter network-specific funding checks (0.448381ms)
-✔ upstream Rust golden signatures reconstruct all N=22 Merkle roots (410.054619ms)
-✔ create, verified backup, deposit, partial withdrawal, full withdrawal, and two rotations (5424.508847ms)
-✔ recovery package is mandatory before funding and again after preparing new keys (1825.285527ms)
-✔ ordinary wallet only, wrong keys, modified amount/recipient/change vault, and replay are rejected (4031.006858ms)
-✔ duplicate clicks and concurrent tabs have only one intended operation (3102.40259ms)
-✔ separate restored browsers race the same key: chain first-writer commitment blocks the loser (4226.285176ms)
-✔ reload/crash after durable signing intent or signature preserves identical authorization (6702.604237ms)
-✔ timeout after actual execution reconciles to consumed without spending twice (3516.519266ms)
-✔ unsubmitted ambiguous transaction blocks new messages and permits identical raw retransmission (4012.459628ms)
-✔ failed and expired transactions permit a new blockhash only for the identical WOTS operation (7637.77288ms)
-✔ clean browser recovery follows confirmed rotation; stale packages block committed and consumed keys (4231.032811ms)
-✔ signing before finalized commit and stale unsigned-package operation substitution are blocked (3498.602192ms)
-✔ authenticated encryption rejects wrong password, tampering, and never replaces identities (2336.144208ms)
-✔ fees, rent, insufficient balance, exact lamports and forbidden rounding (3302.056802ms)
-✔ network and deployment mismatches reject operations and recovery (1697.068641ms)
-✔ authorization binds the program, old vault, coordinator and all operation outputs (2399.79164ms)
-✔ actual React page renders devnet banner, separate balances and real funding gates (183.245186ms)
-ℹ tests 61
+✔ HTTPS Mainnet requests use the same-origin relay with no cookies, redirect or cache; Devnet stays official (3.929613ms)
+✔ RPC transport cannot substitute another destination or alter network-specific funding checks (1.443807ms)
+✔ upstream Rust golden signatures reconstruct all N=22 Merkle roots (378.345404ms)
+✔ create, verified backup, deposit, partial withdrawal, full withdrawal, and two rotations (5006.287701ms)
+✔ recovery package is mandatory before funding and again after preparing new keys (1873.396057ms)
+✔ ordinary wallet only, wrong keys, modified amount/recipient/change vault, and replay are rejected (3803.07874ms)
+✔ duplicate clicks and concurrent tabs have only one intended operation (3130.160153ms)
+✔ separate restored browsers race the same key: chain first-writer commitment blocks the loser (4156.06525ms)
+✔ reload/crash after durable signing intent or signature preserves identical authorization (6789.697282ms)
+✔ timeout after actual execution reconciles to consumed without spending twice (3045.153825ms)
+✔ unsubmitted ambiguous transaction blocks new messages and permits identical raw retransmission (3600.464854ms)
+✔ failed and expired transactions permit a new blockhash only for the identical WOTS operation (7161.029016ms)
+✔ clean browser recovery follows confirmed rotation; stale packages block committed and consumed keys (4381.712469ms)
+✔ signing before finalized commit and stale unsigned-package operation substitution are blocked (3431.08606ms)
+✔ authenticated encryption rejects wrong password, tampering, and never replaces identities (2437.93062ms)
+✔ fees, rent, insufficient balance, exact lamports and forbidden rounding (3331.177211ms)
+✔ network and deployment mismatches reject operations and recovery (1747.981146ms)
+✔ authorization binds the program, old vault, coordinator and all operation outputs (2307.884122ms)
+✔ actual React page renders devnet banner, separate balances and real funding gates (189.896454ms)
+ℹ tests 66
 ℹ suites 0
-ℹ pass 61
+ℹ pass 66
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 97450.010667
+ℹ duration_ms 106908.592608
 
 > shell-devnet@0.1.0 test:programs
 > node scripts/program-tests.mjs
@@ -2252,7 +2272,7 @@
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ real SBF protocol: atomic paid vault, SOL/SPL revenue, actual swaps/burns, governance and operator escrow (4755.461184ms)
+✔ real SBF protocol: atomic paid vault, SOL/SPL revenue, actual swaps/burns, governance and operator escrow (4425.118993ms)
 [SHELL devnet diagnostics] {
   rpcEndpoint: 'https://api.devnet.solana.com',
   rpcTransportEndpoint: 'https://api.devnet.solana.com',
@@ -2263,7 +2283,7 @@
   walletPublicKey: null,
   walletProvider: null,
   walletNetwork: 'not exposed; not verified',
-  programId: 'Dypa5HZHpWuS4DDUvh1sY6m4xDLytPUZyjyFvhke7oJ1',
+  programId: '313WXpuuz7V21KSwhF8pYDEnot4Q3RfRmdeYoAhsyVZ9',
   manifestVerified: false,
   deploymentStatus: 'unchecked',
   deploymentCause: null
@@ -2278,7 +2298,7 @@
   walletPublicKey: null,
   walletProvider: null,
   walletNetwork: 'not exposed; not verified',
-  programId: 'Dypa5HZHpWuS4DDUvh1sY6m4xDLytPUZyjyFvhke7oJ1',
+  programId: '313WXpuuz7V21KSwhF8pYDEnot4Q3RfRmdeYoAhsyVZ9',
   manifestVerified: false,
   deploymentStatus: 'unchecked',
   deploymentCause: null
@@ -2293,12 +2313,12 @@
   walletPublicKey: null,
   walletProvider: null,
   walletNetwork: 'not exposed; not verified',
-  programId: 'Dypa5HZHpWuS4DDUvh1sY6m4xDLytPUZyjyFvhke7oJ1',
+  programId: '313WXpuuz7V21KSwhF8pYDEnot4Q3RfRmdeYoAhsyVZ9',
   manifestVerified: false,
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ SBF devnet-v1: lifecycle, adversarial authorization, cross-network rejection, replay and clean-store recovery (9806.268394ms)
+✔ SBF devnet-v1: lifecycle, adversarial authorization, cross-network rejection, replay and clean-store recovery (8810.625628ms)
 [SHELL mainnet diagnostics] {
   rpcEndpoint: 'https://solana-rpc.publicnode.com',
   rpcTransportEndpoint: 'https://solana-rpc.publicnode.com',
@@ -2309,7 +2329,7 @@
   walletPublicKey: null,
   walletProvider: null,
   walletNetwork: 'not exposed; not verified',
-  programId: '97w6k1KfrPzNKHTMqbm5tWeRCXNDqE45ccLwopybLPL9',
+  programId: '34CssYtXjnN9bie8RrqihyZ76W69PjiaQQTdjxm8AHjV',
   manifestVerified: false,
   deploymentStatus: 'unchecked',
   deploymentCause: null
@@ -2324,7 +2344,7 @@
   walletPublicKey: null,
   walletProvider: null,
   walletNetwork: 'not exposed; not verified',
-  programId: '97w6k1KfrPzNKHTMqbm5tWeRCXNDqE45ccLwopybLPL9',
+  programId: '34CssYtXjnN9bie8RrqihyZ76W69PjiaQQTdjxm8AHjV',
   manifestVerified: false,
   deploymentStatus: 'unchecked',
   deploymentCause: null
@@ -2339,12 +2359,12 @@
   walletPublicKey: null,
   walletProvider: null,
   walletNetwork: 'not exposed; not verified',
-  programId: '97w6k1KfrPzNKHTMqbm5tWeRCXNDqE45ccLwopybLPL9',
+  programId: '34CssYtXjnN9bie8RrqihyZ76W69PjiaQQTdjxm8AHjV',
   manifestVerified: false,
   deploymentStatus: 'unchecked',
   deploymentCause: null
 }
-✔ SBF mainnet-v2: lifecycle, adversarial authorization, cross-network rejection, replay and clean-store recovery (30648.726615ms)
+✔ SBF mainnet-v2: lifecycle, adversarial authorization, cross-network rejection, replay and clean-store recovery (29534.052417ms)
 ℹ tests 3
 ℹ suites 0
 ℹ pass 3
@@ -2352,54 +2372,54 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 45690.147536
+ℹ duration_ms 43188.783178
 
 > shell-devnet@0.1.0 test:browser
 > playwright test
 
-[2m[WebServer] [22m(node:11020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(node:17013) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 [2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
-[2m[WebServer] [22m(node:11033) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(node:17026) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 [2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
-[2m[WebServer] [22m(node:11045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(node:17038) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 [2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
 
 Running 18 tests using 1 worker
 
-(node:11064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:17057) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:11064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:17057) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓   1 tests/browser/mainnet.spec.ts:61:1 › Mainnet connects Phantom without a network indicator and keeps undeployed funding separately blocked (1.3s)
+  ✓   1 tests/browser/mainnet.spec.ts:62:1 › Mainnet connects Phantom without a network indicator and keeps undeployed funding separately blocked (1.3s)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓   2 tests/browser/mainnet.spec.ts:87:1 › Mainnet rejects a Devnet RPC hash without disconnecting the wallet (851ms)
-[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
-[2m[WebServer] [22mReact will never use eval() in production mode 
-[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
-[2m[WebServer] [22mReact will never use eval() in production mode 
+  ✓   2 tests/browser/mainnet.spec.ts:88:1 › Mainnet rejects a Devnet RPC hash without disconnecting the wallet (897ms)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓   3 tests/browser/mainnet.spec.ts:104:1 › Mainnet real browser encryption, clean recovery and network switching retain isolated identities (4.9s)
-  -   4 tests/browser/mainnet.spec.ts:190:1 › real pinned Mainnet RPC verifies genesis and the configured release without requesting a transaction
-  -   5 tests/browser/mainnet.spec.ts:231:1 › production Mainnet stays verified when direct browser access to PublicNode is blocked
-  -   6 tests/browser/mainnet.spec.ts:278:1 › RPC-verified Mainnet setup enables activation only for an authorized public release
+[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[2m[WebServer] [22mReact will never use eval() in production mode 
+[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[2m[WebServer] [22mReact will never use eval() in production mode 
+  ✓   3 tests/browser/mainnet.spec.ts:105:1 › Mainnet real browser encryption, clean recovery and network switching retain isolated identities (4.4s)
+  -   4 tests/browser/mainnet.spec.ts:191:1 › real pinned Mainnet RPC verifies genesis and the configured release without requesting a transaction
+  -   5 tests/browser/mainnet.spec.ts:232:1 › production Mainnet stays verified when direct browser access to PublicNode is blocked
+  -   6 tests/browser/mainnet.spec.ts:279:1 › RPC-verified Mainnet setup enables activation only for an authorized public release
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
   ✓   7 tests/browser/network.spec.ts:118:1 › Phantom connects without network metadata; full Devnet genesis is verified and missing deployment stays separate (1.1s)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓   8 tests/browser/network.spec.ts:173:5 › RPC unexpected-cluster retains successful wallet connection and blocks funding (846ms)
+  ✓   8 tests/browser/network.spec.ts:173:5 › RPC unexpected-cluster retains successful wallet connection and blocks funding (897ms)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓   9 tests/browser/network.spec.ts:173:5 › RPC timeout retains successful wallet connection and blocks funding (873ms)
+  ✓   9 tests/browser/network.spec.ts:173:5 › RPC timeout retains successful wallet connection and blocks funding (875ms)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓  10 tests/browser/network.spec.ts:192:1 › real official Devnet RPC verifies its full hash in the hosted browser, with no program account (2.8s)
+  ✓  10 tests/browser/network.spec.ts:192:1 › real official Devnet RPC verifies its full hash in the hosted browser, with no program account (2.5s)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
   ✓  11 tests/browser/protocol.spec.ts:4:1 › contract-address section visibly awaits the real CA and cannot copy a placeholder (654ms)
@@ -2407,24 +2427,24 @@ Running 18 tests using 1 worker
 [2m[WebServer] [22mReact will never use eval() in production mode 
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓  12 tests/browser/protocol.spec.ts:21:1 › verified and owner-supplied CAs display in full and copy exactly to the clipboard (1.8s)
+  ✓  12 tests/browser/protocol.spec.ts:21:1 › verified and owner-supplied CAs display in full and copy exactly to the clipboard (1.6s)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓  13 tests/browser/protocol.spec.ts:51:1 › protocol dashboard shows no invented financial metrics while deployment is missing; mobile page fits (1.2s)
-[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
-[2m[WebServer] [22mReact will never use eval() in production mode 
-[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
-[2m[WebServer] [22mReact will never use eval() in production mode 
-[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
-[2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓  14 tests/browser/recovery.spec.ts:4:1 › real browser: create, encrypted export/verification, reload/unlock and clean-profile recovery (9.7s)
+  ✓  13 tests/browser/protocol.spec.ts:51:1 › protocol dashboard shows no invented financial metrics while deployment is missing; mobile page fits (1.1s)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓  15 tests/browser/recovery.spec.ts:83:1 › responsive navigation explains setup, returns to the vault and preserves appearance without a Devnet option (1.6s)
+  ✓  14 tests/browser/recovery.spec.ts:4:1 › real browser: create, encrypted export/verification, reload/unlock and clean-profile recovery (9.6s)
+[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[2m[WebServer] [22mReact will never use eval() in production mode 
+[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[2m[WebServer] [22mReact will never use eval() in production mode 
+[2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[2m[WebServer] [22mReact will never use eval() in production mode 
+  ✓  15 tests/browser/recovery.spec.ts:83:1 › responsive navigation explains setup, returns to the vault and preserves appearance without a Devnet option (1.2s)
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
   ✓  16 tests/browser/recovery.spec.ts:151:1 › browser storage that ignores strict durability cannot create a signing identity (1.3s)
@@ -2447,7 +2467,7 @@ Running 18 tests using 1 worker
 [2m[WebServer] [22mReact will never use eval() in production mode 
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓  17 tests/browser/vault.spec.ts:18:52 › browser + compiled SBF devnet-v1: backup, deposit, partial/full rotation and clean-browser recovery (18.5s)
+  ✓  17 tests/browser/vault.spec.ts:19:52 › browser + compiled SBF devnet-v1: backup, deposit, partial/full rotation and clean-browser recovery (17.7s)
 [SHELL devnet diagnostics] {
   rpcEndpoint: [32m'https://api.devnet.solana.com'[39m,
   rpcTransportEndpoint: [32m'https://api.devnet.solana.com'[39m,
@@ -3339,28 +3359,28 @@ Running 18 tests using 1 worker
 [2m[WebServer] [22mReact will never use eval() in production mode 
 [2m[WebServer] [22m[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
 [2m[WebServer] [22mReact will never use eval() in production mode 
-  ✓  18 tests/browser/vault.spec.ts:18:52 › browser + compiled SBF mainnet-v2: backup, deposit, partial/full rotation and clean-browser recovery (24.9s)
+  ✓  18 tests/browser/vault.spec.ts:19:52 › browser + compiled SBF mainnet-v2: backup, deposit, partial/full rotation and clean-browser recovery (25.3s)
 
   3 skipped
-  15 passed (1.3m)
+  15 passed (1.2m)
 
 > shell-devnet@0.1.0 build
 > next build --webpack
 
 ▲ Next.js 16.4.0 (webpack)
 - Environments: .env.local
-✓ Running next.config.ts took 20ms
+✓ Running next.config.ts took 28ms
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.5s
+✓ Compiled successfully in 2.4s
   Running TypeScript ...
-  Finished TypeScript in 2.8s ...
+  Finished TypeScript in 2.9s ...
   Collecting page data using 4 workers ...
   Generating static pages using 4 workers (0/6) ...
   Generating static pages using 4 workers (1/6) 
   Generating static pages using 4 workers (2/6) 
   Generating static pages using 4 workers (4/6) 
-✓ Generating static pages using 4 workers (6/6) in 261ms
+✓ Generating static pages using 4 workers (6/6) in 246ms
   Finalizing page optimization ...
   Collecting build traces ...
 

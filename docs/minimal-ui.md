@@ -4,6 +4,8 @@ Current funding policy: [owner-authorized experimental Mainnet release](experime
 
 Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
 
+Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
+
 # Minimalist wallet interface
 
 The current [SHELL website](https://sonic-perseus-9a1cxls.vercel.app/) uses a light default appearance with an optional saved dark mode, system typography, restrained controls and a small mint hermit crab. One central card puts the vault balance first and the connected-wallet balance below it. Create your vault, Add SOL and Send SOL share that card; Back up vault and Restore vault remain directly available. A short next-step line changes with setup status.

@@ -1,3 +1,4 @@
+import { activationPlatformFee, PLATFORM_FEE_RECIPIENT } from '../../src/core/platform-fee.ts';
 // Real browser cryptography and actual local SBF execution behind an explicit
 // test RPC fixture. This is NOT a Devnet deployment or the real Phantom extension.
 import { test, expect, type Page } from '@playwright/test';
@@ -112,12 +113,12 @@ for (const profile of ['devnet-v1', 'mainnet-v2'] as const) test(`browser + comp
     const funding = new Transaction({ feePayer: donor.publicKey, recentBlockhash: r.svm.latestBlockhash() }).add(SystemProgram.transfer({ fromPubkey: donor.publicKey, toPubkey: new PublicKey(localAddress), lamports: 90_998_331 }));
     funding.sign(donor); await r.connection.sendRawTransaction(funding.serialize());
     const account = r.svm.getAccount(address(payer.publicKey.toBase58()));
-    r.svm.setAccount({ ...account, address: address(payer.publicKey.toBase58()), lamports: lamports(10_000n) });
+    r.svm.setAccount({ ...account, address: address(payer.publicKey.toBase58()), lamports: lamports(10_000n + activationPlatformFee(profile)) });
     await page.getByRole('button', { name: 'Refresh finalized balances' }).click();
     await expect(page.locator('.vault-card .balance')).toContainText('0.090998331');
     await expect(page.locator('.vault-card')).toContainText('SOL awaiting activation');
     await expect(page.getByRole('button', { name: 'Add SOL', exact: true })).toBeDisabled();
-    await page.getByText('Network costs', { exact: true }).click();
+    await page.getByText('Fees and rent', { exact: true }).click();
     await expect(page.getByTestId('activation-cost')).toContainText('0.000010000 SOL transaction fee + 0.000000000 SOL rent top-up');
     directSpendable = 90_998_331n - r.svm.minimumBalanceForRentExemption(172n);
     await page.reload();
@@ -129,7 +130,17 @@ for (const profile of ['devnet-v1', 'mainnet-v2'] as const) test(`browser + comp
     await expect(page.locator('.vault-card .balance')).toContainText('0.090998331');
     await expect(page.locator('.vault-card')).toContainText('SOL awaiting activation');
   }
-  await page.getByRole('button',{name:`Activate vault`}).click();await expect(page.getByRole('button',{name:'Add SOL',exact:true})).toBeEnabled();
+  const platformBalanceBefore = r.svm.getBalance(address(PLATFORM_FEE_RECIPIENT)) ?? 0n;
+  await page.getByRole('button',{name:'Activate vault',exact:true}).click();
+  if (isMainnet) {
+    await expect(page.getByTestId('activation-platform-fee')).toContainText('0.010000000 SOL');
+    await expect(page.getByTestId('activation-total')).toContainText('0.010010000 SOL');
+    await page.getByText('Platform fee recipient', { exact: true }).click();
+    await expect(page.getByTestId('platform-fee-recipient')).toHaveText(PLATFORM_FEE_RECIPIENT);
+  }
+  await page.getByRole('button',{name:'Approve activation in wallet',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Add SOL',exact:true})).toBeEnabled();
+  expect(r.svm.getBalance(address(PLATFORM_FEE_RECIPIENT)) ?? 0n).toBe(platformBalanceBefore + activationPlatformFee(profile));
   if (isMainnet) {
     await expect(page.locator('.vault-card')).toContainText('SHELL vault');
     await expect(page.locator('.vault-card .balance')).toContainText(formatSol(directSpendable));
@@ -143,5 +154,5 @@ for (const profile of ['devnet-v1', 'mainnet-v2'] as const) test(`browser + comp
   expect(r.svm.getBalance(address(recipient.toBase58()))).toBe(40_000_000n);
   const current=await page.locator('.full-address').textContent(), clean=await browser.newContext(), recovered=await clean.newPage();await install(recovered);await recovered.goto(routePath);await recovered.getByRole('button',{name:'Connect wallet',exact:true}).click();await recovered.getByRole('button',{name:'Restore vault',exact:true}).click();await recovered.getByLabel('Encrypted SHELL package').setInputFiles(rotationBackup);await recovered.getByLabel('Recovery password',{exact:true}).fill(PASSWORD);await recovered.getByRole('button',{name:'Restore from file'}).click();await expect(recovered.locator('.full-address')).toHaveText(current!);
   await recovered.getByRole('button',{name:'Send SOL',exact:true}).click();await recovered.getByRole('button',{name:'Full balance',exact:true}).click();await recovered.getByLabel('Recipient’s Solana address').fill(recipient.toBase58());await recovered.getByRole('button',{name:'Prepare send & save backup'}).click();await backup(recovered);await recovered.getByRole('button',{name:`Confirm send details on ${networkLabel}`}).click();await recovered.getByRole('button',{name:'Send SOL & change keys'}).click();await expect(recovered.locator('.vault-card .balance')).toContainText('0.000000000');
-  expect(r.svm.getBalance(address(recipient.toBase58()))).toBe(100_000_000n + directSpendable);expect(successes.length).toBe(6);await clean.close();
+  expect(r.svm.getBalance(address(recipient.toBase58()))).toBe(100_000_000n + directSpendable);expect(successes.length).toBe(6);expect(r.svm.getBalance(address(PLATFORM_FEE_RECIPIENT)) ?? 0n).toBe(platformBalanceBefore + activationPlatformFee(profile));await clean.close();
 });

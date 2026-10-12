@@ -1,6 +1,6 @@
 # SHELL
 
-A free experimental Solana security-vault prototype. A conventional wallet funds deposits and pays fees; a separate Winternitz one-time signature authorizes each SOL withdrawal. Remaining funds rotate into a fresh vault with fresh signing keys. Basic vault software has no SHELL protocol fee; Solana network fees and permanent vault rent still apply. Recovery packages and vault keys stay encrypted in the browser. Browser signing does not provide a hardware secure element, and no superiority over Ledger hardware is claimed.
+An experimental Solana security-vault prototype. A conventional wallet funds deposits and pays fees; a separate Winternitz one-time signature authorizes each SOL withdrawal. Remaining funds rotate into a fresh vault with fresh signing keys. Each separate new Mainnet vault activated through the SHELL app has a one-time 0.01 SOL platform fee. Deposits, withdrawals and automatic shell rotations have no additional platform fee; Solana network fees and permanent vault rent still apply. See [activation fees](docs/platform-fee.md). Recovery packages and vault keys stay encrypted in the browser. Browser signing does not provide a hardware secure element, and no superiority over Ledger hardware is claimed.
 
 **Public website:** https://sonic-perseus-9a1cxls.vercel.app
 
@@ -40,7 +40,7 @@ Compiled-program tests require all three SBF binaries: Devnet vault, Mainnet vau
 
 `bash scripts/verify-runtime.sh` prepares pinned Linux development tools, builds both programs and the real Anchor IDL, tests exact binaries, checks Devnet, and attempts deployment with disposable keys. It stops on failure. For an archive without private deployment keys, `SHELL_NEW_DEVELOPMENT_DEPLOYMENT=1 npm run keys:devnet` explicitly creates a new **unfunded Devnet fork**; rebuild both programs and regenerate the IDL afterward. Never replace a funded deployment identity.
 
-The Anchor protocol supplies optional premium receipts, atomic SOL/SPL fees, 80/20 accounting, controlled Devnet buyback/burn test pools, multisig treasury release, optional operator stake without slashing, and a durable SQLite keeper. The base vault is free; integrators must require verified premium receipts for paid entitlements. There is no hosted enterprise API or enabled production DEX adapter. See [protocol](docs/protocol.md).
+The Anchor protocol supplies optional premium receipts, atomic SOL/SPL fees, 80/20 accounting, controlled Devnet buyback/burn test pools, multisig treasury release, optional operator stake without slashing, and a durable SQLite keeper. The immutable base program has no compulsory fee; the SHELL app charges 0.01 SOL on initial Mainnet vault activation. Integrators must require verified premium receipts for paid entitlements. There is no hosted enterprise API or enabled production DEX adapter. See [protocol](docs/protocol.md).
 
 Once the real CA exists, verify its mint account and republish:
 
@@ -75,3 +75,5 @@ The source archive excludes private deployment keys. On a new checkout, preparat
 * [Light/dark appearance and verification](docs/appearance.md)
 
 Before real-money use: independent audits of exact builds and recovery; production upgrade governance or immutability; reviewed mainnet domain/deployment migration; isolated signing; stronger RPC trust; reproducible builds, fuzzing and supply-chain controls; a reviewed production DEX and price/MEV controls; real token/liquidity configuration; independently controlled multisig keys; monitoring and recovery usability review. The upgradeable prototype is **not trustless** and does not protect the entire underlying network.
+
+Full project source: https://github.com/foundrsol/foundr. See [the platform fee verification](docs/platform-fee-verification.json) for the current fee release.

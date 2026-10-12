@@ -1,10 +1,10 @@
 {
-  "id": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+  "id": "dpl_GZvTPfaqVpGX9aPy6855fyKU57eJ",
   "name": "sonic-perseus-9a1cxls",
-  "url": "sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+  "url": "sonic-perseus-9a1cxls-j0ew4tmz1-foundr2.vercel.app",
   "target": "production",
   "readyState": "READY",
-  "createdAt": 1791822993177,
+  "createdAt": 1791828643442,
   "aliases": [
     "www.shellsafe.xyz",
     "sonic-perseus-9a1cxls.vercel.app",
@@ -14,12 +14,12 @@
   ],
   "builds": [
     {
-      "id": "bld_qorm9dm27",
-      "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+      "id": "bld_ofh5xucsf",
+      "deploymentId": "dpl_GZvTPfaqVpGX9aPy6855fyKU57eJ",
       "entrypoint": ".",
       "readyState": "READY",
-      "readyStateAt": 1791822993031,
-      "createdAt": 1791822993031,
+      "readyStateAt": 1791828643317,
+      "createdAt": 1791828643317,
       "createdIn": "sfo1",
       "use": "@vercel/vc-build",
       "config": {
@@ -118,7 +118,7 @@
           "mode": 49590,
           "size": 2684,
           "lambda": {
-            "functionName": "team_MYqx2Xhak3e9U8khG6BUV6tf-4b9e6252f864f12761ac55780e6a12fa43",
+            "functionName": "team_MYqx2Xhak3e9U8khG6BUV6tf-547f33e3e2f57d28ab2aca132ce8169d3a",
             "deployedTo": [
               "iad1"
             ],

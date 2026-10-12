@@ -197,3 +197,7 @@ The owner explicitly waived waiting for independent review. The application now 
 ## Current experimental release policy
 
 The owner explicitly waived waiting for independent review. The application now accepts a distinct experimental-ready release with exact source/binary/program binding, while retaining all deployment and finalized lifecycle checks. Review status stays pending. This does not modify the immutable program, spending authorization, backup or signing-state rules. See [experimental release policy and verification](experimental-launch.md).
+
+## Current experimental release policy
+
+The owner explicitly waived waiting for independent review. The application now accepts a distinct experimental-ready release with exact source/binary/program binding, while retaining all deployment and finalized lifecycle checks. Review status stays pending. This does not modify the immutable program, spending authorization, backup or signing-state rules. See [experimental release policy and verification](experimental-launch.md).

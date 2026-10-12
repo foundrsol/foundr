@@ -4,6 +4,8 @@ Current release: [experimental Mainnet launch](experimental-launch.md). Earlier 
 
 Current release: [experimental Mainnet launch](experimental-launch.md). Earlier review-gated interface updates below remain historical evidence.
 
+Current release: [experimental Mainnet launch](experimental-launch.md). Earlier review-gated interface updates below remain historical evidence.
+
 # Public website and Vercel deployment
 
 The tested current release is publicly available at **https://sonic-perseus-9a1cxls.vercel.app** on Vercel. It serves the actual Next.js static export with the full wallet, recovery, protocol and CA interfaces. [vercel-evidence.json](vercel-evidence.json) records the real production deployment, public route verification, security headers and exact manifest hashes. All 17 Chromium checks passed at that HTTPS origin in [vercel-public-browser.txt](test-results/vercel-public-browser.txt).
@@ -12,9 +14,9 @@ Vercel publishes the static website and a fixed external Mainnet RPC rewrite. Th
 
 ## Actual production deployment
 
-The user completed Vercel account sign-in. CLI 59.11.7 authenticated as `javieradriano99-5764` and linked the existing claimed project `prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE`, `foundr2/sonic-perseus-9a1cxls`. The actual deployment is `dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ`, with target `production` and state `READY`.
+The user completed Vercel account sign-in. CLI 59.11.7 authenticated as `javieradriano99-5764` and linked the existing claimed project `prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE`, `foundr2/sonic-perseus-9a1cxls`. The actual deployment is `dpl_GZvTPfaqVpGX9aPy6855fyKU57eJ`, with target `production` and state `READY`.
 
-Authenticated inspection confirms the public production alias and the older `temporary-sonic-perseus-9a1cxls.vercel.app` alias point to this new deployment; see [vercel-provider-inspection.json](vercel-provider-inspection.json). The unique build URL `https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app` redirects unauthenticated visitors to Vercel sign-in. Verification uses the API-confirmed public production alias, preserving the canonical build URL in evidence. No deployment-protection setting was disabled.
+Authenticated inspection confirms the public production alias and the older `temporary-sonic-perseus-9a1cxls.vercel.app` alias point to this new deployment; see [vercel-provider-inspection.json](vercel-provider-inspection.json). The unique build URL `https://sonic-perseus-9a1cxls-j0ew4tmz1-foundr2.vercel.app` redirects unauthenticated visitors to Vercel sign-in. Verification uses the API-confirmed public production alias, preserving the canonical build URL in evidence. No deployment-protection setting was disabled.
 
 The earlier Sites publication remains at https://shell-security-vault.javieradriano99.chatgpt.site. [mainnet-website.json](mainnet-website.json) preserves its exact version and Git source commit. Earlier anonymous Vercel evidence is retained in [vercel-anonymous-evidence.json](vercel-anonymous-evidence.json).
 

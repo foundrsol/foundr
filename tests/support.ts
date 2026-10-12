@@ -7,6 +7,7 @@ import { encrypt, decrypt, type Envelope } from '../src/core/recovery.ts';
 import { base58, hex, unhex } from '../src/core/bytes.ts';
 import { assertNetwork, authorizationContext, operationDigest, sameOperation, type AuthorizationProfile, type VaultState } from '../src/core/protocol.ts';
 import { verifyDigest } from '../src/core/winternitz.ts';
+import { activationPlatformFee } from '../src/core/platform-fee.ts';
 export const PASSWORD = 'test-recovery-password-123';
 export const RECIPIENT = base58(new Uint8Array(32).fill(8));
 export class MemoryStore implements Store {
@@ -25,7 +26,7 @@ export class ModelChain implements Chain {
   readonly profile: AuthorizationProfile;
   constructor(profile: AuthorizationProfile = 'devnet-v1') { this.profile = profile; this.genesis = authorizationContext(profile).genesis; }
   vaults = new Map<string, VaultState>(); requests = new Map<string, Request>(); processed = new Set<string>();
-  wallet = 10_000_000_000n; recipients = new Map<string, bigint>(); counter = 0;
+  wallet = 10_000_000_000n; recipients = new Map<string, bigint>(); counter = 0; platformFeesCollected = 0n;
   timeoutAfterSubmit = false; timeoutBeforeSubmit = false; ambiguous = false; expired = false; forceFailure = false;
   async validate(): Promise<void> { assertNetwork(this.genesis, this.profile); }
   address(root: string, coordinator: string): string { return base58(createHash('sha256').update(this.program + root + coordinator).digest()); }
@@ -60,7 +61,8 @@ export class ModelChain implements Chain {
     if (r.kind === 'create') {
       this.validateCoordinator(r.coordinatorSeed, r.coordinator);
       if (v) throw Error('Cannot recreate a consumed or existing vault');
-      this.vaults.set(r.vault.address, { status: 'available', root: r.vault.root, coordinator: r.coordinator, balance: rent, rent }); this.wallet -= rent + await this.fee('create'); return;
+      const platformFee = activationPlatformFee(this.profile);
+      this.vaults.set(r.vault.address, { status: 'available', root: r.vault.root, coordinator: r.coordinator, balance: rent, rent }); this.wallet -= rent + await this.fee('create') + platformFee; this.platformFeesCollected += platformFee; return;
     }
     if (!v) throw Error('Vault missing');
     if (r.kind === 'deposit') { if (v.status !== 'available') throw Error('Vault not available'); v.balance += r.amount!; this.wallet -= r.amount! + await this.fee('deposit'); return; }

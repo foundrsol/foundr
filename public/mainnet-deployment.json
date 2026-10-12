@@ -14,7 +14,7 @@
   "mainnetRelease": {
     "status": "experimental-ready",
     "compiledTestsPassed": true,
-    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
     "securityReview": {
       "status": "pending",
       "reportUrl": null,
@@ -26,9 +26,9 @@
       "mode": "owner-authorized-experimental",
       "authorizationProfile": "mainnet-v2",
       "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
-      "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+      "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
       "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
-      "authorizedAt": "2026-10-12T16:32:33.377Z",
+      "authorizedAt": "2026-10-12T18:08:37.885Z",
       "disclosure": "Experimental vault authorization. Independent security review pending."
     },
     "smoke": {

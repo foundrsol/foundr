@@ -284,7 +284,7 @@
   deploymentCause: null
 }
 {
-  "checkedAt": "2026-10-12T16:35:10.839Z",
+  "checkedAt": "2026-10-12T18:09:26.833Z",
   "mode": "release",
   "rpcEndpoint": "https://api.mainnet-beta.solana.com",
   "rpcGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
@@ -298,7 +298,7 @@
   "binaryPath": "program/target/deploy/mainnet/shell_vault.so",
   "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
   "binarySize": 24544,
-  "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
   "exactBuildCompiledTestsPassed": true,
   "independentReviewVerified": false,
   "experimentalLaunchAuthorized": true,

@@ -1,8 +1,8 @@
 {
   "url": "https://sonic-perseus-9a1cxls.vercel.app",
-  "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+  "deploymentId": "dpl_GZvTPfaqVpGX9aPy6855fyKU57eJ",
   "readyState": "READY",
-  "checkedAt": "2026-10-12T16:37:04.477Z",
+  "checkedAt": "2026-10-12T18:11:44.229Z",
   "cliVersion": "59.11.7",
   "staticExport": true,
   "readOnlyHistoryFunction": {
@@ -23,7 +23,7 @@
   },
   "manifests": {
     "mainnet-deployment.json": {
-      "sha256": "9a8737b0eb1029b8774420e947e9882c9e208938c15c46f468da5bea6edb56dd",
+      "sha256": "293d17a24d0b055267327345e3cebd905aca321355c02658ccf97a614f1c3a98",
       "cluster": "mainnet-beta",
       "verified": true
     },
@@ -58,7 +58,7 @@
     "/.mainnet/program.json": 404,
     "/.dev/vercel/auth.json": 404
   },
-  "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+  "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-j0ew4tmz1-foundr2.vercel.app",
   "verificationTarget": "API-confirmed public production alias",
   "aliasAssignmentVerified": true,
   "mainnetProgramDeployed": true,
@@ -77,10 +77,10 @@
   },
   "interfaceVerification": "docs/experimental-launch.json",
   "liveActivation": {
-    "checkedAt": "2026-10-12T16:38:15.432Z",
+    "checkedAt": "2026-10-12T18:16:47.120Z",
     "website": "https://sonic-perseus-9a1cxls.vercel.app",
     "releaseStatus": "experimental-ready",
-    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "sourceSha256": "84d7ea7379ba6ebb721a08105260a0b0f08ff140f607704d911f5ff11d6a8546",
     "independentReviewStatus": "pending",
     "walletInterfaceConnected": true,
     "encryptedIdentityCreated": true,

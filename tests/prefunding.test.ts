@@ -5,6 +5,7 @@ import { Keypair, PublicKey, SystemProgram } from '@solana/web3.js';
 import { SolanaChain, type Deployment } from '../src/solana/chain.ts';
 import type { Request } from '../src/core/engine.ts';
 import { hex } from '../src/core/bytes.ts';
+import { PLATFORM_FEE_LAMPORTS } from '../src/core/platform-fee.ts';
 const deployment = JSON.parse(await readFile('public/mainnet-deployment.json', 'utf8')) as Deployment;
 const rent = 2_088_000n;
 test('incoming System SOL stays uninitialized; activation quotes only the exact missing rent and rejects unsafe amounts', async () => {
@@ -30,7 +31,7 @@ test('incoming System SOL stays uninitialized; activation quotes only the exact 
     value = original;
   }
 });
-test('a prefunded activation needs the exact wallet fee, not a second rent payment; insufficient fees never request a signature', async () => {
+test('a prefunded activation needs the platform fee and exact network fee, not a second rent payment; insufficient fees never request a signature', async () => {
   const payer = Keypair.generate(), coordinator = Keypair.generate(); let balance = 0n, received = 90_998_331n, signatures = 0;
   const chain = new SolanaChain(deployment, undefined, { publicKey: payer.publicKey, connect: async () => ({ publicKey: payer.publicKey }), disconnect: async () => {}, signTransaction: async tx => { signatures++; tx.partialSign(payer); return tx; } });
   // Isolate fee preflight here. Compiled SBF + browser tests enforce actual
@@ -43,10 +44,10 @@ test('a prefunded activation needs the exact wallet fee, not a second rent payme
   chain.connection.getFeeForMessage = async () => ({ context: { slot: 1 }, value: 10_000 });
   const root = 'ab'.repeat(32), coordinatorAddress = coordinator.publicKey.toBase58();
   const request: Request = { kind: 'create', vault: { root, address: chain.address(root, coordinatorAddress), secret: null, consumed: false }, coordinator: coordinatorAddress, coordinatorSeed: hex(coordinator.secretKey.subarray(0, 32)) };
-  for (const amount of [0n, 9_999n]) { balance = amount; await assert.rejects(chain.transaction(request), /cannot cover/); }
+  for (const amount of [0n, 10_000n, PLATFORM_FEE_LAMPORTS + 9_999n]) { balance = amount; await assert.rejects(chain.transaction(request), /cannot cover/); }
   assert.equal(signatures, 0);
-  balance = 10_000n; await chain.transaction(request); assert.equal(signatures, 1);
+  balance = PLATFORM_FEE_LAMPORTS + 10_000n; await chain.transaction(request); assert.equal(signatures, 1);
   received = rent - 3n;
   await assert.rejects(chain.transaction(request), /cannot cover/); assert.equal(signatures, 1);
-  balance = 10_003n; await chain.transaction(request); assert.equal(signatures, 2);
+  balance = PLATFORM_FEE_LAMPORTS + 10_003n; await chain.transaction(request); assert.equal(signatures, 2);
 });

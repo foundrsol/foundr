@@ -4,6 +4,8 @@ Current funding policy: [owner-authorized experimental Mainnet release](experime
 
 Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
 
+Current funding policy: [owner-authorized experimental Mainnet release](experimental-launch.md). Earlier review-gated release notes below describe the previous policy.
+
 # Light and dark appearance
 
 Use the sun/moon switch beside Wallet and How it Works in the header. The same switch appears on the protocol page. Light is the default. Dark uses navy surfaces and mint controls; balances, dialogs, inputs, errors and transaction states share the selected palette.
