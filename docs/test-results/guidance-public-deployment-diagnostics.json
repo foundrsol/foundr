@@ -1,0 +1,34 @@
+[
+  {
+    "endpoint": "https://api.mainnet-beta.solana.com",
+    "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "programExists": true,
+    "executable": true,
+    "programDataExists": true,
+    "deploymentSlot": 455239788,
+    "authorityOption": 0,
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "transactionExists": true,
+    "transactionSlot": 455239788,
+    "transactionError": null,
+    "programDataInTransaction": true,
+    "signature": "3dxWFSwSgF7kbXAV8jZrqq6mjf4cuUB2qwhkGK6JG4QtaSUHPwUb7JGq3dmKFnjXHYd7mL7taUTPT3JiWceKtaq5",
+    "transactionsSubmitted": 0
+  },
+  {
+    "endpoint": "https://solana-rpc.publicnode.com",
+    "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "programExists": true,
+    "executable": true,
+    "programDataExists": true,
+    "deploymentSlot": 455239788,
+    "authorityOption": 0,
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "transactionExists": true,
+    "transactionSlot": 455239788,
+    "transactionError": null,
+    "programDataInTransaction": true,
+    "signature": "3dxWFSwSgF7kbXAV8jZrqq6mjf4cuUB2qwhkGK6JG4QtaSUHPwUb7JGq3dmKFnjXHYd7mL7taUTPT3JiWceKtaq5",
+    "transactionsSubmitted": 0
+  }
+]

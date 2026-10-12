@@ -1,0 +1,70 @@
+
+> shell-devnet@0.1.0 test:browser
+> playwright test
+
+[WebServer] (node:23839) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:23851) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+
+Running 10 tests using 1 worker
+
+(node:23871) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23871) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   1 tests/browser/network.spec.ts:118:1 › Phantom connects without network metadata; full Devnet genesis is verified and missing deployment stays separate (1.2s)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   2 tests/browser/network.spec.ts:173:5 › RPC unexpected-cluster retains successful wallet connection and blocks funding (869ms)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   3 tests/browser/network.spec.ts:173:5 › RPC timeout retains successful wallet connection and blocks funding (824ms)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   4 tests/browser/network.spec.ts:192:1 › real official Devnet RPC verifies its full hash in the hosted browser, with no program account (1.9s)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   5 tests/browser/protocol.spec.ts:4:1 › contract-address section visibly awaits the real CA and cannot copy a placeholder (618ms)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   6 tests/browser/protocol.spec.ts:13:1 › verified CA is displayed in full and copies exactly to the clipboard (909ms)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   7 tests/browser/protocol.spec.ts:37:1 › protocol dashboard shows no invented financial metrics while deployment is missing; mobile page fits (897ms)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   8 tests/browser/recovery.spec.ts:4:1 › real browser: create, encrypted export/verification, reload/unlock and clean-profile recovery (8.6s)
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓   9 tests/browser/recovery.spec.ts:83:1 › responsive viewport exposes real actions and no horizontal overflow (651ms)
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+[SHELL devnet diagnostics] {
+  rpcEndpoint: 'https://api.devnet.solana.com',
+  expectedGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
+  rpcGenesis: null,
+  rpcStatus: 'unchecked',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'CBZ5KvpvwfKphy1Mrrgsocey5KDimz47ajYmjNWVGWd6',
+  manifestVerified: false,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+[WebServer] [browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+[WebServer] React will never use eval() in production mode 
+  ✓  10 tests/browser/vault.spec.ts:12:1 › browser + compiled SBF: backup, initialize, deposit, partial/full rotation and clean-browser recovery (17.4s)
+
+  10 passed (37.7s)

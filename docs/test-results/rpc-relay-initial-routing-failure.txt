@@ -1,0 +1,9 @@
+file:///workspace/shell/scripts/verify-vercel.mjs:30
+if (!rpc.ok || !rpc.headers.get('cache-control')?.includes('no-store')) throw Error(`Mainnet RPC relay failed: HTTP ${rpc.status} or missing no-store header`);
+                                                                              ^
+
+Error: Mainnet RPC relay failed: HTTP 404 or missing no-store header
+    at file:///workspace/shell/scripts/verify-vercel.mjs:30:79
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.19.0

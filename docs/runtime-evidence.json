@@ -1,0 +1,33 @@
+{
+  "scope": "Actual compiled SBF execution in local LiteSVM only. No Mainnet or Devnet deployment or network transaction.",
+  "vault": {
+    "passed": true,
+    "binarySha256": "6e0854817445e11d87917ada41d90e1fd9a03c8407e6b33670120a85861c2506",
+    "binarySize": 24536,
+    "runtime": "LiteSVM 1.6.0",
+    "agave": "4.3.0",
+    "platformTools": "v1.57",
+    "completedAt": "2026-10-10T11:28:35.437Z"
+  },
+  "mainnetVault": {
+    "passed": true,
+    "authorizationProfile": "mainnet-v2",
+    "sourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "binarySize": 24544,
+    "runtime": "LiteSVM 1.6.0",
+    "agave": "4.3.0",
+    "platformTools": "v1.57",
+    "completedAt": "2026-10-10T11:28:35.464Z"
+  },
+  "protocol": {
+    "passed": true,
+    "binarySha256": "06ed329d771e21260f76fbee12299be66171c23732058e378679ff02fddf7010",
+    "binarySize": 614152,
+    "idlSha256": "f0506493f91edbc55afebe7619af4d8c3ea3da491d9633433b31a865a0c1226d",
+    "runtime": "LiteSVM 1.6.0",
+    "agave": "4.3.0",
+    "platformTools": "v1.57",
+    "completedAt": "2026-10-10T11:28:35.439Z"
+  }
+}

@@ -1,0 +1,4 @@
+
+> shell-devnet@0.1.0 typecheck:tools
+> tsc --noEmit --project tsconfig.tools.json
+

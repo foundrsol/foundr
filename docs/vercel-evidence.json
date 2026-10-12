@@ -1,0 +1,93 @@
+{
+  "url": "https://sonic-perseus-9a1cxls.vercel.app",
+  "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+  "readyState": "READY",
+  "checkedAt": "2026-10-12T16:37:04.477Z",
+  "cliVersion": "59.11.7",
+  "staticExport": true,
+  "readOnlyHistoryFunction": {
+    "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-history",
+    "upstream": "https://api.mainnet-beta.solana.com",
+    "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "postStatus": 200,
+    "transactionSubmissionRejected": 400,
+    "unsupportedMethodStatus": 405,
+    "transactionsSubmitted": 0
+  },
+  "homeStatus": 200,
+  "securityHeadersVerified": true,
+  "routes": {
+    "/how-it-works": 200,
+    "/devnet": 200,
+    "/protocol": 200
+  },
+  "manifests": {
+    "mainnet-deployment.json": {
+      "sha256": "9a8737b0eb1029b8774420e947e9882c9e208938c15c46f468da5bea6edb56dd",
+      "cluster": "mainnet-beta",
+      "verified": true
+    },
+    "deployment.json": {
+      "sha256": "94011c3c0ad994e960a566a1ce6d66dc0084d795904fac65c170347b0891d6e0",
+      "cluster": "devnet",
+      "verified": false
+    },
+    "protocol-deployment.json": {
+      "sha256": "833fa958346cd42f21bf039995d0ff1d0214f54eb32f9f1b8981df9e33540525",
+      "cluster": "devnet",
+      "verified": false
+    },
+    "token.json": {
+      "sha256": "939ecfc64193f9480c3fff567390acff58de484fb2c7fae1e3016c1eeeb3374f",
+      "cluster": null,
+      "verified": null
+    }
+  },
+  "mainnetRpcRelay": {
+    "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+    "upstream": "https://solana-rpc.publicnode.com",
+    "postStatus": 200,
+    "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "unsupportedMethodStatus": 405,
+    "noStore": true,
+    "transactionsSubmitted": 0
+  },
+  "removedHomepageCopyAbsent": true,
+  "privatePaths": {
+    "/.env.local": 404,
+    "/.mainnet/program.json": 404,
+    "/.dev/vercel/auth.json": 404
+  },
+  "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+  "verificationTarget": "API-confirmed public production alias",
+  "aliasAssignmentVerified": true,
+  "mainnetProgramDeployed": true,
+  "mainnetFundingEnabled": true,
+  "devnetFundingEnabled": false,
+  "experimentalLaunchAuthorized": true,
+  "independentReviewVerified": false,
+  "transactionsSubmittedByWebsiteVerification": 0,
+  "publicBrowserTests": {
+    "passed": 18,
+    "failed": 0,
+    "appearance": "dark; clean-profile recovery also exercises light",
+    "liveRpcReadOnly": true,
+    "vaultLifecycleScope": "Actual compiled local SBF fixtures. Historical finalized owner Mainnet flow recorded separately.",
+    "report": "docs/test-results/vercel-public-browser.txt"
+  },
+  "interfaceVerification": "docs/experimental-launch.json",
+  "liveActivation": {
+    "checkedAt": "2026-10-12T16:38:15.432Z",
+    "website": "https://sonic-perseus-9a1cxls.vercel.app",
+    "releaseStatus": "experimental-ready",
+    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "independentReviewStatus": "pending",
+    "walletInterfaceConnected": true,
+    "encryptedIdentityCreated": true,
+    "recoveryExportVerified": true,
+    "activationEnabled": true,
+    "noDepositBeforeActivation": true,
+    "signatureRequests": 0,
+    "transactionsSubmitted": 0
+  }
+}

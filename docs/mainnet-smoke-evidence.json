@@ -1,0 +1,54 @@
+{
+  "network": "mainnet-beta",
+  "authorizationProfile": "mainnet-v2",
+  "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+  "sourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
+  "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+  "cleanStoreRecovery": "passed",
+  "proof": {
+    "payer": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+    "recipient": "3LFCE974HCvG4RZ8FmWxppCJAe3Rsd794SiqaTZz9qxw",
+    "vaults": [
+      "3KRnWVHiFCwdL3HC7rUg9ZkSnR1YVeRce9jFK6kSiayA",
+      "7sY7yGEUtHsyH6w2buLn34c12LBe58KXTdzq6iXQuEUj",
+      "Foc9TZ4hoaGEUSeuFeVsHR7SCdao4kVKMVDhHadngDWD"
+    ],
+    "depositLamports": "2000000",
+    "partialLamports": "1000000",
+    "signatures": [
+      "4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn",
+      "2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D",
+      "2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R",
+      "2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko",
+      "2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7",
+      "2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4"
+    ]
+  },
+  "transactions": [
+    {
+      "signature": "4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn",
+      "explorer": "https://explorer.solana.com/tx/4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn"
+    },
+    {
+      "signature": "2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D",
+      "explorer": "https://explorer.solana.com/tx/2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D"
+    },
+    {
+      "signature": "2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R",
+      "explorer": "https://explorer.solana.com/tx/2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R"
+    },
+    {
+      "signature": "2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko",
+      "explorer": "https://explorer.solana.com/tx/2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko"
+    },
+    {
+      "signature": "2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7",
+      "explorer": "https://explorer.solana.com/tx/2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7"
+    },
+    {
+      "signature": "2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4",
+      "explorer": "https://explorer.solana.com/tx/2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4"
+    }
+  ],
+  "completedAt": "2026-10-10T11:33:52.524Z"
+}

@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-10T11:38:22.131Z",
+  "network": "mainnet-beta",
+  "rpcEndpoint": "https://api.mainnet-beta.solana.com",
+  "signature": "54anGtGNTyiYxN4z9ba7jjd3nxuvuJWjj1k28tJPPDee2L7fDKsSfBT5LLawPFv57KqSUdB5ctEmQZWT92RxbmHz",
+  "source": "3LFCE974HCvG4RZ8FmWxppCJAe3Rsd794SiqaTZz9qxw",
+  "sourceBalanceLamports": 2000000,
+  "blockhash": "DBXFv4Rfi2RgSEUwhe8TcWDA2X8MZ4wr49S6QiMmNbWw",
+  "status": null,
+  "simulation": {
+    "accounts": null,
+    "err": "BlockhashNotFound",
+    "fee": null,
+    "innerInstructions": null,
+    "loadedAccountsDataSize": 0,
+    "loadedAddresses": {
+      "readonly": [],
+      "writable": []
+    },
+    "logs": [],
+    "postBalances": [
+      2000000,
+      166837520,
+      1
+    ],
+    "postTokenBalances": [],
+    "preBalances": [
+      2000000,
+      166837520,
+      1
+    ],
+    "preTokenBalances": [],
+    "replacementBlockhash": null,
+    "returnData": null,
+    "unitsConsumed": 0
+  }
+}

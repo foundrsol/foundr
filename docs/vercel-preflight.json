@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-12T16:37:04.477Z",
+  "status": "experimental-mainnet-deployed-and-verified",
+  "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+  "cliVersion": "59.11.7",
+  "lastAuthenticationResult": "Authenticated existing Vercel account",
+  "deploymentSubmitted": true,
+  "vercelDeploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+  "vercelDeploymentUrl": "https://sonic-perseus-9a1cxls.vercel.app",
+  "upload": {
+    "buildOutputApiVersion": 3,
+    "configSha256": "5eac08bc0e0427ecf6fe43f53bca1f66acdb7d22872700f589d394c3e43e6787",
+    "explicitRoutes": [
+      "/how-it-works",
+      "/devnet",
+      "/protocol",
+      "/api/mainnet-rpc",
+      "/api/mainnet-history"
+    ],
+    "staticFileCount": 60,
+    "publicAssetsMatchExport": true,
+    "privateDirectoriesExcluded": true
+  },
+  "sourceVerification": {
+    "passed": true,
+    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "upstreamVerified": true,
+    "frontendTypecheckPassed": true,
+    "toolsTypecheckPassed": true,
+    "cryptoAndDurabilityTestsPassed": true,
+    "compiledTestsPassed": true,
+    "browserTestsPassed": true,
+    "productionBuildPassed": true,
+    "completedAt": "2026-10-12T16:32:26.528Z",
+    "liveNetworkTransactionsSubmitted": 0
+  },
+  "tests": {
+    "unit": 61,
+    "compiledSbfMatrices": 3,
+    "localBrowser": 15,
+    "localBrowserSkipped": 3,
+    "localBrowserSkipReason": "The three HTTPS production RPC/history checks pass in the public suite.",
+    "localBrowserAppearance": "light",
+    "publicBrowser": 18,
+    "publicBrowserAppearance": "dark",
+    "mainnetOwnerLifecycle": true,
+    "allPassed": true
+  },
+  "mainnetFundingEnabled": true,
+  "devnetFundingEnabled": false,
+  "solanaTransactionsSubmitted": 0,
+  "publicBrowserTestsPassed": 18,
+  "publicBrowserTestsFailed": 0,
+  "mainnetProgramDeployed": true,
+  "interfaceVerification": "docs/experimental-launch.json",
+  "independentReviewVerified": false
+}

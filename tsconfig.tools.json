@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "incremental": false, "plugins": [] },
+  "include": ["scripts/**/*.ts", "keeper/**/*.ts", "tests/*.ts"],
+  "exclude": ["node_modules", "vendor", "tests/browser"]
+}

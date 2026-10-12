@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "authorizationProfile": "mainnet-v2",
+  "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+  "binarySize": 24544,
+  "runtime": "LiteSVM 1.6.0",
+  "agave": "4.3.0",
+  "platformTools": "v1.57",
+  "completedAt": "2026-10-12T16:30:52.371Z"
+}

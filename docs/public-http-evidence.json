@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-09T22:46:05.282200+00:00",
+  "pages": [
+    {
+      "url": "https://shell-security-vault.javieradriano99.chatgpt.site/",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "51bf09e62f8384b2a12f734e2c3277d3ef6d6b9081f012f1c687c83aea4191af",
+      "containsShellAndDevnet": true
+    },
+    {
+      "url": "https://shell-security-vault.javieradriano99.chatgpt.site/protocol",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "ea2cddd6e8248badaa404b6445f0d7f27a0471c0eaf45ea7659b1a94a982cd98",
+      "containsShellAndDevnet": true
+    },
+    {
+      "url": "https://shell-security-vault.javieradriano99.chatgpt.site/deployment.json",
+      "status": 200,
+      "contentType": "application/json",
+      "sha256": "94011c3c0ad994e960a566a1ce6d66dc0084d795904fac65c170347b0891d6e0",
+      "matchesLocalPublicFile": true
+    },
+    {
+      "url": "https://shell-security-vault.javieradriano99.chatgpt.site/protocol-deployment.json",
+      "status": 200,
+      "contentType": "application/json",
+      "sha256": "833fa958346cd42f21bf039995d0ff1d0214f54eb32f9f1b8981df9e33540525",
+      "matchesLocalPublicFile": true
+    },
+    {
+      "url": "https://shell-security-vault.javieradriano99.chatgpt.site/token.json",
+      "status": 200,
+      "contentType": "application/json",
+      "sha256": "56e62ee1e822fff7f1d3d5b7cdca27c9d6b40853040a49e2214d6edb9d9c56d8",
+      "matchesLocalPublicFile": true
+    }
+  ],
+  "scope": "Anonymous HTTPS content and exact public manifests; not Solana deployment evidence",
+  "note": "The host returned 403 for the default Python user agent; a browser-style user agent and real Chromium both work without account tokens."
+}

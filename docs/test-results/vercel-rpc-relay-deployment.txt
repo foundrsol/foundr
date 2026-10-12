@@ -1,0 +1,13 @@
+Vercel CLI 59.11.7 (Node.js 24.19.0)
+Deploying sonic-perseus-9a1cxls
+Uploading [--------------------] (0.0B/111.4KB)
+Uploading [=====---------------] (28.7KB/111.4KB)
+Uploading [==========----------] (56.3KB/111.4KB)
+Uploading [================----] (92.8KB/111.4KB)
+Uploading [====================] (111.4KB/111.4KB)
+  Inspect         https://vercel.com/foundr2/sonic-perseus-9a1cxls/Gs553i3g6tqtQ5aszrduxZ4b2dg3
+  Production      https://sonic-perseus-9a1cxls-mydpzuwov-foundr2.vercel.app
+Building…
+[2K[1A[2K[G  Production      https://sonic-perseus-9a1cxls-mydpzuwov-foundr2.vercel.app
+Completing…
+▲ Aliased         https://sonic-perseus-9a1cxls.vercel.app

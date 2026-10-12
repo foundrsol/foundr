@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-10T11:16:57.599Z",
+  "rpcEndpoint": "https://api.mainnet-beta.solana.com",
+  "rpcGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "wallet": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+  "finalizedBalanceLamports": 300000000,
+  "recentTransactions": [
+    {
+      "signature": "28bMcvUzJFgYqJrPqoaPy3eibLNYTRJ3ctkM2f8TSiDk9GvC64wdyLJ3J6xmsyzCStYzXnm7L1qaS28Mhct11gNe",
+      "slot": 455235540,
+      "err": null,
+      "blockTime": 1791630950,
+      "confirmationStatus": "finalized",
+      "explorer": "https://explorer.solana.com/tx/28bMcvUzJFgYqJrPqoaPy3eibLNYTRJ3ctkM2f8TSiDk9GvC64wdyLJ3J6xmsyzCStYzXnm7L1qaS28Mhct11gNe"
+    }
+  ],
+  "deploymentClaimed": false,
+  "transactionsSubmittedByThisCheck": 0
+}

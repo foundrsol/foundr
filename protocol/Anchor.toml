@@ -1,0 +1,10 @@
+[toolchain]
+anchor_version = "1.2.1"
+solana_version = "4.3.0"
+
+[programs.devnet]
+shell_protocol = "CBZ5KvpvwfKphy1Mrrgsocey5KDimz47ajYmjNWVGWd6"
+
+[provider]
+cluster = "https://api.devnet.solana.com"
+wallet = "../.dev/deployer.json"

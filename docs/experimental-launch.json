@@ -1,0 +1,208 @@
+{
+  "checkedAt": "2026-10-12T16:37:04.477Z",
+  "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "deployment": {
+    "provider": "vercel",
+    "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+    "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
+    "projectName": "sonic-perseus-9a1cxls",
+    "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+    "target": "production",
+    "readyState": "READY",
+    "url": "https://sonic-perseus-9a1cxls.vercel.app",
+    "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+    "aliases": [
+      "www.shellsafe.xyz",
+      "sonic-perseus-9a1cxls.vercel.app",
+      "shellsafe.xyz",
+      "temporary-sonic-perseus-9a1cxls.vercel.app",
+      "sonic-perseus-9a1cxls-foundr2.vercel.app"
+    ],
+    "createdAt": "2026-10-12T16:36:33.177000+00:00",
+    "createdAtAsiaShanghai": "2026-10-13T00:36:33.177000+08:00",
+    "verifiedAt": "2026-10-12T16:37:04.477Z",
+    "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "websiteOnly": true,
+    "mainnetFundingEnabled": true,
+    "devnetFundingEnabled": false,
+    "publicBrowserTestsPassed": 18,
+    "mainnetProgramDeployed": true,
+    "solanaTransactionsSubmittedByWebsitePublication": 0,
+    "publicationScope": "Owner-authorized experimental Mainnet release. Spending authorization and immutable Solana program unchanged.",
+    "mainnetRpcRelay": {
+      "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+      "upstream": "https://solana-rpc.publicnode.com",
+      "postStatus": 200,
+      "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "unsupportedMethodStatus": 405,
+      "noStore": true,
+      "transactionsSubmitted": 0
+    },
+    "publicBrowserAppearance": "dark",
+    "releasePolicy": "owner-authorized-experimental",
+    "independentReviewVerified": false
+  },
+  "releasePolicy": {
+    "mode": "owner-authorized-experimental",
+    "authorizationProfile": "mainnet-v2",
+    "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "authorizedAt": "2026-10-12T16:32:33.377Z",
+    "disclosure": "Experimental vault authorization. Independent security review pending."
+  },
+  "independentReviewVerified": false,
+  "mainnetFundingEnabled": true,
+  "devnetFundingEnabled": false,
+  "liveActivation": {
+    "checkedAt": "2026-10-12T16:38:15.432Z",
+    "website": "https://sonic-perseus-9a1cxls.vercel.app",
+    "releaseStatus": "experimental-ready",
+    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "independentReviewStatus": "pending",
+    "walletInterfaceConnected": true,
+    "encryptedIdentityCreated": true,
+    "recoveryExportVerified": true,
+    "activationEnabled": true,
+    "noDepositBeforeActivation": true,
+    "signatureRequests": 0,
+    "transactionsSubmitted": 0
+  },
+  "interfaceChecks": {
+    "baseURL": "https://sonic-perseus-9a1cxls.vercel.app",
+    "checkedAt": "2026-10-12T16:42:17.271Z",
+    "passed": true,
+    "publicDevnetOptionAbsent": true,
+    "guideHasThreeSteps": true,
+    "guideLinksReturnToSetup": true,
+    "actionNamesAndFundingGatesChecked": true,
+    "defaultLight": true,
+    "mouseAndKeyboardToggle": true,
+    "preferenceSurvivesReloadAndRoutes": true,
+    "paletteBeforeHydration": true,
+    "otherTabsSynchronized": true,
+    "blockedPreferenceStorageHandled": true,
+    "layouts": [
+      {
+        "name": "light-desktop",
+        "width": 1440,
+        "documentWidth": 1440,
+        "appearance": "light",
+        "nativeColorScheme": "light",
+        "background": "rgb(247, 248, 250)"
+      },
+      {
+        "name": "light-guide-desktop",
+        "width": 1440,
+        "documentWidth": 1440,
+        "appearance": "light",
+        "nativeColorScheme": "light",
+        "background": "rgb(247, 248, 250)"
+      },
+      {
+        "name": "dark-desktop",
+        "width": 1440,
+        "documentWidth": 1440,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-create-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-recover-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-guide-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-guide-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-protocol-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "light-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "light",
+        "nativeColorScheme": "light",
+        "background": "rgb(247, 248, 250)"
+      }
+    ],
+    "errors": [],
+    "transactionsSubmitted": 0
+  },
+  "tests": {
+    "unit": 61,
+    "compiledSbfMatrices": 3,
+    "localBrowser": 15,
+    "localBrowserSkipped": 3,
+    "localBrowserSkipReason": "The three HTTPS production RPC/history checks pass in the public suite.",
+    "localBrowserAppearance": "light",
+    "publicBrowser": 18,
+    "publicBrowserAppearance": "dark",
+    "mainnetOwnerLifecycle": true,
+    "allPassed": true
+  },
+  "newSolanaTransactionsSubmitted": 0,
+  "mainnetProgramChanged": false,
+  "mainnetProgramImmutable": true,
+  "originalOwnerLifecycleSourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
+  "tokenAddressUpdate": {
+    "checkedAt": "2026-10-12T16:40:31.263Z",
+    "website": "https://sonic-perseus-9a1cxls.vercel.app",
+    "address": "66fEEkGSYVeBb2eTwsfmipZBvT3WY1ab9bRJTooSpump",
+    "status": "owner-provided",
+    "mintVerification": "not-found",
+    "hostedMetadataMatches": true,
+    "fullAddressVisible": true,
+    "desktopClipboardExact": true,
+    "mobileClipboardExact": true,
+    "mobileNoOverflow": true,
+    "pageErrors": [],
+    "transactionsSubmitted": 0
+  }
+}

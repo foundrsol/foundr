@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-10T11:40:35.358Z",
+  "network": "mainnet-beta",
+  "rpcEndpoint": "https://solana-rpc.publicnode.com",
+  "purpose": "Return disposable owner-smoke funds to the dedicated deployment wallet",
+  "from": "3LFCE974HCvG4RZ8FmWxppCJAe3Rsd794SiqaTZz9qxw",
+  "to": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+  "amountLamports": 1995000,
+  "feeLamports": 5000,
+  "signature": "24oyFtsMCyPNg8YNNG8L54murpKvM58tGmLExC3ZjMQ4jVPfwjHFFnjXtTm7bMLVhkJ72LbBuspGnxPxG51PXdVN",
+  "slot": 455242348,
+  "confirmationStatus": "finalized",
+  "earlierPreflight": "Old conventional-wallet transaction was rejected with BlockhashNotFound; no Winternitz key was involved or reused.",
+  "explorer": "https://explorer.solana.com/tx/24oyFtsMCyPNg8YNNG8L54murpKvM58tGmLExC3ZjMQ4jVPfwjHFFnjXtTm7bMLVhkJ72LbBuspGnxPxG51PXdVN"
+}

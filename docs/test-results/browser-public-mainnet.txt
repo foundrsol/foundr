@@ -1,0 +1,772 @@
+
+> shell-devnet@0.1.0 test:browser
+> playwright test
+
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+
+Running 15 tests using 1 worker
+
+(node:8515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/mainnet.spec.ts:61:1 › Mainnet connects Phantom without a network indicator and keeps undeployed funding separately blocked (2.2s)
+  ✓   2 tests/browser/mainnet.spec.ts:89:1 › Mainnet rejects a Devnet RPC hash without disconnecting the wallet (826ms)
+  ✓   3 tests/browser/mainnet.spec.ts:106:1 › Mainnet real browser encryption, clean recovery and network switching retain isolated identities (6.0s)
+  ✓   4 tests/browser/mainnet.spec.ts:192:1 › real pinned Mainnet RPC verifies the full genesis and missing deployment; no transaction is requested (1.5s)
+  ✓   5 tests/browser/network.spec.ts:118:1 › Phantom connects without network metadata; full Devnet genesis is verified and missing deployment stays separate (989ms)
+  ✓   6 tests/browser/network.spec.ts:173:5 › RPC unexpected-cluster retains successful wallet connection and blocks funding (732ms)
+  ✓   7 tests/browser/network.spec.ts:173:5 › RPC timeout retains successful wallet connection and blocks funding (1.7s)
+  ✓   8 tests/browser/network.spec.ts:192:1 › real official Devnet RPC verifies its full hash in the hosted browser, with no program account (1.9s)
+  ✓   9 tests/browser/protocol.spec.ts:4:1 › contract-address section visibly awaits the real CA and cannot copy a placeholder (567ms)
+  ✓  10 tests/browser/protocol.spec.ts:13:1 › verified CA is displayed in full and copies exactly to the clipboard (778ms)
+  ✓  11 tests/browser/protocol.spec.ts:37:1 › protocol dashboard shows no invented financial metrics while deployment is missing; mobile page fits (840ms)
+  ✓  12 tests/browser/recovery.spec.ts:4:1 › real browser: create, encrypted export/verification, reload/unlock and clean-profile recovery (9.4s)
+  ✓  13 tests/browser/recovery.spec.ts:83:1 › responsive viewport exposes real actions and no horizontal overflow (554ms)
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+[SHELL devnet diagnostics] {
+  rpcEndpoint: 'https://api.devnet.solana.com',
+  expectedGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
+  rpcGenesis: null,
+  rpcStatus: 'unchecked',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'CBZ5KvpvwfKphy1Mrrgsocey5KDimz47ajYmjNWVGWd6',
+  manifestVerified: false,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+  ✓  14 tests/browser/vault.spec.ts:16:52 › browser + compiled SBF devnet-v1: backup, deposit, partial/full rotation and clean-browser recovery (16.5s)
+[SHELL devnet diagnostics] {
+  rpcEndpoint: 'https://api.devnet.solana.com',
+  expectedGenesis: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG',
+  rpcGenesis: null,
+  rpcStatus: 'unchecked',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'CBZ5KvpvwfKphy1Mrrgsocey5KDimz47ajYmjNWVGWd6',
+  manifestVerified: false,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: null,
+  rpcStatus: 'unchecked',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: null,
+  rpcStatus: 'checking',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'checking',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: null,
+  rpcStatus: 'unchecked',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: null,
+  rpcStatus: 'checking',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'checking',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unchecked',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'checking',
+  deploymentCause: null
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'unverified',
+  deploymentCause: 'Immutable Mainnet bytecode verified. Release review and finalized lifecycle checks are still required.'
+}
+[SHELL mainnet diagnostics] {
+  rpcEndpoint: 'https://solana-rpc.publicnode.com',
+  expectedGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcGenesis: '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d',
+  rpcStatus: 'verified',
+  rpcCause: null,
+  walletPublicKey: null,
+  walletProvider: null,
+  walletNetwork: 'not exposed; not verified',
+  programId: 'H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds',
+  manifestVerified: true,
+  deploymentStatus: 'verified',
+  deploymentCause: null
+}
+  ✓  15 tests/browser/vault.spec.ts:16:52 › browser + compiled SBF mainnet-v2: backup, deposit, partial/full rotation and clean-browser recovery (21.3s)
+
+  15 passed (1.1m)

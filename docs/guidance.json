@@ -1,0 +1,172 @@
+{
+  "checkedAt": "2026-10-10T16:19:06.588Z",
+  "releaseSourceSha256": "232b382e22159e9db4363d1a873b83639caec64f53471ff017c2f12156347c9f",
+  "deployment": {
+    "provider": "vercel",
+    "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+    "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
+    "projectName": "sonic-perseus-9a1cxls",
+    "deploymentId": "dpl_2mkmFE3YfJSBjfTupEP9Hz9Cnnem",
+    "target": "production",
+    "readyState": "READY",
+    "url": "https://sonic-perseus-9a1cxls.vercel.app",
+    "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-ni6jtrv35-foundr2.vercel.app",
+    "aliases": [
+      "sonic-perseus-9a1cxls.vercel.app",
+      "temporary-sonic-perseus-9a1cxls.vercel.app",
+      "sonic-perseus-9a1cxls-foundr2.vercel.app"
+    ],
+    "createdAt": "2026-10-10T16:18:12.505000+00:00",
+    "createdAtAsiaShanghai": "2026-10-11T00:18:12.505000+08:00",
+    "verifiedAt": "2026-10-10T16:19:06.588Z",
+    "releaseSourceSha256": "232b382e22159e9db4363d1a873b83639caec64f53471ff017c2f12156347c9f",
+    "websiteOnly": true,
+    "mainnetFundingEnabled": false,
+    "devnetFundingEnabled": false,
+    "publicBrowserTestsPassed": 17,
+    "mainnetProgramDeployed": true,
+    "solanaTransactionsSubmittedByWebsitePublication": 0,
+    "publicationScope": "Wallet and How it Works navigation, clear setup and transaction labels; existing light/dark appearance preserved. Immutable Solana program unchanged.",
+    "mainnetRpcRelay": {
+      "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+      "upstream": "https://solana-rpc.publicnode.com",
+      "postStatus": 200,
+      "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "unsupportedMethodStatus": 405,
+      "noStore": true,
+      "transactionsSubmitted": 0
+    },
+    "publicBrowserAppearance": "dark"
+  },
+  "changes": [
+    "Public navigation is Wallet and How it Works, without a Devnet selector or public protocol link",
+    "Three-step guide explains local setup, encrypted recovery and fresh signing keys",
+    "Contextual next step plus Create your vault, Add SOL, Send SOL and Restore vault labels",
+    "Recovery, funding gates and light/dark appearance preserved"
+  ],
+  "interfaceChecks": {
+    "baseURL": "https://sonic-perseus-9a1cxls.vercel.app",
+    "checkedAt": "2026-10-10T16:19:28.075Z",
+    "passed": true,
+    "publicDevnetOptionAbsent": true,
+    "guideHasThreeSteps": true,
+    "guideLinksReturnToSetup": true,
+    "actionNamesAndFundingGatesChecked": true,
+    "defaultLight": true,
+    "mouseAndKeyboardToggle": true,
+    "preferenceSurvivesReloadAndRoutes": true,
+    "paletteBeforeHydration": true,
+    "otherTabsSynchronized": true,
+    "blockedPreferenceStorageHandled": true,
+    "layouts": [
+      {
+        "name": "light-desktop",
+        "width": 1440,
+        "documentWidth": 1440,
+        "appearance": "light",
+        "nativeColorScheme": "light",
+        "background": "rgb(247, 248, 250)"
+      },
+      {
+        "name": "light-guide-desktop",
+        "width": 1440,
+        "documentWidth": 1440,
+        "appearance": "light",
+        "nativeColorScheme": "light",
+        "background": "rgb(247, 248, 250)"
+      },
+      {
+        "name": "dark-desktop",
+        "width": 1440,
+        "documentWidth": 1440,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-create-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-recover-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-guide-phone",
+        "width": 390,
+        "documentWidth": 390,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-guide-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "dark-protocol-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "dark",
+        "nativeColorScheme": "dark",
+        "background": "rgb(12, 19, 29)"
+      },
+      {
+        "name": "light-small-phone",
+        "width": 320,
+        "documentWidth": 320,
+        "appearance": "light",
+        "nativeColorScheme": "light",
+        "background": "rgb(247, 248, 250)"
+      }
+    ],
+    "errors": [],
+    "transactionsSubmitted": 0
+  },
+  "tests": {
+    "unit": 54,
+    "compiledSbfMatrices": 3,
+    "localBrowser": 16,
+    "localBrowserSkipped": 1,
+    "localBrowserSkipReason": "Production relay requires the HTTPS origin; it passes in the public suite.",
+    "localBrowserAppearance": "light",
+    "publicBrowser": 17,
+    "publicBrowserAppearance": "dark",
+    "mainnetOwnerLifecycle": true,
+    "allPassed": true
+  },
+  "newSolanaTransactionsSubmitted": 0,
+  "mainnetProgramChanged": false,
+  "mainnetProgramImmutable": true,
+  "mainnetFundingEnabled": false,
+  "devnetFundingEnabled": false,
+  "originalOwnerLifecycleSourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4"
+}

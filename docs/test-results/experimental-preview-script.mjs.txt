@@ -1,0 +1,126 @@
+import { chromium, expect } from '@playwright/test';
+import assert from 'node:assert/strict';
+import { mkdir, writeFile } from 'node:fs/promises';
+
+const baseURL = process.env.SHELL_BROWSER_URL || 'http://127.0.0.1:3000';
+const stage = baseURL.startsWith('https:') ? 'public' : 'local';
+const directory = `.dev/experimental-preview/${stage}`;
+const proxy = process.env.SHELL_BROWSER_PROXY;
+const browser = await chromium.launch({ executablePath: '/usr/bin/chromium' });
+const options = { reducedMotion: 'reduce', ...(proxy ? { proxy: { server: proxy, bypass: 'localhost,127.0.0.1,[::1]' } } : {}) };
+await mkdir(directory, { recursive: true });
+const errors = [], layouts = [];
+let transactionsSubmitted = 0;
+function watch(page) {
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error' && /hydrat/i.test(message.text())) errors.push(message.text()); });
+  page.on('request', request => {
+    if (request.method() === 'POST' && /mainnet-rpc|solana\.com|publicnode\.com/.test(request.url()) && request.postDataJSON()?.method === 'sendTransaction') transactionsSubmitted++;
+  });
+}
+async function visit(page, route) {
+  const response = await page.goto(new URL(route, baseURL).href);
+  assert(response.ok(), `HTTP ${response.status()} at ${route}`);
+  if (route === '/' || route === '/how-it-works') await expect(page.locator('.devnet-banner')).toHaveCount(0);
+  if (route === '/how-it-works') {
+    await expect(page.locator('.guide-steps')).toContainText('Winternitz signatures');
+    await expect(page.locator('.guide-steps')).toContainText('Your Phantom or Solflare signature alone can’t move the funds.');
+    await expect(page.locator('.guide-steps')).toContainText('Every spend changes the shell');
+    await expect(page.locator('.guide-steps')).toContainText('Built for quantum resistance');
+    await page.locator('#getting-started summary').click();
+    await expect(page.locator('#getting-started')).toContainText('Save and verify your recovery file');
+    await page.locator('#getting-started summary').click();
+    await expect(page.locator('.guide-steps li')).toHaveCount(3); await expect(page.getByRole('link', { name: 'How it Works', exact: true })).toHaveAttribute('aria-current', 'page'); }
+  else if (route !== '/protocol') await expect(page.getByRole('button', { name: 'Create your vault', exact: true })).toBeEnabled();
+  else await expect(page.getByTestId('protocol-state')).not.toContainText('Checking the devnet deployment');
+  if (route === '/' && stage === 'public') await expect(page.getByTestId('deployment-verification')).toHaveText(/^verified · manifest attestation: present$/, { timeout: 60000 });
+}
+async function snapshot(page, name) {
+  const layout = await page.evaluate(() => ({ width: innerWidth, documentWidth: document.documentElement.scrollWidth, appearance: document.documentElement.dataset.appearance, nativeColorScheme: getComputedStyle(document.documentElement).colorScheme, background: getComputedStyle(document.body).backgroundColor }));
+  assert.equal(layout.width, layout.documentWidth, `${name} has horizontal overflow`);
+  layouts.push({ name, ...layout });
+  await page.screenshot({ path: `${directory}/${name}.png`, fullPage: true });
+}
+try {
+  const context = await browser.newContext({ ...options, viewport: { width: 1440, height: 1100 } });
+  const page = await context.newPage(); watch(page);
+  await visit(page, '/');
+  await expect(page.locator('html')).toHaveAttribute('data-appearance', 'light');
+  const toggle = page.getByRole('switch', { name: 'Dark mode' });
+  await expect(toggle).toHaveAttribute('aria-checked', 'false');
+  await snapshot(page, 'light-desktop');
+  await expect(page.locator('.next-step')).toContainText('Start here');
+  await expect(page.locator('a[href="/devnet"]')).toHaveCount(0);
+  await page.getByRole('link', { name: 'How it Works', exact: true }).click();
+  await expect(page.locator('.guide-steps li')).toHaveCount(3);
+  await snapshot(page, 'light-guide-desktop');
+  await page.getByRole('link', { name: 'Set up your vault', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Create your vault', exact: true })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Add SOL', exact: true })).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Send SOL', exact: true })).toBeDisabled();
+  await toggle.click();
+  await expect(toggle).toHaveAttribute('aria-checked', 'true');
+  await expect(page.locator('html')).toHaveAttribute('data-appearance', 'dark');
+  assert.equal(await page.evaluate(() => localStorage.getItem('shell-appearance')), 'dark');
+  await snapshot(page, 'dark-desktop');
+  await page.reload();
+  await expect(toggle).toHaveAttribute('aria-checked', 'true');
+
+  // The saved palette must work before the Next/React application hydrates.
+  const unhydrated = await context.newPage();
+  await unhydrated.route(/\/_next\/.*\.js(?:\?.*)?$/, route => route.abort());
+  await unhydrated.goto(baseURL, { waitUntil: 'domcontentloaded' });
+  await expect(unhydrated.locator('html')).toHaveAttribute('data-appearance', 'dark');
+  assert.equal(await unhydrated.evaluate(() => getComputedStyle(document.documentElement).colorScheme), 'dark');
+  await unhydrated.close();
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await snapshot(page, 'dark-phone');
+  await page.getByRole('button', { name: 'Create your vault', exact: true }).click();
+  await snapshot(page, 'dark-create-phone');
+  await page.getByRole('button', { name: 'Close dialog' }).click();
+  await page.getByRole('button', { name: 'Restore vault', exact: true }).click();
+  await snapshot(page, 'dark-recover-phone');
+  await page.getByRole('button', { name: 'Close dialog' }).click();
+  await visit(page, '/how-it-works');
+  await snapshot(page, 'dark-guide-phone');
+  await expect(page.locator('a[href="/devnet"]')).toHaveCount(0);
+  await page.setViewportSize({ width: 320, height: 740 });
+  await snapshot(page, 'dark-guide-small-phone');
+  await visit(page, '/devnet');
+  await expect(toggle).toHaveAttribute('aria-checked', 'true');
+  await page.setViewportSize({ width: 320, height: 740 });
+  await snapshot(page, 'dark-small-phone');
+  await visit(page, '/protocol');
+  await expect(toggle).toHaveAttribute('aria-checked', 'true');
+  await snapshot(page, 'dark-protocol-small-phone');
+
+  const other = await context.newPage(); watch(other);
+  await visit(other, '/');
+  await expect(other.getByRole('switch', { name: 'Dark mode' })).toHaveAttribute('aria-checked', 'true');
+  await toggle.focus(); await page.keyboard.press('Space');
+  await expect(toggle).toHaveAttribute('aria-checked', 'false');
+  await expect(other.getByRole('switch', { name: 'Dark mode' })).toHaveAttribute('aria-checked', 'false');
+  await expect(other.locator('html')).toHaveAttribute('data-appearance', 'light');
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-appearance', 'light');
+  await visit(page, '/');
+  await snapshot(page, 'light-small-phone');
+  await context.close();
+
+  const blocked = await browser.newContext(options);
+  await blocked.addInitScript(() => {
+    for (const name of ['getItem', 'setItem']) Object.defineProperty(Storage.prototype, name, { configurable: true, value() { throw new DOMException('Preferences are blocked', 'SecurityError'); } });
+  });
+  const fallback = await blocked.newPage(); watch(fallback);
+  await visit(fallback, '/');
+  await fallback.getByRole('switch', { name: 'Dark mode' }).click();
+  await expect(fallback.locator('html')).toHaveAttribute('data-appearance', 'dark');
+  await fallback.reload();
+  await expect(fallback.locator('html')).toHaveAttribute('data-appearance', 'light');
+  await blocked.close();
+  assert.deepEqual(errors, []); assert.equal(transactionsSubmitted, 0);
+  const results = { baseURL, checkedAt: new Date().toISOString(), passed: true, publicDevnetOptionAbsent: true, guideHasThreeSteps: true, guideLinksReturnToSetup: true, actionNamesAndFundingGatesChecked: true, defaultLight: true, mouseAndKeyboardToggle: true, preferenceSurvivesReloadAndRoutes: true, paletteBeforeHydration: true, otherTabsSynchronized: true, blockedPreferenceStorageHandled: true, layouts, errors, transactionsSubmitted };
+  await writeFile(`${directory}/results.json`, JSON.stringify(results, null, 2) + '\n');
+  console.log(JSON.stringify(results, null, 2));
+} finally { await browser.close(); }

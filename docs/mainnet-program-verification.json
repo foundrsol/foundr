@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-10T11:33:23.541Z",
+  "rpcEndpoint": "https://api.mainnet-beta.solana.com",
+  "rpcGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+  "programData": "GgNpv2WTgVm4gzxMb4UZ9rEZNyGQCoC78nFLBLSgxc9A",
+  "executable": true,
+  "loader": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "immutable": true,
+  "upgradeAuthority": null,
+  "sourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
+  "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+  "binarySize": 24544,
+  "deploymentSlot": 455239788,
+  "deploymentSignature": "3dxWFSwSgF7kbXAV8jZrqq6mjf4cuUB2qwhkGK6JG4QtaSUHPwUb7JGq3dmKFnjXHYd7mL7taUTPT3JiWceKtaq5",
+  "finalizationSlot": 455239839,
+  "finalizationSignature": "2YaPs7pUj9r8oqPovUwSxYwM1ZAtQCFdvJ8j9atBkuukyXgDoRcAroHXomuYsFYsNjVcX81KguqpMf8T3YGoPA6m",
+  "programRentLamports": 833120,
+  "programDataRentLamports": 125562360,
+  "independentAudit": false,
+  "publicFundingEnabled": false,
+  "transactionsSubmittedByVerification": 0
+}

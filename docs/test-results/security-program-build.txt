@@ -1,0 +1,14 @@
+
+> shell-devnet@0.1.0 build:programs
+> bash scripts/build-programs.sh
+
+
+> shell-devnet@0.1.0 verify:upstream
+> node scripts/verify-upstream.mjs
+
+87 vendored files verified against Git blob hashes at 672fc6789b1532ee680f24842d235e0be8737b61
+   Compiling shell-vault v0.1.0 (/workspace/shell/program)
+    Finished `release` profile [optimized] target(s) in 0.43s
+   Compiling shell-vault v0.1.0 (/workspace/shell/program)
+    Finished `release` profile [optimized] target(s) in 0.32s
+    Finished `release` profile [optimized] target(s) in 0.17s

@@ -1,0 +1,57 @@
+{
+  "name": "shell-devnet",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test --test-isolation=none --test-concurrency=1 tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "typecheck:tools": "tsc --noEmit --project tsconfig.tools.json",
+    "test:browser": "playwright test",
+    "test:svm": "node scripts/svm-test.mjs",
+    "test:programs": "node scripts/program-tests.mjs",
+    "keeper": "node keeper/run.ts",
+    "test:devnet": "node scripts/devnet-flow.ts",
+    "keys:devnet": "node scripts/development-keys.ts",
+    "verify:upstream": "node scripts/verify-upstream.mjs",
+    "diagnose:devnet": "node scripts/diagnose-devnet.ts",
+    "verify-and-deploy:devnet": "bash scripts/verify-runtime.sh",
+    "prepare:mainnet": "node scripts/mainnet.ts prepare",
+    "preflight:mainnet": "node scripts/mainnet.ts preflight",
+    "deploy:mainnet": "bash scripts/deploy-mainnet.sh",
+    "verify:mainnet": "node scripts/mainnet.ts verify",
+    "release:mainnet": "node scripts/mainnet.ts release",
+    "build:programs": "bash scripts/build-programs.sh",
+    "test:mainnet": "node scripts/mainnet-flow.ts",
+    "verify:release": "node scripts/verify-release.mjs"
+  },
+  "dependencies": {
+    "@anchor-lang/core": "1.2.1",
+    "@solana/spl-token": "0.4.15",
+    "@solana/web3.js": "1.98.4",
+    "buffer": "6.0.3",
+    "next": "16.4.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "overrides": {
+    "bigint-buffer": "npm:@exodus/bigint-buffer@1.1.5-exodus.1",
+    "toml": "4.2.0",
+    "uuid": "11.1.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@solana/kit": "8.4.0",
+    "@types/node": "24.10.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "litesvm": "1.6.0",
+    "typescript": "5.9.3"
+  }
+}

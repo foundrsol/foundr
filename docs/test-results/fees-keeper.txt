@@ -1,0 +1,16 @@
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+✔ keeper SQL prevents duplicate nonce claims across processes and preserves ambiguous signed bytes across restart (7.537868ms)
+✔ public accounting deduplicates finalized receipts, detects altered records and rejects bogus burns (2.350631ms)
+✔ keeper renews an expired quote under its durable job ID before signing or broadcasting (70.613457ms)
+✔ fee previews use exact lamports, configured rates, ceiling and an absolute cap (0.423692ms)
+✔ revenue allocation conserves every unit and carries integer dust across payments (0.268847ms)
+✔ keeper pool quotes enforce real liquidity, impact, size and minimum output (0.340767ms)
+✔ SPL precision never rounds, truncates, or accepts floating-point exponent notation (0.364262ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 408.286737

@@ -1,0 +1,139 @@
+{
+  "id": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+  "name": "sonic-perseus-9a1cxls",
+  "url": "sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+  "target": "production",
+  "readyState": "READY",
+  "createdAt": 1791822993177,
+  "aliases": [
+    "www.shellsafe.xyz",
+    "sonic-perseus-9a1cxls.vercel.app",
+    "shellsafe.xyz",
+    "temporary-sonic-perseus-9a1cxls.vercel.app",
+    "sonic-perseus-9a1cxls-foundr2.vercel.app"
+  ],
+  "builds": [
+    {
+      "id": "bld_qorm9dm27",
+      "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+      "entrypoint": ".",
+      "readyState": "READY",
+      "readyStateAt": 1791822993031,
+      "createdAt": 1791822993031,
+      "createdIn": "sfo1",
+      "use": "@vercel/vc-build",
+      "config": {
+        "framework": "nextjs",
+        "installCommand": "npm ci --ignore-scripts",
+        "buildCommand": "NEXT_TELEMETRY_DISABLED=1 npm run build -- --webpack",
+        "outputDirectory": "out",
+        "nodeVersion": "24.x",
+        "projectCreatedAt": 1791576001503,
+        "vercelConfig": {
+          "name": "sonic-perseus-9a1cxls",
+          "version": 2,
+          "rewrites": [
+            {
+              "source": "/api/mainnet-rpc",
+              "destination": "https://solana-rpc.publicnode.com/"
+            }
+          ],
+          "headers": [
+            {
+              "source": "/(.*)",
+              "headers": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.devnet.solana.com https://solana-rpc.publicnode.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                }
+              ]
+            },
+            {
+              "source": "/api/mainnet-rpc",
+              "headers": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-store"
+                }
+              ]
+            },
+            {
+              "source": "/deployment.json",
+              "headers": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-store"
+                }
+              ]
+            },
+            {
+              "source": "/protocol-deployment.json",
+              "headers": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-store"
+                }
+              ]
+            },
+            {
+              "source": "/token.json",
+              "headers": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-store"
+                }
+              ]
+            },
+            {
+              "source": "/mainnet-deployment.json",
+              "headers": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-store"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "middleware": [],
+      "output": [
+        {
+          "prerender": null,
+          "type": "lambda",
+          "path": "api/mainnet-history",
+          "digest": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE/bd93ae866e239a2ad9829826be8c44621cc2e03cdc5c3c7b76200d1892ef85bc",
+          "mode": 49590,
+          "size": 2684,
+          "lambda": {
+            "functionName": "team_MYqx2Xhak3e9U8khG6BUV6tf-4b9e6252f864f12761ac55780e6a12fa43",
+            "deployedTo": [
+              "iad1"
+            ],
+            "runtime": "nodejs24.x",
+            "memorySize": 2048,
+            "timeout": 300,
+            "layers": [
+              "arn:aws:lambda:AWS_REGION_PLACEHOLDER:977805900156:layer:vercel-rusty-runtime-nodejs-1_51_9-production-69df3f2b67-AWS_ARCH_PLACEHOLDER:1"
+            ]
+          },
+          "edge": null
+        }
+      ],
+      "fingerprint": null
+    }
+  ],
+  "contextName": "foundr2"
+}

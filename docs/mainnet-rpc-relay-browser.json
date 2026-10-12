@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-12T16:37:56.108Z",
+  "website": "https://sonic-perseus-9a1cxls.vercel.app",
+  "rpcProvider": "https://solana-rpc.publicnode.com",
+  "rpcTransportEndpoint": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+  "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "directBrowserRpcBlocked": true,
+  "directRequests": 0,
+  "observedRelayMethods": [
+    "getGenesisHash",
+    "getAccountInfo",
+    "getAccountInfo",
+    "getAccountInfo",
+    "getAccountInfo",
+    "getAccountInfo"
+  ],
+  "fundingDisabled": true,
+  "transactionsSubmitted": 0
+}

@@ -1,0 +1,41 @@
+{
+  "provider": "vercel",
+  "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+  "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
+  "projectName": "sonic-perseus-9a1cxls",
+  "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+  "target": "production",
+  "readyState": "READY",
+  "url": "https://sonic-perseus-9a1cxls.vercel.app",
+  "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+  "aliases": [
+    "www.shellsafe.xyz",
+    "sonic-perseus-9a1cxls.vercel.app",
+    "shellsafe.xyz",
+    "temporary-sonic-perseus-9a1cxls.vercel.app",
+    "sonic-perseus-9a1cxls-foundr2.vercel.app"
+  ],
+  "createdAt": "2026-10-12T16:36:33.177000+00:00",
+  "createdAtAsiaShanghai": "2026-10-13T00:36:33.177000+08:00",
+  "verifiedAt": "2026-10-12T16:37:04.477Z",
+  "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "websiteOnly": true,
+  "mainnetFundingEnabled": true,
+  "devnetFundingEnabled": false,
+  "publicBrowserTestsPassed": 18,
+  "mainnetProgramDeployed": true,
+  "solanaTransactionsSubmittedByWebsitePublication": 0,
+  "publicationScope": "Owner-authorized experimental Mainnet release. Spending authorization and immutable Solana program unchanged.",
+  "mainnetRpcRelay": {
+    "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+    "upstream": "https://solana-rpc.publicnode.com",
+    "postStatus": 200,
+    "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "unsupportedMethodStatus": 405,
+    "noStore": true,
+    "transactionsSubmitted": 0
+  },
+  "publicBrowserAppearance": "dark",
+  "releasePolicy": "owner-authorized-experimental",
+  "independentReviewVerified": false
+}

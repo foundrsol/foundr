@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+  "upstreamVerified": true,
+  "frontendTypecheckPassed": true,
+  "toolsTypecheckPassed": true,
+  "cryptoAndDurabilityTestsPassed": true,
+  "compiledTestsPassed": true,
+  "browserTestsPassed": true,
+  "productionBuildPassed": true,
+  "completedAt": "2026-10-12T16:32:26.528Z",
+  "liveNetworkTransactionsSubmitted": 0
+}

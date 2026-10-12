@@ -1,0 +1,20 @@
+{
+  "cluster": "devnet",
+  "genesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+  "programId": "CBZ5KvpvwfKphy1Mrrgsocey5KDimz47ajYmjNWVGWd6",
+  "verified": false,
+  "binarySha256": null,
+  "binarySize": null,
+  "programData": null,
+  "upgradeAuthority": "DEQAd3kXd8rbcJQc3bETCM5nvpvEcPWtEfrVTUvzc7dL",
+  "deploymentSlot": null,
+  "deploymentSignature": null,
+  "upstreamCommit": "672fc6789b1532ee680f24842d235e0be8737b61",
+  "idlSha256": null,
+  "shellMint": null,
+  "quoteMint": null,
+  "admins": [],
+  "treasuryRecipient": null,
+  "testPoolOnly": true,
+  "note": "Reserved development program. Not deployed or initialized. Test tokens and controlled liquidity are not a mainnet token or market."
+}

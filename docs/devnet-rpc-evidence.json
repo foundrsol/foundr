@@ -1,0 +1,28 @@
+{
+  "endpoint": "https://api.devnet.solana.com",
+  "genesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+  "programId": "H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds",
+  "programExists": false,
+  "programAccount": null,
+  "slot": 509449676,
+  "checkedAt": "2026-10-10T06:25:54.575Z",
+  "diagnostics": {
+    "rpcEndpoint": "https://api.devnet.solana.com",
+    "expectedGenesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+    "rpcGenesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+    "rpcStatus": "verified",
+    "rpcCause": null,
+    "walletPublicKey": null,
+    "walletProvider": null,
+    "walletNetwork": "not exposed; not verified",
+    "programId": "H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds",
+    "manifestVerified": false,
+    "deploymentStatus": "missing",
+    "deploymentCause": "No SHELL program account exists at H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds on verified devnet. Funding and on-chain signing are disabled."
+  },
+  "protocolProgramId": "CBZ5KvpvwfKphy1Mrrgsocey5KDimz47ajYmjNWVGWd6",
+  "protocolProgramExists": false,
+  "protocolProgramAccount": null,
+  "developmentDeployer": "DEQAd3kXd8rbcJQc3bETCM5nvpvEcPWtEfrVTUvzc7dL",
+  "developmentDeployerLamports": "0"
+}

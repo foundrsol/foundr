@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-10-10T12:56:25.235Z",
+  "releaseSourceSha256": "313d5b93e5db9a7efbc80494cb39aa87c25c29a612dd44b991a1d2c3bb36474b",
+  "deployment": {
+    "provider": "vercel",
+    "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+    "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
+    "projectName": "sonic-perseus-9a1cxls",
+    "deploymentId": "dpl_4VBwGXEBCLSxKWo2SRpdnXNRHWG3",
+    "target": "production",
+    "readyState": "READY",
+    "url": "https://sonic-perseus-9a1cxls.vercel.app",
+    "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-mfo9zh1u7-foundr2.vercel.app",
+    "aliases": [
+      "sonic-perseus-9a1cxls.vercel.app",
+      "temporary-sonic-perseus-9a1cxls.vercel.app",
+      "sonic-perseus-9a1cxls-foundr2.vercel.app"
+    ],
+    "createdAt": "2026-10-10T12:55:33.865000+00:00",
+    "createdAtAsiaShanghai": "2026-10-10T20:55:33.865000+08:00",
+    "verifiedAt": "2026-10-10T12:56:25.235Z",
+    "releaseSourceSha256": "313d5b93e5db9a7efbc80494cb39aa87c25c29a612dd44b991a1d2c3bb36474b",
+    "websiteOnly": true,
+    "mainnetFundingEnabled": false,
+    "devnetFundingEnabled": false,
+    "publicBrowserTestsPassed": 17,
+    "mainnetProgramDeployed": true,
+    "solanaTransactionsSubmittedByWebsitePublication": 0,
+    "publicationScope": "Minimalist static wallet interface and existing fixed public RPC rewrite. Immutable Solana program unchanged.",
+    "mainnetRpcRelay": {
+      "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+      "upstream": "https://solana-rpc.publicnode.com",
+      "postStatus": 200,
+      "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "unsupportedMethodStatus": 405,
+      "noStore": true,
+      "transactionsSubmitted": 0
+    }
+  },
+  "changes": [
+    "Light system typography and subtle mint accent",
+    "One primary vault card with the protected balance first and connected wallet balance below",
+    "Create/deposit/withdraw controls together; backup/recovery as secondary actions",
+    "Network costs, deployment explanation and connection diagnostics in expandable sections",
+    "Compact transaction history and full-address CA copy area",
+    "Matching light recovery, withdrawal and protocol forms"
+  ],
+  "viewportChecks": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "documentWidth": 1440,
+      "height": 1353,
+      "errors": []
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "documentWidth": 390,
+      "height": 1308,
+      "errors": []
+    },
+    {
+      "name": "expanded-phone",
+      "width": 390,
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "name": "small-phone",
+      "width": 320,
+      "documentWidth": 320,
+      "height": 1376,
+      "errors": []
+    },
+    {
+      "name": "protocol-phone",
+      "width": 390,
+      "documentWidth": 390,
+      "height": 4196,
+      "errors": []
+    }
+  ],
+  "tests": {
+    "unit": 54,
+    "compiledSbfMatrices": 3,
+    "localBrowser": 16,
+    "localBrowserSkipped": 1,
+    "localBrowserSkipReason": "Production relay check requires the deployed HTTPS origin; it passes in the public suite.",
+    "publicBrowser": 17,
+    "mainnetOwnerLifecycle": true,
+    "allPassed": true
+  },
+  "newSolanaTransactionsSubmitted": 0,
+  "mainnetProgramChanged": false,
+  "mainnetProgramImmutable": true,
+  "mainnetFundingEnabled": false,
+  "devnetFundingEnabled": false,
+  "securityBehaviorPreserved": [
+    "Full genesis and deployment validation",
+    "Required encrypted backup verification",
+    "Durable one-time state and ambiguous outcome handling",
+    "Required operation-bound hash-based withdrawal authorization",
+    "Fee/rent review before signing",
+    "Independent exact-build review gate"
+  ],
+  "originalOwnerLifecycleSourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4"
+}

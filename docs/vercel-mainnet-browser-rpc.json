@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-12T16:37:54.312Z",
+  "website": "https://sonic-perseus-9a1cxls.vercel.app",
+  "rpcEndpoint": "https://solana-rpc.publicnode.com",
+  "rpcTransportEndpoint": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+  "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "status": "verified",
+  "releaseStatus": "experimental-ready",
+  "deploymentFundingAuthorized": true,
+  "independentReviewStatus": "pending",
+  "transactionsSubmitted": 0
+}

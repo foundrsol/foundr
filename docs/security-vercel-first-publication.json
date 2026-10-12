@@ -1,0 +1,62 @@
+{
+  "publication": "First security hardening publication, before the subsequent free-vault copy update",
+  "checkedAt": "2026-10-10T11:03:17.513730+00:00",
+  "sourceSha256": "815d22b9412dbe9a748ca9f0a43f39775c0cd6d2da6aa7fd864ec3d08b325014",
+  "providerInspection": {
+    "id": "dpl_DBKhoHHB2Y5m9yFDcUzaFozpvFnp",
+    "name": "sonic-perseus-9a1cxls",
+    "url": "sonic-perseus-9a1cxls-ji0vtakuy-foundr2.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1791629811052,
+    "aliases": [
+      "sonic-perseus-9a1cxls.vercel.app",
+      "temporary-sonic-perseus-9a1cxls.vercel.app",
+      "sonic-perseus-9a1cxls-foundr2.vercel.app"
+    ],
+    "contextName": "foundr2"
+  },
+  "httpVerification": {
+    "url": "https://sonic-perseus-9a1cxls.vercel.app",
+    "deploymentId": "dpl_DBKhoHHB2Y5m9yFDcUzaFozpvFnp",
+    "readyState": "READY",
+    "checkedAt": "2026-10-10T10:58:39.969Z",
+    "cliVersion": "59.11.7",
+    "staticExport": true,
+    "homeStatus": 200,
+    "securityHeadersVerified": true,
+    "routes": {
+      "/devnet": 200,
+      "/protocol": 200
+    },
+    "manifests": {
+      "mainnet-deployment.json": {
+        "sha256": "fc4108ec02a301a0ecd1bfddee50e556c5ecdb0ac8cab56ab6a47ec8b004b740",
+        "cluster": "mainnet-beta",
+        "verified": false
+      },
+      "deployment.json": {
+        "sha256": "94011c3c0ad994e960a566a1ce6d66dc0084d795904fac65c170347b0891d6e0",
+        "cluster": "devnet",
+        "verified": false
+      },
+      "protocol-deployment.json": {
+        "sha256": "833fa958346cd42f21bf039995d0ff1d0214f54eb32f9f1b8981df9e33540525",
+        "cluster": "devnet",
+        "verified": false
+      },
+      "token.json": {
+        "sha256": "56e62ee1e822fff7f1d3d5b7cdca27c9d6b40853040a49e2214d6edb9d9c56d8",
+        "cluster": null,
+        "verified": null
+      }
+    }
+  },
+  "publicBrowserTests": {
+    "passed": 16,
+    "failed": 0,
+    "realRpcReadOnly": true,
+    "lifecycle": "local compiled SBF only"
+  },
+  "solanaTransactionsSubmitted": 0
+}

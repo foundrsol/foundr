@@ -1,0 +1,20 @@
+{
+  "id": "appgdep_6ac96e2179bc81919c962305301567bf",
+  "project_id": "appgprj_6ac968ccacd88191be62650458df7979",
+  "title": "SHELL — Security vault",
+  "version_id": "appgprj_6ac968ccacd88191be62650458df7979~appgver_9d89198563288191be3a2445d109b4ef",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://shell-security-vault.javieradriano99.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6ac968ccacd88191be62650458df7979",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-10-09T22:44:07.703582+00:00",
+  "sourceCommit": "52544323539dfdeae889b19a39ac3810684da517",
+  "versionNumber": 2,
+  "archiveSha256": "sha256:9a773135d42af8519b73d40be759d2345d4649c166faa8e33585810cb6be9102",
+  "accessMode": "public",
+  "publication": "Website only; no Solana program deployment or token creation."
+}

@@ -1,0 +1,10 @@
+✔ Solana integer conversion uses the pinned non-native fork and accepts buffers longer than 32 bytes safely (4.131138ms)
+✔ the actual Solana SDK entrypoints do not load the remaining vulnerable streaming parser (192.036647ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 242.933461

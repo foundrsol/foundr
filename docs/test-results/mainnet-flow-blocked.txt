@@ -1,0 +1,12 @@
+
+> shell-devnet@0.1.0 test:mainnet
+> node scripts/mainnet-flow.ts
+
+file:///workspace/shell/scripts/mainnet-flow.ts:13
+if (manifest.authorizationProfile !== 'mainnet-v2' || !manifest.verified || manifest.upgradeAuthority !== null || manifest.mainnetRelease?.securityReview.status !== 'verified') throw Error('Mainnet smoke test is blocked: a verified immutable deployment and exact-build independent review are required first. Nothing was submitted.');
+                                                                                                                                                                                       ^
+
+Error: Mainnet smoke test is blocked: a verified immutable deployment and exact-build independent review are required first. Nothing was submitted.
+    at file:///workspace/shell/scripts/mainnet-flow.ts:13:184
+
+Node.js v24.19.0

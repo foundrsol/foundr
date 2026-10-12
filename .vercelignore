@@ -1,0 +1,15 @@
+.dev/
+.toolchains/
+.cache/
+.next/
+.git/
+.env*
+node_modules/
+out/
+program/target/
+protocol/target/
+vendor/**/target/
+test-results/
+playwright-report/
+*.tsbuildinfo
+*.log

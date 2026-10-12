@@ -1,0 +1,20 @@
+[package]
+name = "winterwallet-program"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "On-chain Solana program for WinterWallet: Winternitz one-time signature verification and wallet state management."
+
+[lints]
+workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pinocchio = { workspace = true }
+pinocchio-system = { workspace = true }
+solana-address = { workspace = true, features = ["decode"] }
+winterwallet-common = { workspace = true }
+winterwallet-core = { workspace = true }

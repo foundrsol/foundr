@@ -1,0 +1,19 @@
+{
+  "endpoint": "https://api.devnet.solana.com",
+  "checkedAt": "2026-10-10T06:27:50.987988+00:00",
+  "quotes": [
+    {
+      "program": "vault",
+      "binaryBytes": 24536,
+      "programDataRentLamports": "125521720",
+      "temporaryBufferRentLamports": "125481080"
+    },
+    {
+      "program": "protocol",
+      "binaryBytes": 614152,
+      "programDataRentLamports": "3120771000",
+      "temporaryBufferRentLamports": "3120730360"
+    }
+  ],
+  "note": "Rent quotes only. Deployment network fees, executable account rent, test-account rent and controlled pool liquidity are additional. No funds were sent."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "appgdep_6aca001817548191bdead1a3d88af4cd",
+  "project_id": "appgprj_6ac968ccacd88191be62650458df7979",
+  "title": "SHELL — Security vault",
+  "version_id": "appgprj_6ac968ccacd88191be62650458df7979~appgver_fcf6d8d789ec8191a09daf9724d2ded8",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://shell-security-vault.javieradriano99.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": "sediment://file_0000000032d481f8ada296ab84c8426f",
+  "provider_deployment_id": "site---6ac968ccacd88191be62650458df7979",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-10-10T09:07:28.641023+00:00",
+  "sourceCommit": "6bdaf6300f6ee220923f2a4e6f598616c5e89f07",
+  "versionNumber": 3,
+  "accessMode": "public",
+  "publication": "Website only. Mainnet funding blocked; no Solana program deployment or real-money transaction.",
+  "publishedAtAsiaShanghai": "2026-10-10 17:07:28 +08:00"
+}

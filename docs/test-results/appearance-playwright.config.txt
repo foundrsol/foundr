@@ -1,0 +1,8 @@
+import { defineConfig } from '@playwright/test';
+import base from '../playwright.config.ts';
+
+const origin = new URL(process.env.SHELL_BROWSER_URL || 'http://127.0.0.1:3000').origin;
+export default defineConfig(base, {
+  testDir: new URL('../tests/browser/', import.meta.url).pathname,
+  use: { ...base.use, storageState: { cookies: [], origins: [{ origin, localStorage: [{ name: 'shell-appearance', value: 'dark' }] }] } },
+});

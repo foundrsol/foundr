@@ -1,0 +1,890 @@
+{
+  "checkedAt": "2026-10-12T16:37:04.477Z",
+  "kind": "engineering review and regression verification",
+  "independentAudit": false,
+  "independentReviewApproval": false,
+  "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+  "mainnetBinarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+  "upstreamCommit": "672fc6789b1532ee680f24842d235e0be8737b61",
+  "releaseChecks": {
+    "passed": true,
+    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "upstreamVerified": true,
+    "frontendTypecheckPassed": true,
+    "toolsTypecheckPassed": true,
+    "cryptoAndDurabilityTestsPassed": true,
+    "compiledTestsPassed": true,
+    "browserTestsPassed": true,
+    "productionBuildPassed": true,
+    "completedAt": "2026-10-12T16:32:26.528Z",
+    "liveNetworkTransactionsSubmitted": 0
+  },
+  "tests": {
+    "unitPassed": 61,
+    "unitFailed": 0,
+    "compiledSbfMatricesPassed": 3,
+    "compiledSbfMatricesFailed": 0,
+    "localBrowserPassed": 15,
+    "localBrowserFailed": 0,
+    "liveRpcChecksReadOnly": true,
+    "localVmLifecycleOnly": false,
+    "publicBrowserPassed": 18,
+    "publicBrowserFailed": 0,
+    "mainnetOwnerLifecyclePassed": true,
+    "publicBrowserLifecycleUsesLocalVm": true,
+    "localBrowserSkipped": 3,
+    "publicBrowserAppearance": "dark"
+  },
+  "findingsFixed": [
+    "Recovery history growth bounds preserve current/next keys and all unresolved signed transactions",
+    "Oversized encrypted state rejected before stored-record replacement",
+    "Browsers ignoring strict IndexedDB durability cannot save signing state",
+    "Native bigint conversion removed using the pinned Exodus pure-JavaScript fork",
+    "Pinned TOML and UUID advisory fixes",
+    "Mainnet HTTPS browser RPC uses a fixed same-origin Vercel rewrite, verified while direct browser provider access is blocked"
+  ],
+  "dependencyAudit": {
+    "runtime": {
+      "info": 0,
+      "low": 0,
+      "moderate": 2,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "full": {
+      "info": 0,
+      "low": 0,
+      "moderate": 2,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "clean": false,
+    "remainingPackages": [
+      "jayson",
+      "stream-json"
+    ],
+    "report": "docs/dependency-audit.json"
+  },
+  "mainnetDeployment": {
+    "command": "npm run deploy:mainnet",
+    "exitCode": 0,
+    "stoppedBeforeSolanaCli": false,
+    "preflight": {
+      "checkedAt": "2026-10-10T11:42:39.260Z",
+      "mode": "preflight",
+      "rpcEndpoint": "https://api.mainnet-beta.solana.com",
+      "rpcGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "authorizationProfile": "mainnet-v2",
+      "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+      "programAccountExists": true,
+      "programDeploymentVerified": true,
+      "feePayer": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+      "feePayerLamports": 168832520,
+      "requiredUpgradePolicy": "immutable",
+      "binaryPath": "program/target/deploy/mainnet/shell_vault.so",
+      "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+      "binarySize": 24544,
+      "sourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
+      "exactBuildCompiledTestsPassed": true,
+      "independentReviewVerified": false,
+      "lifecycleVerified": true,
+      "deploymentPrerequisitesPassed": false,
+      "deploymentRequiresIndependentReview": false,
+      "publicFundingRequiresIndependentReview": true,
+      "rents": {
+        "program": 833120,
+        "programData": 125562360,
+        "buffer": 125521720,
+        "minimumFeePayerLamports": 252917200
+      },
+      "releaseStatus": "review-required",
+      "fundingEnabled": false,
+      "transactionsSubmitted": 0,
+      "blockers": [
+        "No independently supplied security review covers this exact Mainnet source/binary. Provide .mainnet/security-review.json and the real published report."
+      ]
+    },
+    "programDeploymentSignature": "3dxWFSwSgF7kbXAV8jZrqq6mjf4cuUB2qwhkGK6JG4QtaSUHPwUb7JGq3dmKFnjXHYd7mL7taUTPT3JiWceKtaq5",
+    "immutabilitySignature": "2YaPs7pUj9r8oqPovUwSxYwM1ZAtQCFdvJ8j9atBkuukyXgDoRcAroHXomuYsFYsNjVcX81KguqpMf8T3YGoPA6m",
+    "actualTransactionsSinceFunding": 35,
+    "programVerification": "docs/mainnet-program-verification.json"
+  },
+  "mainnetFundingEnabled": false,
+  "websiteSecurityUpdate": {
+    "status": "experimental-mainnet-deployed-and-verified",
+    "website": {
+      "provider": "vercel",
+      "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+      "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
+      "projectName": "sonic-perseus-9a1cxls",
+      "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+      "target": "production",
+      "readyState": "READY",
+      "url": "https://sonic-perseus-9a1cxls.vercel.app",
+      "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+      "aliases": [
+        "www.shellsafe.xyz",
+        "sonic-perseus-9a1cxls.vercel.app",
+        "shellsafe.xyz",
+        "temporary-sonic-perseus-9a1cxls.vercel.app",
+        "sonic-perseus-9a1cxls-foundr2.vercel.app"
+      ],
+      "createdAt": "2026-10-12T16:36:33.177000+00:00",
+      "createdAtAsiaShanghai": "2026-10-13T00:36:33.177000+08:00",
+      "verifiedAt": "2026-10-12T16:37:04.477Z",
+      "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+      "websiteOnly": true,
+      "mainnetFundingEnabled": true,
+      "devnetFundingEnabled": false,
+      "publicBrowserTestsPassed": 18,
+      "mainnetProgramDeployed": true,
+      "solanaTransactionsSubmittedByWebsitePublication": 0,
+      "publicationScope": "Owner-authorized experimental Mainnet release. Spending authorization and immutable Solana program unchanged.",
+      "mainnetRpcRelay": {
+        "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+        "upstream": "https://solana-rpc.publicnode.com",
+        "postStatus": 200,
+        "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+        "unsupportedMethodStatus": 405,
+        "noStore": true,
+        "transactionsSubmitted": 0
+      },
+      "publicBrowserAppearance": "dark",
+      "releasePolicy": "owner-authorized-experimental",
+      "independentReviewVerified": false
+    },
+    "verification": {
+      "url": "https://sonic-perseus-9a1cxls.vercel.app",
+      "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+      "readyState": "READY",
+      "checkedAt": "2026-10-12T16:37:04.477Z",
+      "cliVersion": "59.11.7",
+      "staticExport": true,
+      "readOnlyHistoryFunction": {
+        "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-history",
+        "upstream": "https://api.mainnet-beta.solana.com",
+        "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+        "postStatus": 200,
+        "transactionSubmissionRejected": 400,
+        "unsupportedMethodStatus": 405,
+        "transactionsSubmitted": 0
+      },
+      "homeStatus": 200,
+      "securityHeadersVerified": true,
+      "routes": {
+        "/how-it-works": 200,
+        "/devnet": 200,
+        "/protocol": 200
+      },
+      "manifests": {
+        "mainnet-deployment.json": {
+          "sha256": "9a8737b0eb1029b8774420e947e9882c9e208938c15c46f468da5bea6edb56dd",
+          "cluster": "mainnet-beta",
+          "verified": true
+        },
+        "deployment.json": {
+          "sha256": "94011c3c0ad994e960a566a1ce6d66dc0084d795904fac65c170347b0891d6e0",
+          "cluster": "devnet",
+          "verified": false
+        },
+        "protocol-deployment.json": {
+          "sha256": "833fa958346cd42f21bf039995d0ff1d0214f54eb32f9f1b8981df9e33540525",
+          "cluster": "devnet",
+          "verified": false
+        },
+        "token.json": {
+          "sha256": "939ecfc64193f9480c3fff567390acff58de484fb2c7fae1e3016c1eeeb3374f",
+          "cluster": null,
+          "verified": null
+        }
+      },
+      "mainnetRpcRelay": {
+        "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+        "upstream": "https://solana-rpc.publicnode.com",
+        "postStatus": 200,
+        "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+        "unsupportedMethodStatus": 405,
+        "noStore": true,
+        "transactionsSubmitted": 0
+      },
+      "removedHomepageCopyAbsent": true,
+      "privatePaths": {
+        "/.env.local": 404,
+        "/.mainnet/program.json": 404,
+        "/.dev/vercel/auth.json": 404
+      },
+      "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+      "verificationTarget": "API-confirmed public production alias",
+      "aliasAssignmentVerified": true,
+      "mainnetProgramDeployed": true,
+      "mainnetFundingEnabled": true,
+      "devnetFundingEnabled": false,
+      "experimentalLaunchAuthorized": true,
+      "independentReviewVerified": false,
+      "transactionsSubmittedByWebsiteVerification": 0,
+      "publicBrowserTests": {
+        "passed": 18,
+        "failed": 0,
+        "appearance": "dark; clean-profile recovery also exercises light",
+        "liveRpcReadOnly": true,
+        "vaultLifecycleScope": "Actual compiled local SBF fixtures. Historical finalized owner Mainnet flow recorded separately.",
+        "report": "docs/test-results/vercel-public-browser.txt"
+      },
+      "interfaceVerification": "docs/experimental-launch.json",
+      "liveActivation": {
+        "checkedAt": "2026-10-12T16:38:15.432Z",
+        "website": "https://sonic-perseus-9a1cxls.vercel.app",
+        "releaseStatus": "experimental-ready",
+        "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+        "independentReviewStatus": "pending",
+        "walletInterfaceConnected": true,
+        "encryptedIdentityCreated": true,
+        "recoveryExportVerified": true,
+        "activationEnabled": true,
+        "noDepositBeforeActivation": true,
+        "signatureRequests": 0,
+        "transactionsSubmitted": 0
+      }
+    }
+  },
+  "reviewGate": "Owner explicitly authorized an experimental public release. No independent review or approval has been created or implied. Exact-build approval and all technical spending, deployment and lifecycle checks remain required.",
+  "positioning": {
+    "headline": "A free vault. A fresh shell.",
+    "basicVaultProtocolFeeLamports": "0",
+    "networkFeesAndPermanentAccountRentApply": true,
+    "browserSoftware": true,
+    "ledgerHardwareSuperiorityClaimed": false,
+    "requestedHomepageSentenceRemoved": true
+  },
+  "mainnetProgramVerification": {
+    "checkedAt": "2026-10-10T11:33:23.541Z",
+    "rpcEndpoint": "https://api.mainnet-beta.solana.com",
+    "rpcGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+    "programData": "GgNpv2WTgVm4gzxMb4UZ9rEZNyGQCoC78nFLBLSgxc9A",
+    "executable": true,
+    "loader": "BPFLoaderUpgradeab1e11111111111111111111111",
+    "immutable": true,
+    "upgradeAuthority": null,
+    "sourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "binarySize": 24544,
+    "deploymentSlot": 455239788,
+    "deploymentSignature": "3dxWFSwSgF7kbXAV8jZrqq6mjf4cuUB2qwhkGK6JG4QtaSUHPwUb7JGq3dmKFnjXHYd7mL7taUTPT3JiWceKtaq5",
+    "finalizationSlot": 455239839,
+    "finalizationSignature": "2YaPs7pUj9r8oqPovUwSxYwM1ZAtQCFdvJ8j9atBkuukyXgDoRcAroHXomuYsFYsNjVcX81KguqpMf8T3YGoPA6m",
+    "programRentLamports": 833120,
+    "programDataRentLamports": 125562360,
+    "independentAudit": false,
+    "publicFundingEnabled": false,
+    "transactionsSubmittedByVerification": 0
+  },
+  "mainnetLifecycle": {
+    "network": "mainnet-beta",
+    "authorizationProfile": "mainnet-v2",
+    "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+    "sourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "cleanStoreRecovery": "passed",
+    "proof": {
+      "payer": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+      "recipient": "3LFCE974HCvG4RZ8FmWxppCJAe3Rsd794SiqaTZz9qxw",
+      "vaults": [
+        "3KRnWVHiFCwdL3HC7rUg9ZkSnR1YVeRce9jFK6kSiayA",
+        "7sY7yGEUtHsyH6w2buLn34c12LBe58KXTdzq6iXQuEUj",
+        "Foc9TZ4hoaGEUSeuFeVsHR7SCdao4kVKMVDhHadngDWD"
+      ],
+      "depositLamports": "2000000",
+      "partialLamports": "1000000",
+      "signatures": [
+        "4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn",
+        "2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D",
+        "2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R",
+        "2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko",
+        "2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7",
+        "2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4"
+      ]
+    },
+    "transactions": [
+      {
+        "signature": "4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn",
+        "explorer": "https://explorer.solana.com/tx/4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn"
+      },
+      {
+        "signature": "2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D",
+        "explorer": "https://explorer.solana.com/tx/2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D"
+      },
+      {
+        "signature": "2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R",
+        "explorer": "https://explorer.solana.com/tx/2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R"
+      },
+      {
+        "signature": "2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko",
+        "explorer": "https://explorer.solana.com/tx/2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko"
+      },
+      {
+        "signature": "2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7",
+        "explorer": "https://explorer.solana.com/tx/2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7"
+      },
+      {
+        "signature": "2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4",
+        "explorer": "https://explorer.solana.com/tx/2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4"
+      }
+    ],
+    "completedAt": "2026-10-10T11:33:52.524Z"
+  },
+  "fundsAccounting": {
+    "checkedAt": "2026-10-10T11:42:28.111Z",
+    "rpcEndpoint": "https://api.mainnet-beta.solana.com",
+    "rpcGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "feePayer": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+    "receivedLamports": 300000000,
+    "finalizedBalanceLamports": 168832520,
+    "smokeRecipientRemainingLamports": 0,
+    "netLamportsUsed": 131167480,
+    "vaults": [
+      {
+        "address": "3KRnWVHiFCwdL3HC7rUg9ZkSnR1YVeRce9jFK6kSiayA",
+        "balanceLamports": 1524000,
+        "owner": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+        "dataLength": 172,
+        "stateByte": 2
+      },
+      {
+        "address": "7sY7yGEUtHsyH6w2buLn34c12LBe58KXTdzq6iXQuEUj",
+        "balanceLamports": 1524000,
+        "owner": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+        "dataLength": 172,
+        "stateByte": 2
+      },
+      {
+        "address": "Foc9TZ4hoaGEUSeuFeVsHR7SCdao4kVKMVDhHadngDWD",
+        "balanceLamports": 1524000,
+        "owner": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+        "dataLength": 172,
+        "stateByte": 0
+      }
+    ],
+    "observedTransactionsSinceFunding": 35,
+    "transactions": [
+      {
+        "signature": "24oyFtsMCyPNg8YNNG8L54murpKvM58tGmLExC3ZjMQ4jVPfwjHFFnjXtTm7bMLVhkJ72LbBuspGnxPxG51PXdVN",
+        "slot": 455242348,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/24oyFtsMCyPNg8YNNG8L54murpKvM58tGmLExC3ZjMQ4jVPfwjHFFnjXtTm7bMLVhkJ72LbBuspGnxPxG51PXdVN"
+      },
+      {
+        "signature": "2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4",
+        "slot": 455240501,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2cYPoM4oiVi1845QCEjBfSEoJiReEbPsa7ZcJnm6ke1CxjwTsLGPpGyso24gx3DLxBexmvoxXx5peQQgPEaZJvh4"
+      },
+      {
+        "signature": "2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7",
+        "slot": 455240444,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2ykp1ofq3gw3jEzsmUTUbUHRxLfzcg7v6V3xDwDxTxy4EzCJNcvgDZKYuX4Jp2qit7DcVWj181SRuB8iyLTa2CZ7"
+      },
+      {
+        "signature": "2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko",
+        "slot": 455240383,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2JdgXHvk72d8Szn5MaGt5vuEqdvmAqK9k7hrJzqhtMzbzZT2LoLc9VrXw7rEypRujeaaz1hB58cp399BpX4CxVko"
+      },
+      {
+        "signature": "2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R",
+        "slot": 455240326,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2oFteoP6c1Tb9CNyaSAdU4EMcocpCszAyfkJbZhourK8rpi9W87DxufbUbWsdRHyaJygneszf9fjkhq9WfyAM2R"
+      },
+      {
+        "signature": "2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D",
+        "slot": 455240260,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2XsHhkwt9eLE8aN18niwtpmafp6dS1ZUufqczY8Pbj9gVNskY7mDW7B6w8CBY3xWpvksVvM8gjCFCsWtF1m34d9D"
+      },
+      {
+        "signature": "4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn",
+        "slot": 455240204,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/4vwBQyrnE4Jm1oaNvH3hjbQrbjE4GqSHePYuRNsedg2NSDK6jVbNfuo2sYF8Y2eKxvb2z5WcxdVqe4miNm93dJnn"
+      },
+      {
+        "signature": "2YaPs7pUj9r8oqPovUwSxYwM1ZAtQCFdvJ8j9atBkuukyXgDoRcAroHXomuYsFYsNjVcX81KguqpMf8T3YGoPA6m",
+        "slot": 455239839,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2YaPs7pUj9r8oqPovUwSxYwM1ZAtQCFdvJ8j9atBkuukyXgDoRcAroHXomuYsFYsNjVcX81KguqpMf8T3YGoPA6m"
+      },
+      {
+        "signature": "3dxWFSwSgF7kbXAV8jZrqq6mjf4cuUB2qwhkGK6JG4QtaSUHPwUb7JGq3dmKFnjXHYd7mL7taUTPT3JiWceKtaq5",
+        "slot": 455239788,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/3dxWFSwSgF7kbXAV8jZrqq6mjf4cuUB2qwhkGK6JG4QtaSUHPwUb7JGq3dmKFnjXHYd7mL7taUTPT3JiWceKtaq5"
+      },
+      {
+        "signature": "3azFvZt7pT9ZQJs47TREDenvjfYZTuRmZEgBB4MGSZGS3aavMg9B21pz77VuMrUfZk5XB1w1qDpivQ3UG6ZzT5Ea",
+        "slot": 455239750,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/3azFvZt7pT9ZQJs47TREDenvjfYZTuRmZEgBB4MGSZGS3aavMg9B21pz77VuMrUfZk5XB1w1qDpivQ3UG6ZzT5Ea"
+      },
+      {
+        "signature": "5HoFfK3EpKMwA4xnxe5CsWea7ZtxtgvGVxegwT36bmDyF7wNFHERHBRFAGgbB6NFUfeHcQfie2DA79CGzzJFfRBn",
+        "slot": 455239705,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/5HoFfK3EpKMwA4xnxe5CsWea7ZtxtgvGVxegwT36bmDyF7wNFHERHBRFAGgbB6NFUfeHcQfie2DA79CGzzJFfRBn"
+      },
+      {
+        "signature": "4QLMuqfw6CLsx1yQwPgeg9j5pZyVMTQrG3THH4DpoS7mkmcN7ogqpJRg2LNYG4NxQimjgD2mr465dBThHjWmMfYd",
+        "slot": 455239705,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/4QLMuqfw6CLsx1yQwPgeg9j5pZyVMTQrG3THH4DpoS7mkmcN7ogqpJRg2LNYG4NxQimjgD2mr465dBThHjWmMfYd"
+      },
+      {
+        "signature": "5cYqC3zLspY5DCBdagNQBreyVJj619GqkZGt4bWj7Quz9SVSKU6AkQPwJuWY2ny3jf4Gw66tWidaSHA8HAZgCL9i",
+        "slot": 455239705,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/5cYqC3zLspY5DCBdagNQBreyVJj619GqkZGt4bWj7Quz9SVSKU6AkQPwJuWY2ny3jf4Gw66tWidaSHA8HAZgCL9i"
+      },
+      {
+        "signature": "5yJYb8jsEfwWSrXrfCn8UfCCR77F8aFBLC1vYttMVNEThKCnj3bY6M5Ch9cNYw9weJ4jpaBqA31e28nnmeDb9hrs",
+        "slot": 455239705,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/5yJYb8jsEfwWSrXrfCn8UfCCR77F8aFBLC1vYttMVNEThKCnj3bY6M5Ch9cNYw9weJ4jpaBqA31e28nnmeDb9hrs"
+      },
+      {
+        "signature": "5QmRKL6hxFw9sMfdfioLxhSy2Jo6trfzHtPdNSMzXvtczb7YEirRTijHZWap9DBHjyC5awxMMeGcosSJ2a49zupH",
+        "slot": 455239705,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/5QmRKL6hxFw9sMfdfioLxhSy2Jo6trfzHtPdNSMzXvtczb7YEirRTijHZWap9DBHjyC5awxMMeGcosSJ2a49zupH"
+      },
+      {
+        "signature": "2t3Vnx2EJ6Ha347vqjYrHr8sqZQEujDA1DUUvLNepvcbk2EJMhYNepaGHZaUZp3biY87F1MaDyy1ZfWG7gLDvdBC",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2t3Vnx2EJ6Ha347vqjYrHr8sqZQEujDA1DUUvLNepvcbk2EJMhYNepaGHZaUZp3biY87F1MaDyy1ZfWG7gLDvdBC"
+      },
+      {
+        "signature": "42hBHmDfKRkKQyy1SHu8Zu9Qi1VBv5hYsYaL2sdEurjrfMBdPqARapvxWm1hK22Q34hQEaxsr5f8UsMwUcvzb23r",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/42hBHmDfKRkKQyy1SHu8Zu9Qi1VBv5hYsYaL2sdEurjrfMBdPqARapvxWm1hK22Q34hQEaxsr5f8UsMwUcvzb23r"
+      },
+      {
+        "signature": "43NBCpY94drAz8mvPxWveqirwxD664oHm83ZBTpQ9Ma4qgjvbKkHSsnm2U7gN1v84dYH8PTMmWFG3UjFSSMJZLcQ",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/43NBCpY94drAz8mvPxWveqirwxD664oHm83ZBTpQ9Ma4qgjvbKkHSsnm2U7gN1v84dYH8PTMmWFG3UjFSSMJZLcQ"
+      },
+      {
+        "signature": "5DE9KAPGs6j5VkP5LvRho4x5NxR9k2jhfzxppmkyjY9qYgpqsMc1dgr2QEYo26TZdBs1JDE4qG6qwLzokfVw5aSw",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/5DE9KAPGs6j5VkP5LvRho4x5NxR9k2jhfzxppmkyjY9qYgpqsMc1dgr2QEYo26TZdBs1JDE4qG6qwLzokfVw5aSw"
+      },
+      {
+        "signature": "28vJC4ivXNR4U6z2YgcMirLTHHxMVP8RjLLBirV9jo68f8rc7Db7pSBwmfQRVEpNBavGCRehgyvddxW4T2sBw4cW",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/28vJC4ivXNR4U6z2YgcMirLTHHxMVP8RjLLBirV9jo68f8rc7Db7pSBwmfQRVEpNBavGCRehgyvddxW4T2sBw4cW"
+      },
+      {
+        "signature": "4mfQpRD67oT4JR7XdWidhVHfX5H1G4SeL92ATcJtLquZYXarG3h7AerQBdMY2xibChNd4Gy7R9LY9Vd3PH6bwgg6",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/4mfQpRD67oT4JR7XdWidhVHfX5H1G4SeL92ATcJtLquZYXarG3h7AerQBdMY2xibChNd4Gy7R9LY9Vd3PH6bwgg6"
+      },
+      {
+        "signature": "4r8Vz9GziBo8ZHJujqEqTgVimrrX6c238dVPaACnYeLX8YHvTCahyNJjtuBPjcPHcoQAHESK9Bw4AK3YJTaX7MX4",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/4r8Vz9GziBo8ZHJujqEqTgVimrrX6c238dVPaACnYeLX8YHvTCahyNJjtuBPjcPHcoQAHESK9Bw4AK3YJTaX7MX4"
+      },
+      {
+        "signature": "5tguuXXEYsqfZV9s6aZtFxVnaRi1VfQFgbF1LkJnf9MGzghVzrfyu2WwC4U1FtASGF2rNL33qmHFWuxKDqmwhEEc",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/5tguuXXEYsqfZV9s6aZtFxVnaRi1VfQFgbF1LkJnf9MGzghVzrfyu2WwC4U1FtASGF2rNL33qmHFWuxKDqmwhEEc"
+      },
+      {
+        "signature": "FUYNTMCBUxBJfsiL9rADQtsQ2btfUJHcbsyhNwTwTjWuXKjkvJSwQvSGAhiXMZdx3bWhNfmJoenWN1Zaukzi2aQ",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/FUYNTMCBUxBJfsiL9rADQtsQ2btfUJHcbsyhNwTwTjWuXKjkvJSwQvSGAhiXMZdx3bWhNfmJoenWN1Zaukzi2aQ"
+      },
+      {
+        "signature": "2TLxv9qxAN9AAcgHgeZ3LgmZcwx1jhtjWWXwiFWBb65RTJ4pRGRy4MEiqgpQa5vXiFYoTbjVnNBhXhWR2jnz8hCf",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2TLxv9qxAN9AAcgHgeZ3LgmZcwx1jhtjWWXwiFWBb65RTJ4pRGRy4MEiqgpQa5vXiFYoTbjVnNBhXhWR2jnz8hCf"
+      },
+      {
+        "signature": "4r1Bo8eK7xEFvj31xJGNqDvD7M6YL1Qt6QMGcD5wVN3NTNZsdWsPdSQDL9LCA9ibcHY74aZFNntfzRNHoJL88k6t",
+        "slot": 455239659,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/4r1Bo8eK7xEFvj31xJGNqDvD7M6YL1Qt6QMGcD5wVN3NTNZsdWsPdSQDL9LCA9ibcHY74aZFNntfzRNHoJL88k6t"
+      },
+      {
+        "signature": "48TUiMyDWcAs15PQHUMM6STbZSF2h9Du8dpaPxsxdV1XeTrH1MP3HuscXd2sJ14qGicFQHPDo3XLjout5Z27DUwb",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/48TUiMyDWcAs15PQHUMM6STbZSF2h9Du8dpaPxsxdV1XeTrH1MP3HuscXd2sJ14qGicFQHPDo3XLjout5Z27DUwb"
+      },
+      {
+        "signature": "VQHM1skdjma7VAKq5NnuSG22CjQ9VGeV6zbjQ5SekJayegR7NX2hpVc8cjhmZghEFy5gcfE6TGcvcBtwzvjWaSs",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/VQHM1skdjma7VAKq5NnuSG22CjQ9VGeV6zbjQ5SekJayegR7NX2hpVc8cjhmZghEFy5gcfE6TGcvcBtwzvjWaSs"
+      },
+      {
+        "signature": "2z5RHwVZZTAKdQbgv7tetCfyxo5KFLwx48M8UFbfFGUF8Li2S7XwiF8z4W5uuv8KdSaNarQU2Vqh52xAn5d8QRGx",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2z5RHwVZZTAKdQbgv7tetCfyxo5KFLwx48M8UFbfFGUF8Li2S7XwiF8z4W5uuv8KdSaNarQU2Vqh52xAn5d8QRGx"
+      },
+      {
+        "signature": "5mtyvz3os7QyZtPCd9oWoAzCMNwSMpNDV3YPHgtn4PjsHJhDbTbXMKbrncp2KpqWCCW3eo6qYPH3L91XeCwRhTtN",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/5mtyvz3os7QyZtPCd9oWoAzCMNwSMpNDV3YPHgtn4PjsHJhDbTbXMKbrncp2KpqWCCW3eo6qYPH3L91XeCwRhTtN"
+      },
+      {
+        "signature": "4E8DcYHvDV8tZK8qs75BF3tAFFV8tu6rRYySiTBQnfEX8HVfZfUhKAgqfYFYFmLwuKfvyQBNgfFTnpiNJpzaEErY",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/4E8DcYHvDV8tZK8qs75BF3tAFFV8tu6rRYySiTBQnfEX8HVfZfUhKAgqfYFYFmLwuKfvyQBNgfFTnpiNJpzaEErY"
+      },
+      {
+        "signature": "4GKpGVvwapimsuwj7ModE6DUD7UU4fqn9aTS9pVGkDkt5N6KDxy9YPhkCJuJ9QAJT4V5Ajpxecwwy7dApERq6yCh",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/4GKpGVvwapimsuwj7ModE6DUD7UU4fqn9aTS9pVGkDkt5N6KDxy9YPhkCJuJ9QAJT4V5Ajpxecwwy7dApERq6yCh"
+      },
+      {
+        "signature": "2xnyhL1yQtfAdR77NgSQZPLybz927hyX5ZG4JPRbtqtkMSiBi519EfVskbGKPTksx7HrmFqy9NaYh9ioBp95zpoV",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/2xnyhL1yQtfAdR77NgSQZPLybz927hyX5ZG4JPRbtqtkMSiBi519EfVskbGKPTksx7HrmFqy9NaYh9ioBp95zpoV"
+      },
+      {
+        "signature": "NJB51eex9y312oteHov7A8XR3gwgz43SpN1i5emeMNoWxN8oLvVsdhMpC5astXsccHbdHaD8ahc248N1BmeWFKd",
+        "slot": 455239658,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/NJB51eex9y312oteHov7A8XR3gwgz43SpN1i5emeMNoWxN8oLvVsdhMpC5astXsccHbdHaD8ahc248N1BmeWFKd"
+      },
+      {
+        "signature": "3T7TPrK4jwuLgGd8xbG7KpboRffhjuc2CkdBRe2on7nZEhtopvyzj2ZTqzzsNFxUPvbFKjyum6YTHX4G9XuHYegn",
+        "slot": 455239593,
+        "err": null,
+        "confirmationStatus": "finalized",
+        "explorer": "https://explorer.solana.com/tx/3T7TPrK4jwuLgGd8xbG7KpboRffhjuc2CkdBRe2on7nZEhtopvyzj2ZTqzzsNFxUPvbFKjyum6YTHX4G9XuHYegn"
+      }
+    ]
+  },
+  "rpcTransportVerification": {
+    "relay": {
+      "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+      "upstream": "https://solana-rpc.publicnode.com",
+      "postStatus": 200,
+      "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "unsupportedMethodStatus": 405,
+      "noStore": true,
+      "transactionsSubmitted": 0
+    },
+    "browser": {
+      "checkedAt": "2026-10-12T16:37:56.108Z",
+      "website": "https://sonic-perseus-9a1cxls.vercel.app",
+      "rpcProvider": "https://solana-rpc.publicnode.com",
+      "rpcTransportEndpoint": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+      "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "directBrowserRpcBlocked": true,
+      "directRequests": 0,
+      "observedRelayMethods": [
+        "getGenesisHash",
+        "getAccountInfo",
+        "getAccountInfo",
+        "getAccountInfo",
+        "getAccountInfo",
+        "getAccountInfo"
+      ],
+      "fundingDisabled": true,
+      "transactionsSubmitted": 0
+    },
+    "localTransportTestsPassed": 2,
+    "networkRejectionUnchanged": true,
+    "liveTransactionsSubmitted": 0
+  },
+  "interfaceVerification": {
+    "checkedAt": "2026-10-12T16:37:04.477Z",
+    "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "deployment": {
+      "provider": "vercel",
+      "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+      "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
+      "projectName": "sonic-perseus-9a1cxls",
+      "deploymentId": "dpl_3kvgdGM3CWvpULvBHgURmJqqT8mJ",
+      "target": "production",
+      "readyState": "READY",
+      "url": "https://sonic-perseus-9a1cxls.vercel.app",
+      "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-46b6fvn0w-foundr2.vercel.app",
+      "aliases": [
+        "www.shellsafe.xyz",
+        "sonic-perseus-9a1cxls.vercel.app",
+        "shellsafe.xyz",
+        "temporary-sonic-perseus-9a1cxls.vercel.app",
+        "sonic-perseus-9a1cxls-foundr2.vercel.app"
+      ],
+      "createdAt": "2026-10-12T16:36:33.177000+00:00",
+      "createdAtAsiaShanghai": "2026-10-13T00:36:33.177000+08:00",
+      "verifiedAt": "2026-10-12T16:37:04.477Z",
+      "releaseSourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+      "websiteOnly": true,
+      "mainnetFundingEnabled": true,
+      "devnetFundingEnabled": false,
+      "publicBrowserTestsPassed": 18,
+      "mainnetProgramDeployed": true,
+      "solanaTransactionsSubmittedByWebsitePublication": 0,
+      "publicationScope": "Owner-authorized experimental Mainnet release. Spending authorization and immutable Solana program unchanged.",
+      "mainnetRpcRelay": {
+        "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+        "upstream": "https://solana-rpc.publicnode.com",
+        "postStatus": 200,
+        "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+        "unsupportedMethodStatus": 405,
+        "noStore": true,
+        "transactionsSubmitted": 0
+      },
+      "publicBrowserAppearance": "dark",
+      "releasePolicy": "owner-authorized-experimental",
+      "independentReviewVerified": false
+    },
+    "releasePolicy": {
+      "mode": "owner-authorized-experimental",
+      "authorizationProfile": "mainnet-v2",
+      "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+      "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+      "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+      "authorizedAt": "2026-10-12T16:32:33.377Z",
+      "disclosure": "Experimental vault authorization. Independent security review pending."
+    },
+    "independentReviewVerified": false,
+    "mainnetFundingEnabled": true,
+    "devnetFundingEnabled": false,
+    "liveActivation": {
+      "checkedAt": "2026-10-12T16:38:15.432Z",
+      "website": "https://sonic-perseus-9a1cxls.vercel.app",
+      "releaseStatus": "experimental-ready",
+      "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+      "independentReviewStatus": "pending",
+      "walletInterfaceConnected": true,
+      "encryptedIdentityCreated": true,
+      "recoveryExportVerified": true,
+      "activationEnabled": true,
+      "noDepositBeforeActivation": true,
+      "signatureRequests": 0,
+      "transactionsSubmitted": 0
+    },
+    "interfaceChecks": {
+      "baseURL": "https://sonic-perseus-9a1cxls.vercel.app",
+      "checkedAt": "2026-10-12T16:42:17.271Z",
+      "passed": true,
+      "publicDevnetOptionAbsent": true,
+      "guideHasThreeSteps": true,
+      "guideLinksReturnToSetup": true,
+      "actionNamesAndFundingGatesChecked": true,
+      "defaultLight": true,
+      "mouseAndKeyboardToggle": true,
+      "preferenceSurvivesReloadAndRoutes": true,
+      "paletteBeforeHydration": true,
+      "otherTabsSynchronized": true,
+      "blockedPreferenceStorageHandled": true,
+      "layouts": [
+        {
+          "name": "light-desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "appearance": "light",
+          "nativeColorScheme": "light",
+          "background": "rgb(247, 248, 250)"
+        },
+        {
+          "name": "light-guide-desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "appearance": "light",
+          "nativeColorScheme": "light",
+          "background": "rgb(247, 248, 250)"
+        },
+        {
+          "name": "dark-desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "dark-phone",
+          "width": 390,
+          "documentWidth": 390,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "dark-create-phone",
+          "width": 390,
+          "documentWidth": 390,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "dark-recover-phone",
+          "width": 390,
+          "documentWidth": 390,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "dark-guide-phone",
+          "width": 390,
+          "documentWidth": 390,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "dark-guide-small-phone",
+          "width": 320,
+          "documentWidth": 320,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "dark-small-phone",
+          "width": 320,
+          "documentWidth": 320,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "dark-protocol-small-phone",
+          "width": 320,
+          "documentWidth": 320,
+          "appearance": "dark",
+          "nativeColorScheme": "dark",
+          "background": "rgb(12, 19, 29)"
+        },
+        {
+          "name": "light-small-phone",
+          "width": 320,
+          "documentWidth": 320,
+          "appearance": "light",
+          "nativeColorScheme": "light",
+          "background": "rgb(247, 248, 250)"
+        }
+      ],
+      "errors": [],
+      "transactionsSubmitted": 0
+    },
+    "tests": {
+      "unit": 61,
+      "compiledSbfMatrices": 3,
+      "localBrowser": 15,
+      "localBrowserSkipped": 3,
+      "localBrowserSkipReason": "The three HTTPS production RPC/history checks pass in the public suite.",
+      "localBrowserAppearance": "light",
+      "publicBrowser": 18,
+      "publicBrowserAppearance": "dark",
+      "mainnetOwnerLifecycle": true,
+      "allPassed": true
+    },
+    "newSolanaTransactionsSubmitted": 0,
+    "mainnetProgramChanged": false,
+    "mainnetProgramImmutable": true,
+    "originalOwnerLifecycleSourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4"
+  },
+  "experimentalLaunch": {
+    "mode": "owner-authorized-experimental",
+    "authorizationProfile": "mainnet-v2",
+    "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "authorizedAt": "2026-10-12T16:32:33.377Z",
+    "disclosure": "Experimental vault authorization. Independent security review pending."
+  },
+  "currentMainnetPreflight": {
+    "checkedAt": "2026-10-12T16:35:10.839Z",
+    "mode": "release",
+    "rpcEndpoint": "https://api.mainnet-beta.solana.com",
+    "rpcGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "authorizationProfile": "mainnet-v2",
+    "programId": "DC4PEctnFZH4qcGAJzbGWi47AUrac7QuBRtD8DtLqdk4",
+    "programAccountExists": true,
+    "programDeploymentVerified": true,
+    "feePayer": "45Vxy36SWNd1DrMZWqn1QkVhRgCqfhHPB9uLnw4xqqgy",
+    "feePayerLamports": 168832520,
+    "requiredUpgradePolicy": "immutable",
+    "binaryPath": "program/target/deploy/mainnet/shell_vault.so",
+    "binarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+    "binarySize": 24544,
+    "sourceSha256": "f0b1fafa7967f98ef97883a9e57f351b6b7cfe527002df9a9049e09ea1213972",
+    "exactBuildCompiledTestsPassed": true,
+    "independentReviewVerified": false,
+    "experimentalLaunchAuthorized": true,
+    "lifecycleVerified": true,
+    "deploymentPrerequisitesPassed": false,
+    "deploymentRequiresIndependentReview": false,
+    "publicFundingRequiresIndependentReview": false,
+    "rents": {
+      "program": 833120,
+      "programData": 125562360,
+      "buffer": 125521720,
+      "minimumFeePayerLamports": 252917200
+    },
+    "releaseStatus": "experimental-ready",
+    "fundingEnabled": true,
+    "transactionsSubmitted": 0,
+    "blockers": []
+  }
+}

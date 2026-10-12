@@ -1,0 +1,13 @@
+{
+  "url": "https://temporary-sonic-perseus-9a1cxls.vercel.app",
+  "deploymentId": "dpl_3ZTryeP5UjMeeSQMEmXeUiFUzAgN",
+  "readyState": "READY",
+  "expiresAt": 1791579601381,
+  "checkedAt": "2026-10-09T20:20:28.657Z",
+  "cliVersion": "59.11.7",
+  "staticExport": true,
+  "homeStatus": 200,
+  "securityHeadersVerified": true,
+  "manifestSha256": "71c57be373972c990d256181d93028a12cc13d501bf6286f833cf2643fb70011",
+  "solanaDeploymentVerified": false
+}

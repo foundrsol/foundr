@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_2mkmFE3YfJSBjfTupEP9Hz9Cnnem",
+    "url": "https://sonic-perseus-9a1cxls-ni6jtrv35-foundr2.vercel.app",
+    "inspectorUrl": "https://vercel.com/foundr2/sonic-perseus-9a1cxls/2mkmFE3YfJSBjfTupEP9Hz9Cnnem",
+    "readyState": "READY",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_2mkmFE3YfJSBjfTupEP9Hz9Cnnem"
+  },
+  "message": "Deployment sonic-perseus-9a1cxls-ni6jtrv35-foundr2.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel curl https://sonic-perseus-9a1cxls-ni6jtrv35-foundr2.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect sonic-perseus-9a1cxls-ni6jtrv35-foundr2.vercel.app --global-config .dev/vercel",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --global-config .dev/vercel",
+      "when": "Promote to production"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "network": "devnet",
+  "deployer": "DEQAd3kXd8rbcJQc3bETCM5nvpvEcPWtEfrVTUvzc7dL",
+  "faucetAttempts": [
+    {
+      "endpoint": "https://api.devnet.solana.com",
+      "method": "requestAirdrop",
+      "publicKey": "DEQAd3kXd8rbcJQc3bETCM5nvpvEcPWtEfrVTUvzc7dL",
+      "httpStatus": 200,
+      "response": {
+        "jsonrpc": "2.0",
+        "error": {
+          "code": -32603,
+          "message": "Internal error"
+        },
+        "id": 1
+      },
+      "checkedAt": "2026-10-10T06:26:06.803337+00:00"
+    },
+    {
+      "endpoint": "https://api.devnet.solana.com",
+      "method": "requestAirdrop",
+      "amountLamports": "1000000000",
+      "publicKey": "DEQAd3kXd8rbcJQc3bETCM5nvpvEcPWtEfrVTUvzc7dL",
+      "httpStatus": 429,
+      "response": {
+        "jsonrpc": "2.0",
+        "error": {
+          "code": 429,
+          "message": "You've either reached your airdrop limit today or the airdrop faucet has run dry. Please visit https://faucet.solana.com for alternate sources of test SOL"
+        },
+        "id": 1
+      },
+      "checkedAt": "2026-10-10T06:27:05.824085+00:00"
+    }
+  ],
+  "deploymentTransactionSubmitted": false,
+  "websiteAlreadyPublished": true,
+  "website": "https://shell-security-vault.javieradriano99.chatgpt.site",
+  "programsPresentOnDevnet": false,
+  "finalizedDeployerBalanceLamports": "0",
+  "programDeploymentSubmitted": false,
+  "vercelAuthenticationAvailable": false,
+  "mainnetTransactionsSubmitted": false,
+  "requiredRentQuotes": "deployment-rent-quotes.json"
+}

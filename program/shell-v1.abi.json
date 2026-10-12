@@ -1,0 +1,24 @@
+{
+  "format": "SHELL_PINOCCHIO_ABI_1",
+  "name": "shell_vault",
+  "version": "0.1.0",
+  "note": "Manual Pinocchio ABI, not an Anchor IDL. Reserved program identity is not deployed; this file is not deployment evidence.",
+  "programId": "H5dQjE5MxyTCcwVuDcrVH3yUTeP51t6CvBvg9T4FzPds",
+  "cluster": "devnet",
+  "rpcGenesisHash": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+  "authorizationDomainV1": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+  "upstreamCommit": "672fc6789b1532ee680f24842d235e0be8737b61",
+  "encoding": "One u8 discriminator followed by fixed-width fields; u64 amounts are little-endian integer lamports.",
+  "instructions": [
+    { "name": "create", "discriminator": 0, "dataBytes": 33, "payload": [{"name":"root","type":"bytes32"}], "accounts": [{"name":"payer","signer":true,"writable":true},{"name":"coordinator","signer":true,"writable":false},{"name":"vault","signer":false,"writable":true},{"name":"systemProgram","signer":false,"writable":false}] },
+    { "name": "deposit", "discriminator": 1, "dataBytes": 9, "payload": [{"name":"amount","type":"u64"}], "accounts": [{"name":"payer","signer":true,"writable":true},{"name":"vault","signer":false,"writable":true},{"name":"systemProgram","signer":false,"writable":false}] },
+    { "name": "commit", "discriminator": 2, "dataBytes": 106, "payload": [{"name":"operation","type":"OperationV1"}], "accounts": [{"name":"coordinator","signer":true,"writable":false},{"name":"vault","signer":false,"writable":true}] },
+    { "name": "withdrawAndRotate", "discriminator": 3, "dataBytes": 874, "payload": [{"name":"operation","type":"OperationV1"},{"name":"wotsSignature","type":"bytes768"}], "accounts": [{"name":"payer","signer":true,"writable":true},{"name":"vault","signer":false,"writable":true},{"name":"recipient","signer":false,"writable":true},{"name":"nextVault","signer":false,"writable":true},{"name":"systemProgram","signer":false,"writable":false}], "authorization": "WOTS verification against stored root and finalized immutable operation commitment. Ordinary payer signature alone is insufficient." }
+  ],
+  "OperationV1": { "bytes": 105, "fields": [{"name":"version","offset":0,"type":"u8","value":1},{"name":"amount","offset":1,"type":"u64"},{"name":"destination","offset":9,"type":"publicKey32"},{"name":"nextAddress","offset":41,"type":"publicKey32"},{"name":"nextRoot","offset":73,"type":"bytes32"}] },
+  "VaultV1": { "bytes": 172, "fields": [{"name":"version","offset":0,"type":"u8","value":1},{"name":"status","offset":1,"type":"u8","values":{"0":"available","1":"committed","2":"consumed"}},{"name":"bump","offset":2,"type":"u8"},{"name":"root","offset":3,"type":"bytes32"},{"name":"coordinator","offset":35,"type":"publicKey32"},{"name":"operation","offset":67,"type":"OperationV1"}] },
+  "pdaSeeds": ["utf8(shell)", "root32", "coordinator32"],
+  "spendingDigest": "SHA256(utf8(SHELL_DEVNET_V1) || utf8(authorizationDomainV1) || program32 || vault32 || root32 || coordinator32 || OperationV1)",
+  "closureOrRefundInstruction": null,
+  "administratorSpendInstruction": null
+}

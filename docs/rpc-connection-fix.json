@@ -1,0 +1,86 @@
+{
+  "reportedWebsite": "https://sonic-perseus-9a1cxls.vercel.app",
+  "reportedError": "Mainnet RPC could not be verified: Failed to fetch",
+  "diagnosis": "The user's browser failed to reach the configured RPC. This does not establish a wallet or RPC cluster mismatch. Direct PublicNode requests and genesis verification worked in the test environment; the user's exact local transport failure was not reproduced.",
+  "adaptation": "HTTPS production browser requests use a fixed same-origin /api/mainnet-rpc Vercel rewrite to the same explicit PublicNode provider. Local HTTP and Node tooling remain direct; Devnet remains the official Devnet endpoint.",
+  "security": "Full genesis and immutable program bytecode checks are unchanged. Public funding remains locked on the independent exact-build review gate. Keys, passwords and recovery packages are not sent through the relay.",
+  "initialVerificationFailure": "Two local compiled-SBF browser fixtures missed normalized RPC URLs with a trailing slash. Corrected fixture matching now passes both lifecycles. Initial failed output is retained separately.",
+  "liveRoutingCorrection": "The initial external destination omitted an explicit root slash. Vercel forwarded the original /api/mainnet-rpc path, which PublicNode rejects with HTTP 404 Resource not found. Pinning https://solana-rpc.publicnode.com/ returns HTTP 200 and the full Mainnet genesis. The observed initial failed verification is retained separately.",
+  "checkedAt": "2026-10-10T12:25:35.153Z",
+  "releaseSourceSha256": "c56be3c181517dbf96e6a76c277e38070c7267faaca862f065b47019807ea8ab",
+  "deployment": {
+    "provider": "vercel",
+    "projectId": "prj_lMkS00R8PigQSpkzm5Qf2xcVzmuE",
+    "teamId": "team_MYqx2Xhak3e9U8khG6BUV6tf",
+    "projectName": "sonic-perseus-9a1cxls",
+    "deploymentId": "dpl_Gs553i3g6tqtQ5aszrduxZ4b2dg3",
+    "target": "production",
+    "readyState": "READY",
+    "url": "https://sonic-perseus-9a1cxls.vercel.app",
+    "canonicalDeploymentUrl": "https://sonic-perseus-9a1cxls-mydpzuwov-foundr2.vercel.app",
+    "aliases": [
+      "sonic-perseus-9a1cxls.vercel.app",
+      "temporary-sonic-perseus-9a1cxls.vercel.app",
+      "sonic-perseus-9a1cxls-foundr2.vercel.app"
+    ],
+    "createdAt": "2026-10-10T12:24:30.896000+00:00",
+    "createdAtAsiaShanghai": "2026-10-10T20:24:30.896000+08:00",
+    "verifiedAt": "2026-10-10T12:25:35.153Z",
+    "releaseSourceSha256": "c56be3c181517dbf96e6a76c277e38070c7267faaca862f065b47019807ea8ab",
+    "websiteOnly": true,
+    "mainnetFundingEnabled": false,
+    "devnetFundingEnabled": false,
+    "publicBrowserTestsPassed": 17,
+    "mainnetProgramDeployed": true,
+    "solanaTransactionsSubmittedByWebsitePublication": 0,
+    "publicationScope": "Static website and fixed public Mainnet RPC rewrite; immutable Solana program deployment was performed separately.",
+    "mainnetRpcRelay": {
+      "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+      "upstream": "https://solana-rpc.publicnode.com",
+      "postStatus": 200,
+      "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "unsupportedMethodStatus": 405,
+      "noStore": true,
+      "transactionsSubmitted": 0
+    }
+  },
+  "tests": {
+    "unit": 54,
+    "compiledSbfMatrices": 3,
+    "localBrowser": 16,
+    "localBrowserSkipped": 1,
+    "localBrowserSkipReason": "Production relay check requires the deployed HTTPS origin; it passes in the public suite.",
+    "publicBrowser": 17,
+    "mainnetOwnerLifecycle": true,
+    "allPassed": true
+  },
+  "relayHttpVerification": {
+    "requestUrl": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+    "upstream": "https://solana-rpc.publicnode.com",
+    "postStatus": 200,
+    "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "unsupportedMethodStatus": 405,
+    "noStore": true,
+    "transactionsSubmitted": 0
+  },
+  "relayBrowserVerification": {
+    "checkedAt": "2026-10-10T12:25:46.286Z",
+    "website": "https://sonic-perseus-9a1cxls.vercel.app",
+    "rpcProvider": "https://solana-rpc.publicnode.com",
+    "rpcTransportEndpoint": "https://sonic-perseus-9a1cxls.vercel.app/api/mainnet-rpc",
+    "verifiedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "directBrowserRpcBlocked": true,
+    "directRequests": 0,
+    "observedRelayMethods": [
+      "getGenesisHash",
+      "getAccountInfo",
+      "getAccountInfo"
+    ],
+    "fundingDisabled": true,
+    "transactionsSubmitted": 0
+  },
+  "mainnetFundingEnabled": false,
+  "newMainnetTransactionsSubmitted": 0,
+  "unchangedMainnetBinarySha256": "9cbc6ed720288666c45693350405a35022c0f20bf80723b143628a47f13bc62f",
+  "originalOwnerLifecycleSourceSha256": "c3c27f2eb9c4095d357e820eaa391f46699a63c6a60783353466bd90beb48da4"
+}
